@@ -1,0 +1,43 @@
+<!-- Top section -->
+<section>
+    <ul>
+        <li>
+            <button app-button [icon]="'github.svg'" [iconColor]="'grey'" [text]="'GitHub'"></button>
+        </li>
+        <li>
+            <button app-button [icon]="'forum.svg'" [iconColor]="'grey'" [text]="'Discussions'"></button>
+        </li>
+        <li>
+            <button app-button [icon]="'earth.svg'" [iconColor]="'grey'" [text]="'Français'"></button>
+        </li>
+    </ul>
+</section>
+
+
+<!-- Bottom section -->
+<section>
+    <!-- Logo Archi TS-->
+    <div>
+        <img src="logo/logo-v1.svg" alt="">
+        <p>ArchiTS</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li>
+                <a [routerLink]="'/home'" routerLinkActive="active">Home</a>
+            </li>
+            <li>
+                <a [routerLink]="'/documentation'" routerLinkActive="active">Documentation</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- CTA -->
+    <div>
+        <button app-button [icon]="'heart.svg'" [iconColor]="'white'" [text]="'Sponsor'"></button>
+        <button app-button [icon]="'arrow-start.svg'" [iconColor]="'white'" [text]="'Commencer'"></button>
+    </div>
+</section>
