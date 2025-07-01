@@ -1,4 +1,6 @@
-
+<button class="button" 
+    [ngClass]="['bg-' + bgColor(), 'border-' + borderColor(), 'color-' + txtColor(), 'shadow-' + shadowColor()]" 
+    [type]="type() === 'submit' ? 'submit' : 'button'"(click)="handleClick()">
 @if(icon()) {
     <img class="button__icn" [src]="`./icons/${iconColor()}/${icon()}`" alt="">
 }
@@ -8,3 +10,5 @@
 @if (text()) {
     <span class="button__text">{{text()}}</span>
 }
+
+</button>

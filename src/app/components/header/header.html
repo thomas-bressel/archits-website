@@ -1,42 +1,64 @@
 <!-- Top section -->
 <section class="header__top">
     <ul class="header__top-buttons">
-        @for(button of interfaceService.buttonsList(); track $index ) {
-            <li class="header__top-button">
-                <a [href]="button.link" target="_blank">
-                    <button app-button [icon]="button.icon" [iconColor]="button.iconColor" [text]="button.text"></button>
-                </a>
-            </li>
-        } 
+
+        @for(button of interfaceService.headerTopButtons(); track $index ) {
+        <li class="header__top-button">
+            <a [href]="button.link" target="_blank">
+                <div app-button [icon]="button.icon" [iconColor]="button.iconColor" [text]="button.text"></div>
+            </a>
+        </li>
+        }
+
+        <li class="header__top-button">
+            <div app-select-field [label]="'langOptions'" [optionsList]="[
+                {value: 'français', label: 'Français'},
+                {value: 'english', label: 'English'},
+                {value: 'español', label: 'Español'},
+                {value: 'русский', label: 'Русский'}
+
+            ]" [placeholder]="interfaceService.currentLanguage()" (fieldValue)="onLanguageChange($event)">
+            </div>
+        </li>
     </ul>
 </section>
 
 
 <!-- Bottom section -->
-<section>
+<section class="header__bot">
     <!-- Logo Archi TS-->
-    <div>
+
+    <div class="header__bot-logo">
         <img src="logo/logo-v1.svg" alt="">
         <p>ArchiTS</p>
     </div>
 
+
     <!-- Navigation -->
-    <nav>
-        <ul>
-            <li>
-                <a [routerLink]="'/home'" routerLinkActive="active">Home</a>
+    <nav class="header__bot-navigation">
+        <ul class="header__bot-navigation-items" [class.hidden]="!isMenuOpen()">
+            @for(item of interfaceService.headerBotNavigation() ; track $index) {
+            <li class="header__bot-navigation-item">
+                <a [routerLink]="item.router" routerLinkActive="active">{{item.name}}</a>
             </li>
-            <li>
-                <a [routerLink]="'/documentation'" routerLinkActive="active">Documentation</a>
-            </li>
+            }
         </ul>
     </nav>
 
 
     <!-- CTA -->
-    <div>
-        <button app-button [icon]="'heart.svg'" [iconColor]="'white'" [text]="'Sponsor'"></button>
-        <button app-button [icon]="'arrow-start.svg'" [iconColor]="'white'" [text]="'Commencer'"></button>
-        <button app-button [icon]="'burger.svg'" [iconColor]="'white'"></button>
-    </div>
+    <ul class="header__bot-ctas">
+        @for (item of interfaceService.headerBotCta(); track $index) {
+        <li class="header__bot-cta">
+            <a [href]="item.link" target="_blank">
+                <div app-button [icon]="item.icon" [iconColor]="item.iconColor" [text]="item.text" [txtColor]="item.textColor" [bgColor]="item.bgColor"></div>
+            </a>
+        </li>
+        }
+
+        <li class="header__bot-burger" (click)="toggleBurger()">
+            <div app-button [icon]="!isMenuOpen() ? 'burger.svg': 'cross.svg'" [iconColor]="'white'"></div>
+        </li>
+
+    </ul>
 </section>

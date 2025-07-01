@@ -4,12 +4,12 @@ export interface ButtonsList {
     bgColor?: string;
     borderColor?: string;
     text: string;
-    txtColor?: string;
+    textColor: string; 
     iconColor: string;
     shadowColor?: string;
     type?: string;
     link?: string;
-}
+  }
 
 
 export interface LanguageConfig {

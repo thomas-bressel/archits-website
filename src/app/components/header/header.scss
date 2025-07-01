@@ -1,5 +1,6 @@
 @use 'mixins' as *;
 @use 'colors' as color;
+@use 'fonts' as font;
 
 :host {
     width: 100%;
@@ -7,10 +8,25 @@
 }
 
 .header {
+    position: fixed;
+    left: 0;
     &__top {
+        position: relative;
         padding: .5rem;
         background: linear-gradient(135deg, color.$background-blue-linear1, color.$background-blue-linear2 50%, color.$background-blue-linear1);
-        border-bottom: 2px solid color.$grey;
+
+        &::after {
+            content: '';
+            @include position($position: absolute, $bottom: 0, $left: 0);
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(
+                to right, 
+                transparent 0%,
+                transparent 20%, 
+                color.$grey 30%
+            );
+        }
 
         &-buttons {
             @include flex($gap: 1rem, $justify: flex-end);
@@ -18,6 +34,75 @@
 
         &-button {
             width: fit-content;
+        }
+    }
+    &__bot {
+        @include flex($align: center, $justify: space-between);
+        @include text ($color: color.$h4-title, $font: font.$InterBold, $size: 1.25rem);
+        position: relative;
+        background-color: color.$background;
+        padding: .5rem;
+        border-bottom: 2px solid color.$grey;
+        
+        &-logo {
+            img {
+                margin-top: -64px;
+            }
+        }
+        
+        &-navigation-items {
+            @include position($position: absolute, $top: 82px, $right: 0);
+            @include flex($align: center, $gap: 1.5rem, $direction: column);
+            @include text($color: color.$link);
+            background-color: color.$background-blue-linear1;
+            padding: 1rem;
+            width: 80vw;
+
+
+        }
+        
+        &-ctas {
+            @include flex($align: center, $gap: 0.5rem);
+            
+        }
+
+
+      
+    }
+}
+
+@media  screen and (min-width: 758px) {
+    .header {
+
+        &__top {
+            &::after {
+                background: linear-gradient(
+                    to right, 
+                    transparent 0%,
+                    transparent 10%, 
+                    color.$grey 20%
+                );
+            }
+        }
+       
+        &__bot {
+           
+            &-navigation-items {
+                @include flex($align: center, $gap: 1.5rem, $wrap: wrap);
+                @include text($color: color.$link);
+                position:initial;
+                width: auto;
+
+                // Force desktop display event if hidden if present
+                &.hidden {
+                    display: flex !important;
+                }
+            }
+
+            &-burger {
+                display: none;
+            }
+          
         }
     }
 }

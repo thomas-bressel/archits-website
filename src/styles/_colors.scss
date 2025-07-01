@@ -59,6 +59,21 @@ $grey: #93A4B8;
 $yellow: #FFCE31;
 $red: #FF5353;
 
+// buttons
+$btn-red-linear1: #741B39;
+$btn-red-linear2: #6D11EE;
+$btn-blue-linear1: #2563EB;
+$btn-blue-linear2: #6D11EE;
+
+
+.bg-linear-red {
+    background: linear-gradient(135deg, $btn-red-linear1, $btn-red-linear2);
+}
+.bg-linear-blue {
+    background: linear-gradient(135deg, $btn-blue-linear1, $btn-blue-linear2);
+}
+
+
 // color
 .color-grey { color: $grey !important; }
 .color-red { color: $red !important; }

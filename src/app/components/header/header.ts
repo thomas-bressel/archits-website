@@ -1,11 +1,12 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Button } from '../ui/button/button';
 import { RouterLink } from '@angular/router';
 import { Interface } from '../../shared/services/interface';
+import { SelectField } from '../ui/select-field/select-field';
 
 @Component({
   selector: 'header[app-header]',
-  imports: [Button, RouterLink],
+  imports: [Button, SelectField, RouterLink],
   host: {
     'class': 'header'
   },
@@ -15,9 +16,16 @@ import { Interface } from '../../shared/services/interface';
 export class Header {
 
   interfaceService = inject(Interface);
+  isMenuOpen = signal(false);
 
 
+  public toggleBurger() {
+    this.isMenuOpen.set(!this.isMenuOpen());
+  }
 
+  public onLanguageChange(languageValue: string) {
+    this.interfaceService.setLanguage(languageValue);
+  }
   
 }
 
