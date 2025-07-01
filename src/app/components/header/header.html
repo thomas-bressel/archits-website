@@ -1,15 +1,11 @@
 <!-- Top section -->
-<section>
-    <ul>
-        <li>
-            <button app-button [icon]="'github.svg'" [iconColor]="'grey'" [text]="'GitHub'"></button>
-        </li>
-        <li>
-            <button app-button [icon]="'forum.svg'" [iconColor]="'grey'" [text]="'Discussions'"></button>
-        </li>
-        <li>
-            <button app-button [icon]="'earth.svg'" [iconColor]="'grey'" [text]="'Français'"></button>
-        </li>
+<section class="header__top">
+    <ul class="header__top-buttons">
+        @for(button of interfaceService.buttonsList(); track $index ) {
+            <li class="header__top-button">
+                <button app-button [icon]="button.icon" [iconColor]="button.iconColor" [text]="button.text"></button>
+            </li>
+        }
     </ul>
 </section>
 
@@ -39,5 +35,6 @@
     <div>
         <button app-button [icon]="'heart.svg'" [iconColor]="'white'" [text]="'Sponsor'"></button>
         <button app-button [icon]="'arrow-start.svg'" [iconColor]="'white'" [text]="'Commencer'"></button>
+        <button app-button [icon]="'burger.svg'" [iconColor]="'white'"></button>
     </div>
 </section>

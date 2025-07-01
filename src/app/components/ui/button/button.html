@@ -1,8 +1,10 @@
 
 @if(icon()) {
-    <img class="btn__icn" [src]="`./icons/${iconColor()}/${icon()}`" alt="">
+    <img class="button__icn" [src]="`./icons/${iconColor()}/${icon()}`" alt="">
 }
 @if(img()) {
-    <img class="btn__img" [src]="`./logos/${img()}.webp`" alt="">
+    <img class="button__img" [src]="`./logos/${img()}.webp`" alt="">
 }
-    <span class="btn__text">{{text()}}</span>
+@if (text()) {
+    <span class="button__text">{{text()}}</span>
+}

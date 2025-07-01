@@ -1,0 +1,96 @@
+// H1 linear gradient green
+$h1-green-linear1: #0F4B00;
+$h1-green-linear2: #27BE01;
+$h1-green-linear3: #21CF9D;
+
+// H1 linear gradient blue
+$h1-blue-linear1: #2563EB;
+$h1-blue-linear2: #06B6D4;
+$h1-blue-linear3: #1F2F4D;
+
+// H2 linear gradient green
+$h2-green-linear1: #0F4B00;
+$h2-green-linear2: #27BE01;
+$h2-green-linear3: #21CF9D;
+
+// H2 linear gradient blue
+$h2-blue-linear1: #2563EB;
+$h2-blue-linear2: #06B6D4;
+$h2-blue-linear3: #1F2F4D;
+
+// H3 title
+$h3-title: #F1F5F9;
+
+// H4 title
+$h4-title: #06B6D4; 
+
+// H5 title
+$h5-title: #93A4B8;
+
+ // alert box
+$alert-box-border-blue: #2563EB;
+$alert-box-bg-blue: #1F2F4D; 
+$alert-box-border-yellow: #FFCE31;
+$alert-box-bg-yellow: #413A15;
+$alert-box-border-green: #0F4B00;
+$alert-box-bg-green: #27BE01; 
+$alert-box-border-red: #FF5353;
+$alert-box-bg-red: #5B3333; 
+
+// link
+$link-active: #F1F5F9;
+$link: #93A4B8;
+
+// paragraph
+$paragraph-white: #F1F5F9;
+$paragraph-grey: #93A4B8;
+
+// background
+$background: #0F172A;
+$background-blue-linear1: #0F172A;
+$background-blue-linear2: #1E293B;
+
+// global
+$green: #27BE01;
+$blue: #2563EB;
+$darkblue: #0F172A;
+$white: #F1F5F9;
+$grey: #93A4B8;
+$yellow: #FFCE31;
+$red: #FF5353;
+
+// color
+.color-grey { color: $grey !important; }
+.color-red { color: $red !important; }
+.color-blue { color:$blue !important; }
+.color-green { color: $green !important; }
+.color-yellow { color: $yellow !important; }
+.color-black { color: $darkblue !important; }
+.color-white {  color: $white !important; }
+
+// background color
+.bg-red { background-color: $red !important; }
+.bg-blue { background-color: $blue !important; }
+.bg-green { background-color: $green !important; }
+.bg-yellow { background-color: $yellow !important; }
+.bg-black { background-color: $darkblue !important; }
+.bg-white { background-color: $white !important; }
+.bg-grey { background-color: $grey !important; }
+
+// shadow box
+.shadow-red { box-shadow: 0 3px 10px rgba($red, .5) !important; }
+.shadow-blue { box-shadow: 0 3px 10px rgba($blue, .5) !important; }
+.shadow-green { box-shadow: 0 3px 10px rgba($green, .5) !important; }
+.shadow-yellow { box-shadow: 0 3px 10px rgba($yellow, .5) !important; }
+.shadow-black { box-shadow: 0 3px 10px rgba($darkblue, .5) !important; }
+.shadow-white { box-shadow: 0 3px 10px rgba($white, .5) !important; }
+.shadow-grey { box-shadow: 0 3px 10px rgba($grey, .5) !important; }
+
+// border box
+.border-red { border-color: $red !important;}
+.border-blue { border-color: $blue !important;}
+.border-green { border-color: $green !important;}
+.border-yellow { border-color: $yellow !important;}
+.border-black { border-color: $darkblue !important;}
+.border-white { border-color: $white !important;}
+.border-grey { border-color: $grey !important;}

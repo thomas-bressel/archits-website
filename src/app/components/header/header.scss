@@ -1,0 +1,23 @@
+@use 'mixins' as *;
+@use 'colors' as color;
+
+:host {
+    width: 100%;
+
+}
+
+.header {
+    &__top {
+        padding: .5rem;
+        background: linear-gradient(92deg, color.$background-blue-linear1, color.$background-blue-linear2 50%, color.$background-blue-linear1);
+        border-bottom: 2px solid color.$grey;
+
+        &-buttons {
+            @include flex($gap: 1rem, $justify: flex-end);
+        }
+
+        &-button {
+            width: fit-content;
+        }
+    }
+}

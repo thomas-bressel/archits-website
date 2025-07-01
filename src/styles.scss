@@ -1,0 +1,35 @@
+@use "./styles/reset";
+@use "./styles/forms";
+
+@use "./styles/loaders"; // z-index : 1000
+@use "./styles/masks";  // z-index : 1500
+
+@use "./styles/fonts" as font;
+@use "./styles/colors" as color;
+
+/* Globar Styles*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+
+
+.hidden {
+    display: none !important;
+}
+
+
+.active {
+    opacity: 1 !important;
+    cursor: pointer !important;
+}

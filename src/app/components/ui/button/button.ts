@@ -5,7 +5,7 @@ import { Component, input, output } from '@angular/core';
   selector: 'button[app-button]',
   imports: [CommonModule],
   host: {
-    'class': "btn", 
+    'class': "button", 
     '[class]': "['background-' + bgColor(), 'border-' + borderColor(), 'color-' + txtColor(), 'shadow-' + shadowColor()]", 
     '[type]': "type() === 'submit' ? 'submit' : 'button'",
     '(click)': "handleClick()"

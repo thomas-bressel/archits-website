@@ -1,0 +1,47 @@
+@use "fonts" as font;
+@use "colors" as color;
+@use 'animations' as anim;
+@use "mixins" as *;
+
+
+:host {
+    @include flex ($align: center, $gap: .5rem);
+    @include standard-border($radius: .9rem, $size: 2px);
+    @include text($font: font.$InterMedium, $size: 1.25rem, $color: color.$h5-title); 
+    
+    transition: anim.$btn-hover ease-in-out;
+    padding: 1.5rem .5rem;
+    width: fit-content;
+    height: 48px;
+    
+    white-space: nowrap;
+}
+
+.button {
+    &__img,
+    &__icn {
+        height: 2rem;
+    }
+    &__text {
+        display: none
+    }
+}
+
+
+
+@media screen and (min-width: 758px) {
+
+    :host:hover {
+        cursor: pointer;
+        box-shadow: 0 3px 10px rgb(55, 64, 85) !important;
+        transition: anim.$btn-hover ease-in-out;
+    }
+    
+    .button {
+        &__text {
+            display: contents;
+        }
+    }
+  
+  }
+  

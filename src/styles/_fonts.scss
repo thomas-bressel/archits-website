@@ -1,0 +1,38 @@
+$InterLight: 'Inter Light';
+$InterBold: 'Inter Bold';
+$InterMedium: 'Inter Medium';
+$InterRegular: 'Inter Regular';
+$FiraRegular: 'Fira Regular';
+
+
+
+@font-face {
+    font-family: 'Inter Light';
+    src: url('/fonts/Inter_18pt-Light.woff2') format('woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Inter Regular';
+    src: url('/fonts/Inter_18pt-Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Inter Medium';
+    src: url('/fonts/Inter_18pt-Medium.woff2') format('woff2');
+    font-weight: 500;
+}
+
+
+@font-face {
+    font-family: 'Inter Bold';
+    src: url('/fonts/Inter_18pt-Bold.woff2') format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Fira Regular';
+    src: url('/fonts/FiraMono-Regular.woff2') format('woff2');
+    font-weight: 900;
+}
