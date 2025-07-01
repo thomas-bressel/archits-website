@@ -3,9 +3,11 @@
     <ul class="header__top-buttons">
         @for(button of interfaceService.buttonsList(); track $index ) {
             <li class="header__top-button">
-                <button app-button [icon]="button.icon" [iconColor]="button.iconColor" [text]="button.text"></button>
+                <a [href]="button.link" target="_blank">
+                    <button app-button [icon]="button.icon" [iconColor]="button.iconColor" [text]="button.text"></button>
+                </a>
             </li>
-        }
+        } 
     </ul>
 </section>
 

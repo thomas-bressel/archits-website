@@ -8,4 +8,12 @@ export interface ButtonsList {
     iconColor: string;
     shadowColor?: string;
     type?: string;
+    link?: string;
 }
+
+
+export interface LanguageConfig {
+    version: string;
+    language: string;
+    pages: { pageTitle: string }[];
+  }
