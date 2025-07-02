@@ -14,7 +14,7 @@ export class Button {
   icon = input('');
   img = input('');
   text = input('');
-  bgColor = input('');
+  bgColor = input();
   borderColor = input('');
   txtColor = input('');
   iconColor = input('');

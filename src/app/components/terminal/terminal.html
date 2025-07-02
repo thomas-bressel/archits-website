@@ -1,16 +1,6 @@
-<p>BASH</p>
+<p class="terminal__type">{{ terminalContent()?.type?.toUpperCase() || 'BASH' }}</p>
 
-<pre>
-<p>
-        # Cloner le repository
-        git clone https://github.com/thomas-bressel/archi-ts-cli.git
-        cd archi-ts-cli
-        
-        # Installation
-        make install
-        source ~/.bashrc
-        
-        # Créer votre premier projet
-        archi create
-    </p>
-    </pre>
+
+<div class="terminal__txt">
+<pre>{{ terminalContent()?.content }}</pre>
+</div>

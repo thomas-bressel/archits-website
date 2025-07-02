@@ -1,0 +1,76 @@
+@use 'mixins' as *;
+@use 'fonts' as font;
+@use 'colors' as color;
+
+.home {
+    &__blocintro {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 1.5rem;
+        grid-column-gap: 1.5rem;
+        padding: 5rem 0;
+    }
+
+    &__introduce {
+        @include flex($direction: column, $gap: 1.5rem);
+        &-title {
+            @include text($size: 4rem, $font: font.$InterBold);
+            background: linear-gradient(-135deg, color.$h1-green-linear1 0%, color.$h1-blue-linear2 50%, color.$h1-blue-linear1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+
+        }
+        &-text {
+            @include text($size: 1.5rem, $font: font.$InterMedium, $color: color.$paragraph-grey);
+        }
+    }
+
+
+    &__bloc1 {
+        @include flex($direction: column, $align: center, $gap: 2rem);
+        background-color: color.$background;
+        padding: 5rem 1rem;
+
+        &-title {
+            @include text($size: 2.5rem, $color:color.$h3-title);
+        }
+        
+        &-hook {
+            @include text($size: 1rem, $color:color.$paragraph-white);
+        }
+    }
+
+
+    &__bloc2 {
+        @include flex($direction: column, $align: center, $gap: 2rem);
+        background-color: transparent;
+        padding: 5rem 1rem;
+
+        &-title {
+            @include text($size: 2.5rem, $color:color.$h3-title);
+        }
+
+        &-hook {
+            @include text($size: 1rem, $color:color.$paragraph-white);
+        }
+    }
+
+    &__buttons {
+        @include flex($justify: flex-start, $gap: 1.5rem)
+    }
+
+    &__cards {
+        @include flex($justify: space-around, $gap: 1rem, $wrap: wrap);
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 758px) {
+    .home {
+
+        &__blocintro {
+            grid-template-columns: 1fr 1fr;    
+        }
+    }
+}

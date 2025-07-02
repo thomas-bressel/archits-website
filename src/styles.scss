@@ -1,9 +1,6 @@
 @use "./styles/reset";
 @use "./styles/forms";
 
-@use "./styles/loaders"; // z-index : 1000
-@use "./styles/masks";  // z-index : 1500
-
 @use "./styles/fonts" as font;
 @use "./styles/colors" as color;
 
@@ -19,8 +16,11 @@ body {
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 9.1rem;
     padding: 1rem;
     font-family: font.$InterMedium;
+    background: linear-gradient(135deg, color.$background-blue-linear1, color.$background-blue-linear2 50%, color.$background-blue-linear1);
+
 }
 
 

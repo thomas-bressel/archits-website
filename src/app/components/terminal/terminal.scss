@@ -1,0 +1,25 @@
+@use 'mixins' as *;
+@use 'fonts' as font;
+@use 'colors' as color;
+
+
+:host {
+    background-color: black;
+    padding: 1rem;
+    border: 1px solid color.$grey;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1.25rem;
+}
+
+.terminal {
+
+    &__type {
+        text-align: right;
+        color: color.$paragraph-grey;
+    }
+    
+    &__txt {
+        color: color.$paragraph-white;
+    }
+}

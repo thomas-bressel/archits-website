@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject, computed, signal } from '@angular/core';
 import { Button } from '../../../components/ui/button/button';
 import { Console } from '../../../components/console/console';
 import { Card } from '../../../components/card/card';
 import { Terminal } from '../../../components/terminal/terminal';
+import { Interface } from '../../../shared/services/interface';
 
 @Component({
   selector: 'app-home',
@@ -11,5 +12,13 @@ import { Terminal } from '../../../components/terminal/terminal';
   styleUrl: './home.scss'
 })
 export class Home {
+
+  public readonly interfaceService = inject(Interface);
+
+  homePageData = computed(() => {
+    return this.interfaceService.getPageById('home');
+  });
+
+
 
 }

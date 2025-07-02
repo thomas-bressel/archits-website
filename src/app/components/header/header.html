@@ -12,12 +12,15 @@
 
         <li class="header__top-button">
             <div app-select-field [label]="'langOptions'" [optionsList]="[
-                {value: 'français', label: 'Français'},
-                {value: 'english', label: 'English'},
-                {value: 'español', label: 'Español'},
-                {value: 'русский', label: 'Русский'}
+{value: 'français', label: 'Français'},
+  {value: 'english', label: 'English'},
+  {value: 'español', label: 'Español'},
+  {value: 'русский', label: 'Русский'},
+  {value: '日本語', label: '日本語'},
+  {value: 'română', label: 'Română'},
+               
 
-            ]" [placeholder]="interfaceService.currentLanguage()" (fieldValue)="onLanguageChange($event)">
+            ]" [placeholder]="interfaceService.currentLanguageLabel()" (fieldValue)="onLanguageChange($event)">
             </div>
         </li>
     </ul>
@@ -51,7 +54,8 @@
         @for (item of interfaceService.headerBotCta(); track $index) {
         <li class="header__bot-cta">
             <a [href]="item.link" target="_blank">
-                <div app-button [icon]="item.icon" [iconColor]="item.iconColor" [text]="item.text" [txtColor]="item.textColor" [bgColor]="item.bgColor"></div>
+                <div app-button [icon]="item.icon" [iconColor]="item.iconColor" [text]="item.text"
+                    [txtColor]="item.textColor" [bgColor]="item.bgColor"></div>
             </a>
         </li>
         }

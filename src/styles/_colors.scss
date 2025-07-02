@@ -65,6 +65,11 @@ $btn-red-linear2: #6D11EE;
 $btn-blue-linear1: #2563EB;
 $btn-blue-linear2: #6D11EE;
 
+// icon background
+$icon-blue-linear1: #2563EB;
+$icon-blue-linear2: #06B6D4;
+
+
 
 .bg-linear-red {
     background: linear-gradient(135deg, $btn-red-linear1, $btn-red-linear2);
@@ -72,6 +77,32 @@ $btn-blue-linear2: #6D11EE;
 .bg-linear-blue {
     background: linear-gradient(135deg, $btn-blue-linear1, $btn-blue-linear2);
 }
+
+
+// console
+
+$console-bg: #0a0a0a;
+$console-border: #333333;
+$console-head-bg: #2d2d2d;
+$console-border-bot: #404040;
+$console-title: #999999;
+$console-main: #ffffff;
+$console-node : #5fa04e;
+$console-go : #00add8;
+$console-os : #c0c0c0;
+$console-author : #ff6b6b;
+$console-user : #ff6b6b;
+$console-description : #9966cc;
+$console-item : #666;
+$console-highlight : #00BFFF;
+$console-navigation : #999;
+$console-host : #4ecdc4;
+$console-path : #45b7d1;
+
+
+// Cards
+$card-bg: #1E293B;
+$card-border: #334155;
 
 
 // color

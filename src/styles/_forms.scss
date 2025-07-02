@@ -5,62 +5,10 @@
 
 
 
-/* Native elements */
-input,
-textarea {
-  width: 100%;
-}
-
-input::placeholder,
-textarea::placeholder {
-  @include text($size: 1rem, $color: color.$grey);
-  width: 100%;
-}
-
-
-/* global classes */
-.input {
-  @include standard-border($radius: .5rem, $size: 2px, $color: color.$grey);
-  display: flex;
-
-  &__icn {
-    width: 1rem;
-    height: 1rem;
-    margin-right: .5rem;
-  }
-}
-
-
-/* Input filed border color change */
-.selected {
-  @include standard-border($radius: .5rem, $size: 2px, $color: color.$darkblue);
-}
-
-
 /* Hide buttons or field or anything else */
 .hidden {
   display: none !important;
 }
-
-
-
-// .text {
-//   @include standard-border($radius: .5rem, $size: 2px, $color: color.$grey);
-//   display: flex;
-
-//   &__field {
-//     overflow: hidden;
-//     resize: none;
-//     transition: height 0.2s ease;
-//   }
-// }
-
-
-.error {
-  @include text($color: color.$red, $size: .9rem);
-}
-
-
 
 /* */
 .select {

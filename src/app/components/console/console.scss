@@ -1,0 +1,158 @@
+@use 'colors' as color;
+@use 'fonts' as font;
+@use 'mixins' as *;
+
+
+
+
+
+:host {
+  display: block;
+  @include standard-border($radius: 8px, $size: 1px, $color: color.$console-border);
+  background: color.$console-bg;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  min-height: 400px;
+}
+
+.console {
+  &__header {
+    @include flex($align: center, $gap: .5rem);
+    background: color.$console-head-bg;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid color.$console-border-bot;
+    
+    &-circle {
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+    }
+    
+    &-circles {
+      @include flex($align: center, $gap: .5rem);
+    }
+
+    &-title {
+      @include text($color: color.$console-title, $size: .85rem, $font: font.$FiraRegular);
+      margin-left: 1rem;
+    }
+  }
+  
+  &__main {
+    @include text($size: .9rem, $font: font.$FiraRegular, $line: 1.4);
+    padding: 1.5rem;
+    min-height: 320px;
+    overflow-x: auto;
+  }
+  
+  &__line {
+    @include flex($align: flex-start, $direction: column);
+    margin-bottom: 0.1rem;
+  }
+  
+  &__banner {
+    @include text($color: #00BFFF, $size: .7rem, $line: 1.1);
+    font-weight: bold;
+    margin: 0.5rem 0;
+    white-space: pre;
+  }
+
+  &__text,
+  &__version,
+  &__at,
+  &__dollar,
+  &__command,
+  &__command-final,
+  &__question,
+  &__input
+   {
+    color: color.$console-main;
+  }
+
+
+  &__node {
+    color: color.$console-node;
+  }
+
+  &__go {
+    color: color.$console-go;
+  }
+
+  &__os {
+    color: color.$console-os;
+  }
+
+  &__author {
+    color: color.$console-author;
+  }
+
+  &__description {
+    color: color.$console-description;
+  }
+
+  &__menu-item {
+    color: color.$console-item;
+  }
+
+  &__highlight {
+    color: color.$console-highlight;
+    font-weight: bold;
+  }
+
+  &__navigation {
+    color: color.$console-navigation;
+    font-size: 0.85rem;
+  }
+
+  &__prompt {
+    @include flex($align: center);
+  }
+  
+  &__user {
+    color: color.$console-user;
+    font-weight: bold;
+  }
+  
+  &__host {
+    color: color.$console-host;
+  }
+  
+  &__path {
+    color: color.$console-path;
+  }
+  
+  &__dollar,
+  &__command,
+  &__command-final,
+  &__menu-arrow {
+    margin-right: 0.5rem;
+  }
+  
+  &__response,
+  &__menu-arrow,
+  &__menu-selected {
+    color: color.$green;
+  }
+  
+  &__cursor {
+    background-color: color.$green;
+    color: color.$console-bg;
+    animation: blink 1s infinite;
+  }
+  
+  &__menu-option {
+    @include flex($align: center);
+    padding: 0.1rem 0;
+  }
+  
+  &__menu-arrow {
+    width: 1rem;
+    font-weight: bold;
+  }
+
+  &__menu-selected {
+    font-weight: normal;
+  }
+
+
+}

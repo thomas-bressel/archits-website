@@ -9,3 +9,11 @@ $btn-hover: 150ms;
 */
 $tag-hover: 300ms;
 $tag-scale: 1.2;
+
+// Animation cursos 
+@keyframes blink {
+    0%, 30% { opacity: 1; }
+    31%, 60% { opacity: 0; }
+    61%, 80% { opacity: 1; }
+    81%, 100% { opacity: 0; }
+  }

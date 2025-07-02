@@ -4,12 +4,13 @@
 
 :host {
     width: 100%;
-
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 
 .header {
-    position: fixed;
-    left: 0;
+
     &__top {
         position: relative;
         padding: .5rem;

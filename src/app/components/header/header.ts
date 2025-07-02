@@ -18,15 +18,22 @@ export class Header {
   interfaceService = inject(Interface);
   isMenuOpen = signal(false);
 
-
+  /**
+   * Toggle burger menu
+   */
   public toggleBurger() {
     this.isMenuOpen.set(!this.isMenuOpen());
   }
 
+
+  /**
+   * Listen to change language
+   * @param languageValue 
+   */
   public onLanguageChange(languageValue: string) {
     this.interfaceService.setLanguage(languageValue);
   }
-  
+
 }
 
 

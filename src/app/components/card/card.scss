@@ -1,0 +1,51 @@
+@use 'mixins' as *;
+@use 'fonts' as font;
+@use 'colors' as color;
+
+:host {
+    @include flex($direction: column, $gap: 1.5rem);
+    width: 100%; 
+    max-width: 350px; 
+    background-color: color.$card-bg;
+    padding: 2rem;
+}
+
+.card {
+    
+    &__header {
+        @include flex($direction: column, $gap: 1rem);
+    }
+    
+    &__icon {
+        @include flex($direction: column, $align: center, $justify: center);
+        @include standard-border($size: 1px, $color: color.$card-border, $radius: 8px);
+        background: linear-gradient(135deg, color.$icon-blue-linear1 , color.$icon-blue-linear2);
+        font-size: 2rem;
+        width: 48px;
+        height: 48px;
+    }
+
+    &__title {
+        @include text($size: 1.5rem, $color: color.$h3-title, $font: font.$InterRegular);
+    }
+    
+    &__hook {
+        @include text($color: color.$paragraph-white, $font: font.$InterLight);
+    }
+    
+    &__items {
+        @include flex($direction: column, $gap: 1rem);
+    }
+    
+    &__item {
+        @include flex($direction: row, $align: center, $gap: 1rem);
+        
+        &-icon {
+            color: color.$green;
+        }
+        
+        &-txt {
+            @include text($size: 1rem, $color: color.$paragraph-grey, $font: font.$InterLight);
+        }
+    }
+}
