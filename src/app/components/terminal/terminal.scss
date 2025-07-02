@@ -20,6 +20,8 @@
     }
     
     &__txt {
+        white-space: pre-wrap;
+        font-family: font.$FiraRegular;
         color: color.$paragraph-white;
     }
 }
