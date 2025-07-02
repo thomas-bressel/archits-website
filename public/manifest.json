@@ -1,0 +1,23 @@
+{
+    "name": "ArchiTS CLI - Générateur d'Architecture Backend TypeScript",
+    "short_name": "ArchiTS",
+    "description": "Créez des structures backend robustes avec TypeScript ou JavaScript.",
+    "icons": [
+        {
+            "src": "android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "android-chrome-512x512.png", 
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#27BE01",
+    "background_color": "#0F172A",
+    "display": "standalone",
+    "start_url": "/",
+    "scope": "/"
+}

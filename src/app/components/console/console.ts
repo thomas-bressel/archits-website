@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, OnDestroy } from '@angular/core';
+import { Component, inject, OnInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';
 import { ConsoleService } from '../../shared/services/console';
 
 @Component({
@@ -8,7 +8,7 @@ import { ConsoleService } from '../../shared/services/console';
   styleUrl: './console.scss'
 })
 export class Console implements OnInit, OnDestroy {
-
+  @ViewChild('consoleMain', { static: false }) consoleMain!: ElementRef;
 
   // DEPENDENCY INJECTION
   public readonly consoleService = inject(ConsoleService);   // Injects the ConsoleService to access animation state and methods
@@ -85,37 +85,30 @@ export class Console implements OnInit, OnDestroy {
    */
   private async runNextStep() {
     if (!this.isRunning) return;
-  
+
     if (!this.consoleService.isComplete()) {
       const currentStep = this.consoleService.getCurrentStep();
       if (currentStep) {
-  
-        // MANAGE COMMANDES
+
+        // GESTION DES COMMANDES
         if (currentStep.type === 'command' && currentStep.text) {
           await this.typeCommand(currentStep.text, currentStep.typingSpeed || 300, currentStep.id);
         }
-  
-        // MANAGE QUESTIONS
+
+        // GESTION DES QUESTIONS
         if (currentStep.type === 'question' && currentStep.typedText && currentStep.typingSpeed) {
           await this.typeQuestion(currentStep.typedText, currentStep.typingSpeed, currentStep.id);
         }
-  
+
         // Schedule next step
         this.timeoutId = setTimeout(async () => {
           if (this.isRunning) {
-            this.consoleService.nextStep(); 
+            this.consoleService.nextStep();
             
-            // Auto-scroll
-            requestAnimationFrame(() => {
-              requestAnimationFrame(() => {
-                document.getElementById('console-bottom')?.scrollIntoView({
-                  behavior: 'smooth',
-                  block: 'end'
-                });
-              });
-            });
-  
-            // MANAGE ANIMATION MENU 
+            // AUTO-SCROLL MANUEL SUR LA CONSOLE SEULEMENT
+            this.scrollConsoleToBottom();
+
+            // ANIMATION DU MENU APRÈS L'AFFICHAGE
             const newStep = this.consoleService.getCurrentStep();
             if (newStep?.type === 'menu' && newStep.menuAnimation) {
               await this.consoleService.animateMenuSelection(
@@ -124,7 +117,7 @@ export class Console implements OnInit, OnDestroy {
                 newStep.menuAnimation.stepDuration
               );
             }
-  
+
             this.runNextStep();
           }
         }, currentStep.delay);
@@ -142,6 +135,21 @@ export class Console implements OnInit, OnDestroy {
     }
   }
 
+
+  /**
+   * Scroll la console vers le bas SANS affecter la page
+   */
+  private scrollConsoleToBottom() {
+    setTimeout(() => {
+      if (this.consoleMain?.nativeElement) {
+        const element = this.consoleMain.nativeElement;
+        element.scrollTo({
+          top: element.scrollHeight,
+          behavior: 'smooth'
+        });
+      }
+    }, 50);
+  }
 
 
   // TYPING ANIMATION METHOD
