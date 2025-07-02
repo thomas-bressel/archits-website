@@ -1,0 +1,28 @@
+services:
+  archits-website:
+    container_name: archits-website-app
+    image: ${DOCKERHUB_USERNAME}/archits-website:latest
+    restart: unless-stopped
+    expose:
+      - "4000"
+    networks:
+      - archits-website-net
+
+  nginx:
+    image: nginx:stable-alpine
+    container_name: archits-website-nginx
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - /etc/letsencrypt:/etc/letsencrypt:ro  # Certificats SSL
+    ports:
+      - "80:80"
+      - "443:443"  # Port HTTPS
+    depends_on:
+      - archits-website
+    networks:
+      - archits-website-net
+
+networks:
+  archits-website-net:
+    name: archits-website-net
+    driver: bridge
