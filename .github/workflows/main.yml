@@ -32,7 +32,6 @@ jobs:
         tags: |
           ${{ secrets.DOCKERHUB_USERNAME }}/archits-website:latest
           ${{ secrets.DOCKERHUB_USERNAME }}/archits-website:${{ github.sha }}
-        platforms: linux/amd64,linux/arm64
       
     - name: Deploy to VPS
       uses: appleboy/ssh-action@v1.0.3
