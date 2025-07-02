@@ -69,4 +69,11 @@ export interface ConsoleStep {
   className?: string;
   menuOptions?: { text: string; selected: boolean }[];
   typingSpeed?: number;
+  staticText?: string; 
+  typedText?: string;  
+  menuAnimation?: {
+    duration: number;
+    sequence: boolean[][];
+    stepDuration: number;
+  };
 }

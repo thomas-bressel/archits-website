@@ -1,37 +1,28 @@
 <!-- Title bar of the window-->
 <section class="console__header">
-
   <div class="console__header-circles">
     <span class="console__header-circle bg-red"></span>
     <span class="console__header-circle bg-yellow"></span>
     <span class="console__header-circle bg-green"></span>
   </div>
   <div class="console__header-title">zisquier: ~/archi-projects</div>
-
 </section>
-
 
 <!-- Main section of the console -->
 <section class="console__main">
-  
+
   @for (step of consoleService.visibleSteps(); track step.id) {
   <div class="console__line">
 
-
-    
     <!-- Banner -->
     @if (step.type === 'banner') {
     <pre class="console__banner">{{ step.text }}</pre>
     }
 
-
-
     <!-- Info lines -->
     @if (step.type === 'info') {
     <span [class]="'console__' + (step.className || 'text')">{{ step.text }}</span>
     }
-
-
 
     <!-- Command with prompt included -->
     @if (step.type === 'command') {
@@ -46,21 +37,29 @@
     </span>
     }
 
-
-
     <!-- Response -->
     @if (step.type === 'response') {
     <span [class]="'console__' + (step.className || 'response')">{{ step.text }}</span>
     }
 
-
-
     <!-- Question -->
     @if (step.type === 'question') {
-    <span [class]="'console__' + (step.className || 'question')">{{ step.text }}</span>
+    <span [class]="'console__' + (step.className || 'question')">
+      @if (step.staticText) {
+      <span>{{ step.staticText }}</span>
+      }
+      @if (step.typedText) {
+      @if (consoleService.isTyping() && consoleService.currentTypingStepId() === step.id) {
+      <span>{{ consoleService.typingText() }}<span class="console__cursor">_</span></span>
+      } @else {
+      <span>{{ step.typedText }}</span>
+      }
+      }
+      @if (!step.staticText && !step.typedText && step.text) {
+      <span>{{ step.text }}</span>
+      }
+    </span>
     }
-
-
 
     <!-- Menu -->
     @if (step.type === 'menu' && step.menuOptions) {
@@ -74,4 +73,7 @@
 
   </div>
   }
+
+  <div class="console__scroll-anchor" id="console-bottom"></div>
+
 </section>

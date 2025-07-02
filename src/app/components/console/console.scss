@@ -1,10 +1,7 @@
 @use 'colors' as color;
 @use 'fonts' as font;
 @use 'mixins' as *;
-
-
-
-
+@use 'animations' as *;
 
 :host {
   display: block;
@@ -12,22 +9,26 @@
   background: color.$console-bg;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-  min-height: 400px;
+  height: 400px;
+  max-height: 400px;
 }
 
 .console {
+  height: 100%;
+
+
   &__header {
     @include flex($align: center, $gap: .5rem);
     background: color.$console-head-bg;
     padding: 0.5rem 1rem;
     border-bottom: 1px solid color.$console-border-bot;
-    
+
     &-circle {
       border-radius: 50%;
       width: 16px;
       height: 16px;
     }
-    
+
     &-circles {
       @include flex($align: center, $gap: .5rem);
     }
@@ -37,19 +38,34 @@
       margin-left: 1rem;
     }
   }
-  
+
   &__main {
     @include text($size: .9rem, $font: font.$FiraRegular, $line: 1.4);
     padding: 1.5rem;
-    min-height: 320px;
-    overflow-x: auto;
+    height: calc(100% - 50px); // 50px pour le header
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    // HIDE SCROLLBAR
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+
+    &::-webkit-scrollbar {
+      display: none;
+      /* Chrome, Safari, Opera */
+      width: 0;
+      background: transparent;
+    }
+
   }
-  
+
   &__line {
     @include flex($align: flex-start, $direction: column);
     margin-bottom: 0.1rem;
   }
-  
+
   &__banner {
     @include text($color: #00BFFF, $size: .7rem, $line: 1.1);
     font-weight: bold;
@@ -64,11 +80,9 @@
   &__command,
   &__command-final,
   &__question,
-  &__input
-   {
+  &__input {
     color: color.$console-main;
   }
-
 
   &__node {
     color: color.$console-node;
@@ -107,52 +121,54 @@
   &__prompt {
     @include flex($align: center);
   }
-  
+
   &__user {
     color: color.$console-user;
     font-weight: bold;
   }
-  
+
   &__host {
     color: color.$console-host;
   }
-  
+
   &__path {
     color: color.$console-path;
   }
-  
+
   &__dollar,
   &__command,
   &__command-final,
   &__menu-arrow {
     margin-right: 0.5rem;
   }
-  
+
   &__response,
   &__menu-arrow,
   &__menu-selected {
     color: color.$green;
   }
-  
+
   &__cursor {
     background-color: color.$green;
     color: color.$console-bg;
     animation: blink 1s infinite;
   }
-  
+
   &__menu-option {
     @include flex($align: center);
     padding: 0.1rem 0;
   }
-  
+
   &__menu-arrow {
     width: 1rem;
     font-weight: bold;
   }
 
+  &__scroll-anchor {
+    scroll-margin-top: 0;
+  }
+
   &__menu-selected {
     font-weight: normal;
   }
-
-
 }

@@ -44,20 +44,30 @@ export class ConsoleService {
     { id: 14, type: 'info', text: '', delay: 20 },
 
     // Project name question
-    { id: 15, type: 'question', text: 'Project Name: mon-projet-backend', delay: 800, className: 'input' },
-    { id: 16, type: 'info', text: 'Use the arrow keys to navigate: ↓ ↑ → ←', delay: 500, className: 'navigation' },
-    { id: 17, type: 'info', text: 'Select an architecture:', delay: 300, className: 'question' },
+    { id: 15, type: 'question', staticText: 'Project Name: ', typedText: 'mon-projet-backend', delay: 800, className: 'input', typingSpeed: 100 },
+    { id: 16, type: 'info', text: 'Use the arrow keys to navigate: ↓ ↑ → ←', delay: 20, className: 'navigation' },
+    { id: 17, type: 'info', text: 'Select an architecture:', delay: 20, className: 'question' },
 
     // Architecture menu
     {
       id: 18,
       type: 'menu',
-      delay: 500,
+      delay: 20,
       menuOptions: [
-        { text: 'Layered Architecture', selected: false },
-        { text: 'Clean Architecture', selected: true },
+        { text: 'Layered Architecture', selected: true },
+        { text: 'Clean Architecture', selected: false },
         { text: 'Hexagonal Architecture', selected: false }
-      ]
+      ],
+      menuAnimation: {
+        duration: 2000, 
+        sequence: [
+          [true, false, false],
+          [false, true, false],
+          [false, false, true],
+          [false, true, false] 
+        ],
+        stepDuration: 800
+      }
     }
   ];
 
@@ -82,6 +92,60 @@ export class ConsoleService {
   public readonly isComplete = computed(() => {
     return this.currentStepIndex() >= this.allSteps().length - 1;
   });
+
+  
+
+/**
+ * menu selection animation
+ * @param stepId 
+ * @param sequence 
+ * @param stepDuration
+ */
+public animateMenuSelection(stepId: number, sequence: boolean[][], stepDuration: number): Promise<void> {
+  return new Promise(resolve => {
+    let currentIndex = 0;
+    
+    const animateStep = () => {
+      if (currentIndex < sequence.length) {
+        // Met à jour les options du menu
+        this.updateMenuSelection(stepId, sequence[currentIndex]);
+        currentIndex++;
+        
+        setTimeout(animateStep, stepDuration);
+      } else {
+        resolve();
+      }
+    };
+    
+    animateStep();
+  });
+}
+
+
+
+/**
+ * Update the selection
+ * @param stepId
+ * @param selection
+ */
+public updateMenuSelection(stepId: number, selection: boolean[]) {
+  const steps = this.allSteps();
+  const stepIndex = steps.findIndex(step => step.id === stepId);
+  
+  if (stepIndex !== -1 && steps[stepIndex].menuOptions) {
+    const updatedStep = {
+      ...steps[stepIndex],
+      menuOptions: steps[stepIndex].menuOptions!.map((option, index) => ({
+        ...option,
+        selected: selection[index] || false
+      }))
+    };
+    
+    const updatedSteps = [...steps];
+    updatedSteps[stepIndex] = updatedStep;
+    this.allSteps.set(updatedSteps);
+  }
+}
 
 
 

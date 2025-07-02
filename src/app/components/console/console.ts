@@ -8,20 +8,20 @@ import { ConsoleService } from '../../shared/services/console';
   styleUrl: './console.scss'
 })
 export class Console implements OnInit, OnDestroy {
-  
+
+
   // DEPENDENCY INJECTION
-  // Injects the ConsoleService to access animation state and methods
-  public readonly consoleService = inject(ConsoleService);
-  
+  public readonly consoleService = inject(ConsoleService);   // Injects the ConsoleService to access animation state and methods
+
   // PRIVATE PROPERTIES
-  // Stores timeout ID for proper cleanup and cancellation
-  private timeoutId?: ReturnType<typeof setTimeout>;
-  
-  // Flag to prevent multiple animations running simultaneously
-  private isRunning = false;
+  private timeoutId?: ReturnType<typeof setTimeout>;   // Stores timeout ID for proper cleanup and cancellation
+  private isRunning = false;   // Flag to prevent multiple animations running simultaneously
+
+
+
 
   // LIFECYCLE HOOKS
-  
+
   /**
    * Called when component is initialized
    * Automatically starts the terminal animation
@@ -38,8 +38,10 @@ export class Console implements OnInit, OnDestroy {
     this.stopAnimation();
   }
 
+
+
   // ANIMATION CONTROL METHODS
-  
+
   /**
    * Stops the current animation and cleans up resources
    * Sets running flag to false and clears any pending timeouts
@@ -52,6 +54,8 @@ export class Console implements OnInit, OnDestroy {
     }
   }
 
+
+
   /**
    * Starts the terminal animation sequence
    * Prevents multiple instances and resets service state
@@ -60,11 +64,11 @@ export class Console implements OnInit, OnDestroy {
   private startAnimation() {
     // Guard clause - prevent starting if already running
     if (this.isRunning) return;
-    
+
     // Set running flag and reset service to initial state
     this.isRunning = true;
     this.consoleService.reset();
-    
+
     // Start first step after 100ms delay
     this.timeoutId = setTimeout(() => {
       this.consoleService.nextStep();  // Move to first step (index 0)
@@ -72,55 +76,76 @@ export class Console implements OnInit, OnDestroy {
     }, 100);
   }
 
+
+
   /**
    * Recursively processes each animation step
    * Handles different step types and manages timing
    * Restarts animation when complete (infinite loop)
    */
   private async runNextStep() {
-    // Safety check - exit if animation was stopped
     if (!this.isRunning) return;
-    
-    // Check if we've reached the end of the animation
+  
     if (!this.consoleService.isComplete()) {
       const currentStep = this.consoleService.getCurrentStep();
       if (currentStep) {
-        
-        // SPECIAL HANDLING FOR COMMAND STEPS
-        // Commands need typing animation simulation
+  
+        // MANAGE COMMANDES
         if (currentStep.type === 'command' && currentStep.text) {
-          // Wait for typing animation to complete before proceeding
-          await this.typeCommand(
-            currentStep.text, 
-            currentStep.typingSpeed || 300,  // Default to 300ms per character
-            currentStep.id
-          );
+          await this.typeCommand(currentStep.text, currentStep.typingSpeed || 300, currentStep.id);
         }
-        
-        // Schedule next step based on current step's delay
-        this.timeoutId = setTimeout(() => {
+  
+        // MANAGE QUESTIONS
+        if (currentStep.type === 'question' && currentStep.typedText && currentStep.typingSpeed) {
+          await this.typeQuestion(currentStep.typedText, currentStep.typingSpeed, currentStep.id);
+        }
+  
+        // Schedule next step
+        this.timeoutId = setTimeout(async () => {
           if (this.isRunning) {
-            this.consoleService.nextStep();  // Advance to next step
-            this.runNextStep();              // Recursively process next step
+            this.consoleService.nextStep(); 
+            
+            // Auto-scroll
+            requestAnimationFrame(() => {
+              requestAnimationFrame(() => {
+                document.getElementById('console-bottom')?.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'end'
+                });
+              });
+            });
+  
+            // MANAGE ANIMATION MENU 
+            const newStep = this.consoleService.getCurrentStep();
+            if (newStep?.type === 'menu' && newStep.menuAnimation) {
+              await this.consoleService.animateMenuSelection(
+                newStep.id,
+                newStep.menuAnimation.sequence,
+                newStep.menuAnimation.stepDuration
+              );
+            }
+  
+            this.runNextStep();
           }
         }, currentStep.delay);
       }
     } else {
-      // ANIMATION COMPLETE - RESTART CYCLE
-      // Wait 2 seconds then restart the entire animation
+      // RESTART CYCLE
       this.timeoutId = setTimeout(() => {
         if (this.isRunning) {
-          this.stopAnimation();              // Clean stop
+          this.stopAnimation();
           setTimeout(() => {
-            this.startAnimation();           // Fresh start after 200ms
+            this.startAnimation();
           }, 200);
         }
       }, 2000);
     }
   }
 
+
+
   // TYPING ANIMATION METHOD
-  
+
   /**
    * Simulates realistic typing by revealing characters one by one
    * Uses Promise to ensure animation completes before continuing
@@ -136,9 +161,45 @@ export class Console implements OnInit, OnDestroy {
       this.consoleService.setIsTyping(true);           // Enable typing mode
       this.consoleService.setCurrentTypingStepId(stepId); // Link to specific step
       this.consoleService.setTypingText('');           // Start with empty text
-      
+
       let i = 0; // Character index counter
-      
+
+      // Use setInterval to reveal characters progressively
+      const typeInterval = setInterval(() => {
+        if (i < text.length) {
+          // Add next character to the visible text
+          this.consoleService.setTypingText(text.substring(0, i + 1));
+          i++;
+        } else {
+          // Typing complete - cleanup and resolve
+          clearInterval(typeInterval);                    // Stop the interval
+          this.consoleService.setIsTyping(false);         // Disable typing mode
+          this.consoleService.setCurrentTypingStepId(null); // Clear step reference
+          resolve();                                      // Signal completion
+        }
+      }, speed); // Execute every 'speed' milliseconds
+    });
+  }
+
+
+  /**
+   * Simulates realistic typing for questions by revealing characters one by one
+   * Uses Promise to ensure animation completes before continuing
+   * 
+   * @param text - The question text to type out
+   * @param speed - Delay between characters in milliseconds
+   * @param stepId - ID of the step being typed (for UI targeting)
+   * @returns Promise that resolves when typing is complete
+   */
+  private async typeQuestion(text: string, speed: number, stepId: number): Promise<void> {
+    return new Promise(resolve => {
+      // Initialize typing state in the service
+      this.consoleService.setIsTyping(true);           // Enable typing mode
+      this.consoleService.setCurrentTypingStepId(stepId); // Link to specific step
+      this.consoleService.setTypingText('');           // Start with empty text
+
+      let i = 0; // Character index counter
+
       // Use setInterval to reveal characters progressively
       const typeInterval = setInterval(() => {
         if (i < text.length) {
@@ -157,7 +218,7 @@ export class Console implements OnInit, OnDestroy {
   }
 
   // UTILITY METHODS
-  
+
   /**
    * Returns the standard terminal prompt string
    * Used for consistent prompt display across the terminal
