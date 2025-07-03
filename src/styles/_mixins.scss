@@ -19,9 +19,9 @@
   @if $line !=null {line-height: $line;}
 }
 
-@mixin standard-border($size: 1px, $shape: solid, $color: transparent, $radius: 1rem) {
+@mixin standard-border($size: 1px, $shape: null, $color: transparent, $radius: 1rem) {
   border-width: $size;
-  border-style: $shape;
+  @if $shape != null {border-style: $shape;}
   border-color: $color;
   border-radius: $radius;
 }
