@@ -31,6 +31,7 @@
 
         &-buttons {
             @include flex($gap: 1rem, $justify: flex-end);
+            padding: 0 1.5rem;
             max-width: 1400px;
             margin-left: auto;
             margin-right: auto;
@@ -45,7 +46,7 @@
         @include text ($color: color.$h4-title, $font: font.$InterBold, $size: 1.25rem);
         position: relative;
         background-color: color.$background;
-        padding: .5rem;
+        padding: .5rem 2rem;
         border-bottom: 2px solid color.$grey;
         
         &-logo {

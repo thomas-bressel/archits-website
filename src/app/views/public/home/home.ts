@@ -1,4 +1,4 @@
-import { Component, inject, computed, signal } from '@angular/core';
+import { Component, inject, computed } from '@angular/core';
 import { Button } from '../../../components/ui/button/button';
 import { Console } from '../../../components/console/console';
 import { Card } from '../../../components/card/card';

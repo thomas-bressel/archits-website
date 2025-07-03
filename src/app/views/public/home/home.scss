@@ -21,6 +21,9 @@
             background-clip: text;
 
         }
+        &-version {
+            @include text($size: 1.5rem);
+        }
         &-text {
             @include text($size: 1.5rem, $font: font.$InterMedium, $color: color.$paragraph-grey);
         }

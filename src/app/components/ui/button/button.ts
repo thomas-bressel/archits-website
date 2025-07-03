@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, input, output } from '@angular/core';
-
 @Component({
   selector: 'div[app-button]',
   imports: [CommonModule],
@@ -24,4 +23,8 @@ export class Button {
   handleClick() {
     this.buttonClicked.emit();
   }
+  constructor() {
+    console.log('Button component loaded!');
+  }
+
 }

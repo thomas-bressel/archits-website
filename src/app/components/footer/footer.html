@@ -1,19 +1,5 @@
- <!-- Footer Navigation -->
- <p>Footer</p>
- <nav>
-    <ul>
-        <li>
-            <a [routerLink]="'/home'" routerLinkActive="active">Home</a>
-        </li>
-        <li>
-            <a [routerLink]="'/documentation'" routerLinkActive="active">Documentation</a>
-        </li>
-    </ul>
-</nav>
 
-
-
-<div>
-    <p>© 2025 ArchiTS CLI - Développé par Thomas Bressel</p>
-    <p>Générateur d'architecture backend moderne pour TypeScript et JavaScript</p>
+<div class="footer__txt">
+    <p> {{interfaceService.footer()[0].line1}}</p>
+    <p> {{interfaceService.footer()[0].line2}}</p>
 </div>

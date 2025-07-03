@@ -3,7 +3,7 @@
 
     <div class="home__introduce">
         <h1 class="home__introduce-title">
-            {{ homePageData()?.h1Title }}
+            {{ homePageData()?.h1Title }}<span class="home__introduce-version"> {{ interfaceService.interface()[0].version }}</span>
         </h1>
         <article class="home__introduce-text">
             <p>{{ homePageData()?.subtitle }}</p>
@@ -15,10 +15,12 @@
 
     <ul class="home__buttons">
         <li>
-            <div app-button [text]="'Documentation'"></div>
+            <div app-button [text]="'Documentation'" [borderColor]="'grey'"></div>
         </li>
         <li>
-            <div app-button [icon]="'star.svg'" [iconColor]="'yellow'" [text]="'GitHub'"></div>
+            <a href="https://github.com/thomas-bressel/archi-ts-cli" target="_blank">
+                <div app-button [icon]="'star.svg'" [iconColor]="'yellow'" [text]="'GitHub'" [borderColor]="'grey'"></div>
+            </a>
         </li>
     </ul>
 </section>
@@ -43,14 +45,16 @@
     <h2  class="home__bloc2-title">{{bloc2?.h2Title}}</h2>
     <p  class="home__bloc2-hook">{{bloc2?.hook}}</p>
 
-    <app-terminal [terminalContent]="interfaceService.getTerminalByBlocId('bloc2')"></app-terminal>
+    <app-terminal id="start" [terminalContent]="interfaceService.getTerminalByBlocId('bloc2')"></app-terminal>
 
     <ul class="home__buttons">
         <li>
-            <div app-button [text]="'Documentation'"></div>
+            <div app-button [text]="'Documentation'" [borderColor]="'grey'"></div>
         </li>
         <li>
-            <div app-button [icon]="'star.svg'" [iconColor]="'yellow'" [text]="'GitHub'"></div>
+            <a href="https://github.com/thomas-bressel/archi-ts-cli" target="_blank">
+                <div app-button [icon]="'star.svg'" [iconColor]="'yellow'" [text]="'GitHub'" [borderColor]="'grey'"></div>
+            </a>       
         </li>
     </ul>
 </section>

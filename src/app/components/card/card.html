@@ -1,5 +1,6 @@
 <div class="card__header">
-    <i class="card__icon">{{cardContent()?.icon}}</i>
+    <!-- <i class="card__icon">{{cardContent()?.icon}}</i> -->
+    <img class="card__icon" [src]="'icons/blue/' + cardContent()?.icon" alt="">
     <h3 class="card__title">{{cardContent()?.h3Title}}</h3>
 </div>
 

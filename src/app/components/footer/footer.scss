@@ -1,0 +1,18 @@
+@use 'mixins' as *;
+@use 'colors' as color;
+@use 'fonts' as font;
+
+
+:host {
+    @include flex($justify: center, $direction: column, $align: center, $gap: .5rem);
+    width: 100%;
+}
+
+
+.footer {
+
+    &__txt {
+        @include flex($justify: center, $direction: column, $align: center, $gap: .5rem);
+        @include text ($size: .85rem, $color: color.$grey);
+    }
+}

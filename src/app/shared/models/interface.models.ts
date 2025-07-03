@@ -9,6 +9,7 @@ export interface ButtonsList {
   shadowColor?: string;
   type?: string;
   link?: string;
+  anchor?: string;
 }
 
 export interface CardContent {
@@ -59,6 +60,10 @@ export interface LanguageConfig {
   }>;
   cta: ButtonsList[];
   pages: PageContent[];
+  footer: Array<{
+    line1: string;
+    line2: string;
+  }>;
 }
 
 export interface ConsoleStep {
