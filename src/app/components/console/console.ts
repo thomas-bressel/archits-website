@@ -90,12 +90,12 @@ export class Console implements OnInit, OnDestroy {
       const currentStep = this.consoleService.getCurrentStep();
       if (currentStep) {
 
-        // GESTION DES COMMANDES
+        // MANAGE COMMANDS
         if (currentStep.type === 'command' && currentStep.text) {
           await this.typeCommand(currentStep.text, currentStep.typingSpeed || 300, currentStep.id);
         }
 
-        // GESTION DES QUESTIONS
+        // MANAGE QUESTIONS
         if (currentStep.type === 'question' && currentStep.typedText && currentStep.typingSpeed) {
           await this.typeQuestion(currentStep.typedText, currentStep.typingSpeed, currentStep.id);
         }
@@ -105,10 +105,10 @@ export class Console implements OnInit, OnDestroy {
           if (this.isRunning) {
             this.consoleService.nextStep();
             
-            // AUTO-SCROLL MANUEL SUR LA CONSOLE SEULEMENT
+            // AUTO-SCROLL
             this.scrollConsoleToBottom();
 
-            // ANIMATION DU MENU APRÈS L'AFFICHAGE
+            // MENU ANIMATION AFTER RENDER
             const newStep = this.consoleService.getCurrentStep();
             if (newStep?.type === 'menu' && newStep.menuAnimation) {
               await this.consoleService.animateMenuSelection(
@@ -136,9 +136,9 @@ export class Console implements OnInit, OnDestroy {
   }
 
 
-  /**
-   * Scroll la console vers le bas SANS affecter la page
-   */
+/**
+ * Scroll page 
+ */
   private scrollConsoleToBottom() {
     setTimeout(() => {
       if (this.consoleMain?.nativeElement) {

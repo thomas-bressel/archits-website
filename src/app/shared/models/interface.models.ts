@@ -42,7 +42,89 @@ export interface PageContent {
   h1Title?: string;
   subtitle?: string;
   hook?: string;
-  blocs?: BlocContent[];
+  blocsContent?: BlocContent[] | "";
+  blocs?: Blocs[] ;
+  overlay?: Overlay[] | undefined;
+}
+
+export interface Overlay {
+    h5Title: string;
+    h5Icon: string;
+    h5Anchor: string;
+    items: Array<{
+      id: string;
+      name: string;
+      anchor: string;
+    }>
+}
+
+export interface Blocs {
+  id: string;
+  h2Title: string;
+  text?: string | undefined;
+  cards?: Card[] | undefined;
+  alerts?: Alert[] | undefined;
+  subBlocs?: SubBlocs[] | undefined;
+}
+
+
+export interface Card {
+  title: string;
+  icon: string;
+  text: string;
+}
+
+
+export interface SubBlocs {
+  id: string;
+  h3Title?: string;
+  subchildBlocs?: SubChildBloc[]| undefined;
+  arrays?: Arrays[] | undefined;
+}
+
+export interface Label {
+  label: string;
+  text?: string;
+}
+
+
+export interface SubChildBloc {
+  h4Title?: string;
+  text?: string;
+  h5Title?: string;
+  list?: string[];
+  arrays?: Arrays[] | undefined;
+  terminal?: TerminalError[] | undefined;
+  alerts?: Alert[] | undefined;
+  labels?: Label[] | undefined;
+}
+
+export interface Alert {
+  bgColor: string;
+  borderColor: string;
+  icon: string;
+  text: string;
+}
+
+export interface TerminalError {
+  message?: string;
+  text?: string;
+  type: string;
+  bgColor?: string;
+  borderColor?: string;
+  code: string;
+}
+
+export interface Arrays {
+  headCol: string[];
+  rows: Row[]; 
+}
+
+export interface Row {
+  [key: string]: Array<{
+    text: string;
+    label: boolean;
+  }>
 }
 
 export interface LanguageConfig {
