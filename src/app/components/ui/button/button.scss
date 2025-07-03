@@ -7,7 +7,7 @@
 
 .button {
     @include flex ($align: center, $gap: .5rem);
-    @include standard-border($radius: .9rem, $size: 2px);
+    @include standard-border($radius: .9rem, $size: 1px, $shape: solid);
     @include text($font: font.$InterMedium, $size: 1.25rem, $color: color.$h5-title); 
     
     transition: anim.$btn-hover ease-in-out;
@@ -25,7 +25,6 @@
         display: none
     }
 }
-
 
 
 @media screen and (min-width: 758px) {
