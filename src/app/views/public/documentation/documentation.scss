@@ -145,16 +145,25 @@
 
     }
 
+
+    &__table-mask {
+        overflow-x: scroll;
+    }
     &__table {
         font-size: 1.5rem;
         font-family: font.$InterRegular;
     }
 
     &__header{
-        background-color: transparent;
+        background-color: color.$background-blue-linear2;
         color: color.$white;
+
        &-text {
         padding: 1.5rem;
+        position: sticky;
+        left: 0;
+        background-color: color.$background-blue-linear2;
+        border-left: dotted 1px white;
        }
     }
     
@@ -162,8 +171,13 @@
         background-color: color.$background;
         color: color.$grey;
         &-text {
+            background-color: color.$background;
          padding: 1.5rem;
          border-bottom: 1px solid color.$grey;
+         position: sticky;
+         left: 0;
+         border-left: dotted 1px white;
+
         }
     }
 
@@ -192,7 +206,7 @@
 @media screen and (min-width: 758px) {
     :host {
         display: grid;
-        grid-template-columns: 320px minmax(50vw, 3fr);
+        grid-template-columns: 320px minmax(10%, 3fr);
     }
 
 }
