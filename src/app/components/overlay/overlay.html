@@ -1,20 +1,25 @@
 <div class="overlay__btn"  (click)="toggleOverlay($event)">{{isOverlayOpen() ? '>' : '<'}}</div>
-@for (bloc of interfaceService() ; track $index) {
-<h5 class="overlay__title">
-    <a [routerLink]="[]" [fragment]="`${bloc.h5Anchor}`">
-        @if (bloc.h5Icon) {
-        <span>{{bloc.h5Icon}}</span>
-        }
+
+
+<section class="overlay__scroll">
+
+    @for (bloc of interfaceService() ; track $index) {
+        <h5 class="overlay__title">
+            <a [routerLink]="[]" [fragment]="`${bloc.h5Anchor}`">
+                @if (bloc.h5Icon) {
+                    <span>{{bloc.h5Icon}}</span>
+                }
         {{bloc.h5Title}}
     </a>
 </h5>
 <ul>
     @for (item of bloc.items ; track $index) {
-    <li [id]="item.id">
+    <li  class="overlay__subtitle" [id]="item.id">
         <a [routerLink]="[]" [fragment]="`${item.anchor}`">
             <p>{{item.name}}</p>
         </a>
     </li>
-    }
+}
 </ul>
 }
+</section>

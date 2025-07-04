@@ -4,21 +4,18 @@
 
 :host {
     @include flex($direction: column, $gap: 1.5rem);
-    padding: 1rem;
+    padding: 1rem 0;
     height: 100vh;
     background: linear-gradient(135deg, color.$background-blue-linear1, color.$background-blue-linear2 50%, color.$background-blue-linear1);
     border-right : solid 20px color.$background-blue-linear1;
-    
-    
     
     &.opened {
         @include position($position: fixed, $left: 0, $top: 140px, $zindex: 0);
         transition: 300ms ease-in-out;
     }
     
-    
     &.closed {
-        @include position($position: fixed, $left: -270px, $top: 140px, $zindex: 0);
+        @include position($position: fixed, $left: -290px, $top: 140px, $zindex: 0);
         transition: 300ms ease-in-out;
     }
 }
@@ -26,18 +23,37 @@
 
 .overlay {
     &__btn {
-        @include position($position: relative, $left: 272px, $top: -1px);
-        color: color.$grey;
-        font-weight: bold;
-        font-size: larger;
-        border: 1px solid white;
+        @include position($position: relative, $left: 300px, $top: -1px);
+        @include standard-border ($radius: 50%, $shape: solid, $color: color.$white, $size: 1px);
+        @include text($color: color.$grey, $size: larger, $align: center);
         width: 28px;
-        border-radius: 50%;
         height: 28px;
-        text-align: center;
         background-color: color.$background-blue-linear1;
     }
 
+    &__scroll {
+        @include flex($direction: column, $gap: 1rem);
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    &__title {
+        color: color.$white;
+        font-size: 1.25rem;
+        border-radius: 8px;
+        padding: .5rem 1rem;
+        transition: 200ms ease-in-out;
+    }
+
+    &__subtitle {
+        color: color.$grey;
+        font-size: 1.25rem;
+        font-family: font.$InterLight;
+        padding: .5rem 1rem;
+        width: fit-content;
+        border-radius: 8px;
+        transition: 200ms ease-in-out;
+    }
 }
 
 @media screen and (min-width: 758px) {
@@ -50,15 +66,27 @@
 
         &.closed {
             @include position($position: fixed, $left: 0, $top: 140px, $zindex: 0);
-            transition: 300ms ease-in-out;
+            transition: 200ms ease-in-out;
         }
+        
+    }
 
-}
-
-
-.overlay {
-    &__btn {
+    
+    .overlay {
+        &__btn {
         display: none;
+    }
+    
+    &__title:hover {
+        transition: 200ms ease-in-out;
+        color: color.$h4-title;
+        background-color: rgba(36, 99, 235, 0.5);
+    }
+    
+    &__subtitle:hover {
+        transition: 200ms ease-in-out;
+        color: color.$h4-title;
+        background-color: rgba(36, 99, 235, 0.5);
     }
 
 }
