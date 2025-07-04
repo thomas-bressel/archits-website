@@ -6,23 +6,23 @@
 
 @let blocs = blocsData();
 
-<div>
+<div class="documentation__bloc">
     @for (section of blocs; track $index) {
 
-    <section [id]="section.id">
+    <section [id]="section.id" class="documentation__section">
 
         <!-- Main H2 header section -->
-        <h2>{{section.h2Title}}</h2>
-        <p>{{section.text}}</p>
+        <h2 class="documentation__h2Title">{{section.h2Title}}</h2>
+        <p class="documentation__text">{{section.text}}</p>
 
 
         <!-- Little cards-->
         @if(section.cards) {
-        <ul>
+        <ul class="documentation__cards">
             @for (card of section.cards ; track $index) {
-            <li>
-                <h5><span>{{card.icon}}</span>{{card.title}}</h5>
-                <p>{{card.text}}</p>
+            <li class="documentation__card">
+                <h5  class="documentation__card-title"><span>{{card.icon}}</span>{{card.title}}</h5>
+                <p  class="documentation__card-text">{{card.text}}</p>
             </li>
             }
         </ul>
@@ -32,8 +32,8 @@
         @if (section.alerts) {
         <ul>
             @for (alert of section.alerts ; track $index) {
-            <li [ngClass]="`bg-${alert.bgColor} border-${alert.borderColor}`">
-                <p><span>{{alert.icon}}</span>{{alert.text}}</p>
+            <li class="documentation__alert" [ngClass]="`bg-${alert.bgColor} border-${alert.borderColor}`">
+                <p class="documentation__text-p"><span >{{alert.icon}}</span >{{alert.text}}</p>
             </li>
             }
         </ul>
@@ -51,8 +51,8 @@
                 <ul>
                     @for(subChild of subBloc.subchildBlocs ; track $index) {
                     <li>
-                        <h4>{{subChild.h4Title}}</h4>
-                        <p>{{subChild.text}}</p>
+                        <h4 class="documentation__h4Title">{{subChild.h4Title}}</h4>
+                        <p  class="documentation__text">{{subChild.text}}</p>
 
                         <h5>{{subChild.h5Title}}</h5>
 
@@ -140,8 +140,8 @@
                         @if (subChild.alerts) {
                         <ul>
                             @for (alert of subChild.alerts ; track $index) {
-                            <li [ngClass]="`bg-${alert.bgColor} border-${alert.borderColor}`">
-                                <p><span>{{alert.icon}}</span>{{alert.text}}</p>
+                            <li class="documentation__alert" [ngClass]="`bg-${alert.bgColor} border-${alert.borderColor}`">
+                                <p  class="documentation__text-p"><span>{{alert.icon}}</span>{{alert.text}}</p>
                             </li>
                             }
                         </ul>

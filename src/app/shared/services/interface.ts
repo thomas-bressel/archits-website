@@ -433,8 +433,8 @@ archi create`
               text: "ArchiTS CLI est un outil en ligne de commande développé en Go qui permet de générer automatiquement des structures de projets backend robustes et bien organisées. Il supporte trois patterns architecturaux éprouvés et peut générer du code TypeScript ou JavaScript moderne.",
               alerts: [
                 {
-                  bgColor: 'blue',
-                  borderColor: 'blue',
+                  bgColor: 'alert-blue',
+                  borderColor: 'alert-blue',
                   icon: '💡',
                   text: "Philosophie : ArchiTS vous aide à démarrer vos projets backend avec une architecture solide, des bonnes pratiques et une configuration automatisée, vous permettant de vous concentrer sur votre logique métier."
                 },
@@ -698,8 +698,8 @@ source ~/.bashrc`
                       ],
                       alerts: [
                         {
-                          bgColor: 'yellow',
-                          borderColor: 'yellow',
+                          bgColor: 'alert-yellow',
+                          borderColor: 'alert-yellow',
                           icon: '⚠️',
                           text: "Note importante : ArchiTS est actuellement optimisé pour Linux et WSL. L'utilisation sur Windows natif nécessite WSL (Windows Subsystem for Linux)."
                         },
@@ -726,8 +726,8 @@ archi create`
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '✅',
                           text: "Installation réussie ! Si toutes les commandes fonctionnent, ArchiTS est prêt à être utilisé."
                         },
@@ -830,8 +830,8 @@ curl http://localhost:3000
                       ],
                       alerts: [
                         {
-                          bgColor: 'blue',
-                          borderColor: 'blue',
+                          bgColor: 'alert-blue',
+                          borderColor: 'alert-blue',
                           icon: '🎯',
                           text: "Résultat : Vous avez maintenant une API fonctionnelle avec une architecture Clean, TypeScript et ExpressJS, prête à recevoir votre logique métier !"
                         },
@@ -887,8 +887,8 @@ curl http://localhost:3000
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "Avantages : Simple à comprendre, rapide à développer, idéal pour débuter"
                         },
@@ -939,8 +939,8 @@ curl http://localhost:3000
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "Avantages : Indépendance technologique, testabilité maximale, évolutivité"
                         },
@@ -1004,8 +1004,8 @@ curl http://localhost:3000
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "Avantages : Isolation maximale, flexibilité des adaptateurs, testabilité parfaite"
                         },
@@ -1166,8 +1166,8 @@ curl http://localhost:3000
                       h5Title: "TypeScript (Fortement recommandé)",
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "Avantages TypeScript : Typage statique, IntelliSense amélioré, détection d'erreurs à la compilation, meilleure documentation du code"
                         },
@@ -1298,8 +1298,8 @@ MAIL_AUTH_PASSWORD="my-super-password"`
                       ],
                       alerts: [
                         {
-                          bgColor: 'red',
-                          borderColor: 'red',
+                          bgColor: 'alert-red',
+                          borderColor: 'alert-red',
                           icon: '🔒',
                           text: "Sécurité : N'oubliez pas de modifier les valeurs par défaut, surtout les mots de passe et clés secrètes avant de passer en production !"
                         },
@@ -1769,8 +1769,8 @@ make install`
               text: "ArchiTS CLI is a command-line tool developed in Go that automatically generates robust and well-organized backend project structures. It supports three proven architectural patterns and can generate modern TypeScript or JavaScript code.",
               alerts: [
                 {
-                  bgColor: 'blue',
-                  borderColor: 'blue',
+                  bgColor: 'alert-blue',
+                  borderColor: 'alert-blue',
                   icon: '💡',
                   text: "Philosophy: ArchiTS helps you start your backend projects with a solid architecture, best practices, and automated configuration, allowing you to focus on your business logic."
                 },
@@ -2033,8 +2033,8 @@ make install`
                       ],
                       alerts: [
                         {
-                          bgColor: 'yellow',
-                          borderColor: 'yellow',
+                          bgColor: 'alert-yellow',
+                          borderColor: 'alert-yellow',
                           icon: '⚠️',
                           text: "Important note: ArchiTS is currently optimized for Linux and WSL. Using on native Windows requires WSL (Windows Subsystem for Linux)."
                         },
@@ -2061,8 +2061,8 @@ make install`
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '✅',
                           text: "Installation successful! If all commands work, ArchiTS is ready to use."
                         },
@@ -2164,8 +2164,8 @@ make install`
                       ],
                       alerts: [
                         {
-                          bgColor: 'blue',
-                          borderColor: 'blue',
+                          bgColor: 'alert-blue',
+                          borderColor: 'alert-blue',
                           icon: '🎯',
                           text: "Result: You now have a functional API with Clean architecture, TypeScript and ExpressJS, ready to receive your business logic!"
                         },
@@ -2220,8 +2220,8 @@ make install`
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "Advantages: Easy to understand, quick to develop, ideal for beginners"
                         },
@@ -2271,8 +2271,8 @@ make install`
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "Advantages: Technology independence, maximum testability, scalability"
                         },
@@ -2336,8 +2336,8 @@ make install`
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "Advantages: Maximum isolation, adapter flexibility, perfect testability"
                         },
@@ -2497,8 +2497,8 @@ make install`
                       h5Title: "TypeScript (Highly recommended)",
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "TypeScript advantages: Static typing, enhanced IntelliSense, compile-time error detection, better code documentation"
                         },
@@ -2629,8 +2629,8 @@ make install`
                       ],
                       alerts: [
                         {
-                          bgColor: 'red',
-                          borderColor: 'red',
+                          bgColor: 'alert-red',
+                          borderColor: 'alert-red',
                           icon: '🔒',
                           text: "Security: Don't forget to change the default values, especially passwords and secret keys before going to production!"
                         },
@@ -3107,8 +3107,8 @@ archi create`
               text: "ArchiTS CLI - это инструмент командной строки, разработанный на Go, который позволяет автоматически генерировать надежные и хорошо организованные структуры backend-проектов. Он поддерживает три проверенных архитектурных паттерна и может генерировать современный код TypeScript или JavaScript.",
               alerts: [
                 {
-                  bgColor: 'blue',
-                  borderColor: 'blue',
+                  bgColor: 'alert-blue',
+                  borderColor: 'alert-blue',
                   icon: '💡',
                   text: "Философия: ArchiTS помогает вам запускать backend-проекты с надежной архитектурой, лучшими практиками и автоматической конфигурацией, позволяя сосредоточиться на бизнес-логике."
                 },
@@ -3371,8 +3371,8 @@ source ~/.bashrc`
                       ],
                       alerts: [
                         {
-                          bgColor: 'yellow',
-                          borderColor: 'yellow',
+                          bgColor: 'alert-yellow',
+                          borderColor: 'alert-yellow',
                           icon: '⚠️',
                           text: "Важное примечание: ArchiTS в настоящее время оптимизирован для Linux и WSL. Использование в нативной Windows требует WSL (Windows Subsystem for Linux)."
                         },
@@ -3399,8 +3399,8 @@ archi create`
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '✅',
                           text: "Установка успешна! Если все команды работают, ArchiTS готов к использованию."
                         },
@@ -3501,8 +3501,8 @@ curl http://localhost:3000
                       ],
                       alerts: [
                         {
-                          bgColor: 'blue',
-                          borderColor: 'blue',
+                          bgColor: 'alert-blue',
+                          borderColor: 'alert-blue',
                           icon: '🎯',
                           text: "Результат: Теперь у вас есть функциональный API с Clean Architecture, TypeScript и ExpressJS, готовый к добавлению вашей бизнес-логики!"
                         },
@@ -3561,8 +3561,8 @@ curl http://localhost:3000
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "Преимущества: Легко понять, быстро разрабатывать, идеально для начинающих"
                         },
@@ -3612,8 +3612,8 @@ curl http://localhost:3000
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "Преимущества: Технологическая независимость, максимальная тестируемость, масштабируемость"
                         },
@@ -3677,8 +3677,8 @@ curl http://localhost:3000
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "Преимущества: Максимальная изоляция, гибкость адаптеров, идеальная тестируемость"
                         },
@@ -3838,8 +3838,8 @@ curl http://localhost:3000
                       h5Title: "TypeScript (настоятельно рекомендуется)",
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "Преимущества TypeScript: Статическая типизация, улучшенный IntelliSense, обнаружение ошибок на этапе компиляции, лучшая документация кода"
                         },
@@ -3973,8 +3973,8 @@ MAIL_AUTH_PASSWORD="my-super-password"`
                       ],
                       alerts: [
                         {
-                          bgColor: 'red',
-                          borderColor: 'red',
+                          bgColor: 'alert-red',
+                          borderColor: 'alert-red',
                           icon: '🔒',
                           text: "Безопасность: Не забудьте изменить значения по умолчанию, особенно пароли и секретные ключи перед переходом в продакшн!"
                         },
@@ -4464,8 +4464,8 @@ archi create`
               text: "ArchiTS CLIは、Goで開発されたコマンドラインツールで、堅牢で適切に整理されたバックエンドプロジェクト構造を自動生成できます。3つの実証済みアーキテクチャパターンをサポートし、モダンなTypeScriptまたはJavaScriptコードを生成できます。",
               alerts: [
                 {
-                  bgColor: 'blue',
-                  borderColor: 'blue',
+                  bgColor: 'alert-blue',
+                  borderColor: 'alert-blue',
                   icon: '💡',
                   text: "哲学：ArchiTSは堅牢なアーキテクチャ、ベストプラクティス、自動設定でバックエンドプロジェクトを開始し、ビジネスロジックに集中できるようにします。"
                 },
@@ -4728,8 +4728,8 @@ source ~/.bashrc`
                       ],
                       alerts: [
                         {
-                          bgColor: 'yellow',
-                          borderColor: 'yellow',
+                          bgColor: 'alert-yellow',
+                          borderColor: 'alert-yellow',
                           icon: '⚠️',
                           text: "重要な注意：ArchiTSは現在LinuxとWSLで最適化されています。ネイティブWindowsでの使用にはWSL（Windows Subsystem for Linux）が必要です。"
                         },
@@ -4756,8 +4756,8 @@ archi create`
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '✅',
                           text: "インストール成功！すべてのコマンドが動作すれば、ArchiTSは使用準備完了です。"
                         },
@@ -4858,8 +4858,8 @@ curl http://localhost:3000
                       ],
                       alerts: [
                         {
-                          bgColor: 'blue',
-                          borderColor: 'blue',
+                          bgColor: 'alert-blue',
+                          borderColor: 'alert-blue',
                           icon: '🎯',
                           text: "結果：Clean Architecture、TypeScript、ExpressJSを使用した機能的なAPIができ、ビジネスロジックを追加する準備が整いました！"
                         },
@@ -4918,8 +4918,8 @@ curl http://localhost:3000
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "メリット：理解しやすい、迅速な開発、初心者に最適"
                         },
@@ -4969,8 +4969,8 @@ curl http://localhost:3000
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "メリット：技術的独立性、最大限のテスト可能性、スケーラビリティ"
                         },
@@ -5034,8 +5034,8 @@ curl http://localhost:3000
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "メリット：最大限の分離、アダプターの柔軟性、完璧なテスト可能性"
                         },
@@ -5195,8 +5195,8 @@ curl http://localhost:3000
                       h5Title: "TypeScript（強く推奨）",
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "TypeScriptのメリット：静的型付け、改善されたIntelliSense、コンパイル時のエラー検出、より良いコード文書化"
                         },
@@ -5330,8 +5330,8 @@ MAIL_AUTH_PASSWORD="my-super-password"`
                       ],
                       alerts: [
                         {
-                          bgColor: 'red',
-                          borderColor: 'red',
+                          bgColor: 'alert-red',
+                          borderColor: 'alert-red',
                           icon: '🔒',
                           text: "セキュリティ：プロダクション環境に移行する前に、特にパスワードと秘密鍵のデフォルト値を変更することを忘れないでください！"
                         },
@@ -5824,8 +5824,8 @@ make install`
               text: "ArchiTS CLI es una herramienta de línea de comandos desarrollada en Go que permite generar automáticamente estructuras de proyectos backend robustas y bien organizadas. Soporta tres patrones arquitectónicos probados y puede generar código TypeScript o JavaScript moderno.",
               alerts: [
                 {
-                  bgColor: 'blue',
-                  borderColor: 'blue',
+                  bgColor: 'alert-blue',
+                  borderColor: 'alert-blue',
                   icon: '💡',
                   text: "Filosofía: ArchiTS te ayuda a iniciar tus proyectos backend con una arquitectura sólida, buenas prácticas y configuración automatizada, permitiéndote enfocarte en tu lógica de negocio."
                 },
@@ -6088,8 +6088,8 @@ make install`
                       ],
                       alerts: [
                         {
-                          bgColor: 'yellow',
-                          borderColor: 'yellow',
+                          bgColor: 'alert-yellow',
+                          borderColor: 'alert-yellow',
                           icon: '⚠️',
                           text: "Nota importante: ArchiTS está actualmente optimizado para Linux y WSL. El uso en Windows nativo requiere WSL (Windows Subsystem for Linux)."
                         },
@@ -6116,8 +6116,8 @@ make install`
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '✅',
                           text: "¡Instalación exitosa! Si todos los comandos funcionan, ArchiTS está listo para usar."
                         },
@@ -6219,8 +6219,8 @@ make install`
                       ],
                       alerts: [
                         {
-                          bgColor: 'blue',
-                          borderColor: 'blue',
+                          bgColor: 'alert-blue',
+                          borderColor: 'alert-blue',
                           icon: '🎯',
                           text: "¡Resultado: Ahora tienes una API funcional con arquitectura Clean, TypeScript y ExpressJS, lista para recibir tu lógica de negocio!"
                         },
@@ -6275,8 +6275,8 @@ make install`
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "Ventajas: Fácil de entender, rápido de desarrollar, ideal para comenzar"
                         },
@@ -6326,8 +6326,8 @@ make install`
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "Ventajas: Independencia tecnológica, testeabilidad máxima, escalabilidad"
                         },
@@ -6391,8 +6391,8 @@ make install`
                       ],
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "Ventajas: Aislamiento máximo, flexibilidad de adaptadores, testeabilidad perfecta"
                         },
@@ -6474,8 +6474,8 @@ make install`
                       h5Title: "TypeScript (Altamente recomendado)",
                       alerts: [
                         {
-                          bgColor: 'green',
-                          borderColor: 'green',
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
                           icon: '👍',
                           text: "Ventajas de TypeScript: Tipado estático, IntelliSense mejorado, detección de errores en tiempo de compilación, mejor documentación del código"
                         },
@@ -6606,8 +6606,8 @@ make install`
                       ],
                       alerts: [
                         {
-                          bgColor: 'red',
-                          borderColor: 'red',
+                          bgColor: 'alert-red',
+                          borderColor: 'alert-red',
                           icon: '🔒',
                           text: "Seguridad: ¡No olvides modificar los valores por defecto, especialmente las contraseñas y claves secretas antes de pasar a producción!"
                         },

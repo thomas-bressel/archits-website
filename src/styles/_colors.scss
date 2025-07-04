@@ -30,12 +30,24 @@ $h5-title: #93A4B8;
  // alert box
 $alert-box-border-blue: #2563EB;
 $alert-box-bg-blue: #1F2F4D; 
+.border-alert-blue { border-color: $alert-box-border-blue !important;}
+.bg-alert-blue { background-color: $alert-box-bg-blue !important;}
+
 $alert-box-border-yellow: #FFCE31;
 $alert-box-bg-yellow: #413A15;
-$alert-box-border-green: #0F4B00;
-$alert-box-bg-green: #27BE01; 
+.border-alert-yellow { border-color: $alert-box-border-yellow !important;}
+.bg-alert-yellow { background-color: $alert-box-bg-yellow !important;}
+
+$alert-box-bg-green: #0F4B00;
+$alert-box-border-green: #27BE01; 
+.border-alert-green { border-color: $alert-box-border-green !important;}
+.bg-alert-green { background-color: $alert-box-bg-green !important;}
+
 $alert-box-border-red: #FF5353;
 $alert-box-bg-red: #5B3333; 
+.border-alert-red { border-color: $alert-box-border-red !important;}
+.bg-alert-red { background-color: $alert-box-bg-red !important;}
+
 
 // link
 $link-active: #F1F5F9;

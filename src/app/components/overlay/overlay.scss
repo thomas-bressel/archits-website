@@ -7,13 +7,14 @@
     padding: 1rem 0;
     height: 100vh;
     background: linear-gradient(135deg, color.$background-blue-linear1, color.$background-blue-linear2 50%, color.$background-blue-linear1);
-    border-right : solid 20px color.$background-blue-linear1;
-    
+    border-right: solid 20px color.$background-blue-linear1;
+
     &.opened {
         @include position($position: fixed, $left: 0, $top: 140px, $zindex: 0);
         transition: 300ms ease-in-out;
+
     }
-    
+
     &.closed {
         @include position($position: fixed, $left: -290px, $top: 140px, $zindex: 0);
         transition: 300ms ease-in-out;
@@ -35,6 +36,7 @@
         @include flex($direction: column, $gap: 1rem);
         height: 100%;
         overflow-y: auto;
+        margin-bottom: 10rem;
     }
 
     &__title {
@@ -57,38 +59,43 @@
 }
 
 @media screen and (min-width: 758px) {
-    
-    
-    :host {
-        position: static;
-        background: linear-gradient(135deg, color.$background-blue-linear1, color.$background-blue-linear2 50%, color.$background-blue-linear1);
-        position: absolute;
 
-        &.closed {
-            @include position($position: fixed, $left: 0, $top: 140px, $zindex: 0);
+
+    :host {
+        background: linear-gradient(135deg, color.$background-blue-linear1, color.$background-blue-linear2 50%, color.$background-blue-linear1);
+
+        &.closed,
+        &.opened {
+            @include position($position: sticky);
+            margin-left: -16px;
+            margin-top: -16px;
             transition: 200ms ease-in-out;
         }
-        
     }
 
-    
     .overlay {
         &__btn {
-        display: none;
-    }
-    
-    &__title:hover {
-        transition: 200ms ease-in-out;
-        color: color.$h4-title;
-        background-color: rgba(36, 99, 235, 0.5);
-    }
-    
-    &__subtitle:hover {
-        transition: 200ms ease-in-out;
-        color: color.$h4-title;
-        background-color: rgba(36, 99, 235, 0.5);
-    }
+            display: none;
+        }
 
-}
+        &__scroll {
+            position: fixed;
+            top: 150px;
+            padding-left: 1rem ;
+        }
+
+        &__title:hover {
+            transition: 200ms ease-in-out;
+            color: color.$h4-title;
+            background-color: rgba(36, 99, 235, 0.5);
+        }
+
+        &__subtitle:hover {
+            transition: 200ms ease-in-out;
+            color: color.$h4-title;
+            background-color: rgba(36, 99, 235, 0.5);
+        }
+
+    }
 
 }
