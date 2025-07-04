@@ -37,3 +37,11 @@ body {
 }
 
 
+.tag {
+    color: color.$h4-title;
+    border : 1px solid color.$grey;
+    border-radius: 8px;
+    padding: 0.2rem .4rem;
+
+}
+

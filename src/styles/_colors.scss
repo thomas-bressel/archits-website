@@ -48,6 +48,12 @@ $alert-box-bg-red: #5B3333;
 .border-alert-red { border-color: $alert-box-border-red !important;}
 .bg-alert-red { background-color: $alert-box-bg-red !important;}
 
+// terminal
+$terminal-border-black: #303030;
+$terminal-bg-black: #0c0c0c; 
+.border-terminal-black { border-color: $terminal-border-black !important;}
+.bg-terminal-black { background-color: $terminal-bg-black !important;}
+
 
 // link
 $link-active: #F1F5F9;

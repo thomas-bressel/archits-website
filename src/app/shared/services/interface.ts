@@ -251,6 +251,8 @@ export class Interface {
               cards: [],
               terminal: [
                 {
+                  bgColor: "terminal-black",
+                  borderColor: "terminal-black",
                   type: 'bash',
                   content: `# Cloner le repository
 git clone https://github.com/thomas-bressel/archi-ts-cli.git
@@ -683,6 +685,8 @@ archi create`
                       text: "Suivez ces étapes pour installer ArchiTS sur votre système :",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# 1. Cloner le repository
 git clone https://github.com/thomas-bressel/archi-ts-cli.git
@@ -710,6 +714,8 @@ source ~/.bashrc`
                       text: "Une fois l'installation terminée, vérifiez que tout fonctionne correctement :",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Vérifier la version d'ArchiTS
 archi --version
@@ -749,6 +755,8 @@ archi create`
                       text: "Créons ensemble votre premier projet backend avec ArchiTS :",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Lancer la création interactive
 archi create`
@@ -759,6 +767,8 @@ archi create`
                       text: "ArchiTS vous guidera à travers une série de questions :",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Vérifier la version d'ArchiTS
 archi --version
@@ -779,6 +789,8 @@ archi create`
                       text: "Une fois votre projet créé, voici les commandes essentielles :",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Se déplacer dans le projet
 cd mon-api-backend 
@@ -809,6 +821,8 @@ npm run lint`
                       text: "Voici un exemple complet de création et démarrage d'un projet :",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# 1. Créer le projet
 archi create
@@ -856,6 +870,8 @@ curl http://localhost:3000
                       h5Title: "Structure générée :",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TEXT",
                           code: `src/ ├── controllers/ # Gestion des requêtes HTTP
      │ └── base/ ├── services/ # Logique métier 
@@ -901,6 +917,8 @@ curl http://localhost:3000
                       h5Title: "Structure générée :",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TEXT",
                           code: `src/ ├── domain/ # Cœur métier pur
      │ └── entities/ 
@@ -952,6 +970,8 @@ curl http://localhost:3000
                       h5Title: "Structure générée :",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TEXT",
                           code: `src/ ├── core/ # Hexagone central
      │ ├── domain/ 
@@ -1196,6 +1216,8 @@ curl http://localhost:3000
                       h5Title: "Typescript : Scripts npm générés :",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "JSON",
                           code: `{ "scripts": 
   { "start": "node dist/src/index.js",
@@ -1213,6 +1235,8 @@ curl http://localhost:3000
                       h5Title: "Javascript : Scripts npm générés :",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "JSON",
                           code: `{ "scripts": 
    { "start": "node src/index.js",
@@ -1229,6 +1253,8 @@ curl http://localhost:3000
                       text: "Vous pouvez choisir d'utiliser ExpressJS ou Node.js natif lors de la création du projet.",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TYPESCRIPT",
                           code: `import express, { Express, Request, Response } from 'express';
 const server = express();
@@ -1257,6 +1283,8 @@ server.listen(PORT, () => {
                       text: "ArchiTS génère automatiquement un fichier .env avec toutes les variables essentielles :",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Environment 
 NODE_ENV=development 
@@ -1322,6 +1350,8 @@ MAIL_AUTH_PASSWORD="my-super-password"`
                       text: "Commande principale pour créer un nouveau projet avec ArchiTS.",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `archi create`
                         },
@@ -1349,6 +1379,8 @@ MAIL_AUTH_PASSWORD="my-super-password"`
                       text: "Affiche les informations détaillées sur la version et l'environnement.",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Version courte
 archi -v 
@@ -1409,6 +1441,8 @@ make clean make install`
                       text: "Pour diagnostiquer les problèmes, vous pouvez :",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Vérifier l'installation 
 which archi 
@@ -2018,6 +2052,8 @@ make install`
                       text: "Follow these steps to install ArchiTS on your system:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# 1. Clone the repository
   git clone https://github.com/thomas-bressel/archi-ts-cli.git
@@ -2045,6 +2081,8 @@ make install`
                       text: "Once installation is complete, verify that everything works correctly:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Check ArchiTS version
   archi --version
@@ -2084,6 +2122,8 @@ make install`
                       text: "Let's create your first backend project with ArchiTS together:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Launch interactive creation
   archi create`
@@ -2094,6 +2134,8 @@ make install`
                       text: "ArchiTS will guide you through a series of questions:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Check ArchiTS version
   archi --version
@@ -2114,6 +2156,8 @@ make install`
                       text: "Once your project is created, here are the essential commands:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Navigate to the project
   cd my-backend-api 
@@ -2143,6 +2187,8 @@ make install`
                       text: "Here's a complete example of project creation and startup:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# 1. Create the project
   archi create
@@ -2189,6 +2235,8 @@ make install`
                       h5Title: "Generated structure:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TEXT",
                           code: `src/ ├── controllers/ # HTTP request handling
        │ └── base/ ├── services/ # Business logic 
@@ -2233,6 +2281,8 @@ make install`
                       h5Title: "Generated structure:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TEXT",
                           code: `src/ ├── domain/ # Pure business core
        │ └── entities/ 
@@ -2284,6 +2334,8 @@ make install`
                       h5Title: "Generated structure:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TEXT",
                           code: `src/ ├── core/ # Central hexagon
        │ ├── domain/ 
@@ -2525,6 +2577,8 @@ make install`
                       h5Title: "TypeScript: Generated npm scripts:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "JSON",
                           code: `{ "scripts": 
     { "start": "node dist/src/index.js",
@@ -2542,6 +2596,8 @@ make install`
                       h5Title: "JavaScript: Generated npm scripts:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "JSON",
                           code: `{ "scripts": 
      { "start": "node src/index.js",
@@ -2558,6 +2614,8 @@ make install`
                       text: "You can choose to use ExpressJS or native Node.js when creating the project.",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TYPESCRIPT",
                           code: `import express, { Express, Request, Response } from 'express';
   const server = express();
@@ -2586,6 +2644,8 @@ make install`
                       text: "ArchiTS automatically generates an .env file with all essential variables:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Environment 
   NODE_ENV=development 
@@ -2652,6 +2712,8 @@ make install`
                       text: "Main command to create a new project with ArchiTS.",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `archi create`
                         },
@@ -2681,6 +2743,8 @@ make install`
                       text: "Displays detailed information about version and environment.",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Short version
   archi -v 
@@ -2699,11 +2763,11 @@ make install`
                       text: "Here are solutions to common problems:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           message: "❌ Error: archi: command not found",
                           text: "Solutions:",
                           type: "BASH",
-                          bgColor: 'red',
-                          borderColor: 'red',
                           code: `# Reload the shell
   source ~/.bashrc 
   
@@ -2744,6 +2808,8 @@ make install`
                       text: "To diagnose problems, you can:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Check installation 
   which archi 
@@ -3356,6 +3422,8 @@ archi create`
                       text: "Следуйте этим шагам для установки ArchiTS в вашей системе:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# 1. Клонирование репозитория
 git clone https://github.com/thomas-bressel/archi-ts-cli.git
@@ -3383,6 +3451,8 @@ source ~/.bashrc`
                       text: "После завершения установки проверьте, что все работает правильно:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Проверка версии ArchiTS
 archi --version
@@ -3422,6 +3492,8 @@ archi create`
                       text: "Давайте создадим ваш первый backend-проект с ArchiTS:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Запуск интерактивного создания
 archi create`
@@ -3432,6 +3504,8 @@ archi create`
                       text: "ArchiTS проведет вас через серию вопросов:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Интерактивные вопросы при создании проекта
 ? Введите имя проекта: mon-api-backend
@@ -3452,6 +3526,8 @@ archi create`
                       text: "После создания проекта, вот основные команды:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Переход в проект
 cd mon-api-backend 
@@ -3481,6 +3557,8 @@ npm run lint`
                       text: "Вот полный пример создания и запуска проекта:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# 1. Создание проекта
 archi create
@@ -3526,6 +3604,8 @@ curl http://localhost:3000
                       h5Title: "Генерируемая структура:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TEXT",
                           code: `src/
 ├── controllers/     # Обработка HTTP-запросов
@@ -3574,6 +3654,8 @@ curl http://localhost:3000
                       h5Title: "Генерируемая структура:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TEXT",
                           code: `src/
 ├── domain/          # Чистая бизнес-логика
@@ -3625,6 +3707,8 @@ curl http://localhost:3000
                       h5Title: "Генерируемая структура:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TEXT",
                           code: `src/
 ├── core/            # Центральный гексагон
@@ -3866,6 +3950,8 @@ curl http://localhost:3000
                       h5Title: "TypeScript: Генерируемые npm-скрипты:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "JSON",
                           code: `{ 
 "scripts": {
@@ -3884,6 +3970,8 @@ curl http://localhost:3000
                       h5Title: "JavaScript: Генерируемые npm-скрипты:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "JSON",
                           code: `{ 
 "scripts": {
@@ -3901,6 +3989,8 @@ curl http://localhost:3000
                       text: "Вы можете выбрать использование ExpressJS или нативного Node.js при создании проекта.",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TYPESCRIPT",
                           code: `import express, { Express, Request, Response } from 'express';
 
@@ -3930,6 +4020,8 @@ console.log('Server running on http://localhost:' + PORT);
                       text: "ArchiTS автоматически генерирует файл .env со всеми важными переменными:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Окружение 
 NODE_ENV=development 
@@ -3996,6 +4088,8 @@ MAIL_AUTH_PASSWORD="my-super-password"`
                       text: "Основная команда для создания нового проекта с ArchiTS.",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `archi create`
                         },
@@ -4025,6 +4119,8 @@ MAIL_AUTH_PASSWORD="my-super-password"`
                       text: "Показывает подробную информацию о версии и окружении.",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Короткая версия
 archi -v 
@@ -4043,11 +4139,11 @@ archi version`
                       text: "Решения для наиболее распространенных проблем:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           message: "❌ Ошибка: archi: command not found",
                           text: "Решения:",
                           type: "BASH",
-                          bgColor: 'red',
-                          borderColor: 'red',
                           code: `# Перезагрузка shell
 source ~/.bashrc 
 
@@ -4101,6 +4197,8 @@ go version`
                       text: "Для диагностики проблем вы можете:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Проверка установки 
 which archi 
@@ -4713,6 +4811,8 @@ archi create`
                       text: "システムにArchiTSをインストールするには、以下の手順に従ってください：",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# 1. リポジトリのクローン
 git clone https://github.com/thomas-bressel/archi-ts-cli.git
@@ -4740,6 +4840,8 @@ source ~/.bashrc`
                       text: "インストールが完了したら、すべてが正常に動作することを確認してください：",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# ArchiTSバージョンの確認
 archi --version
@@ -4779,6 +4881,8 @@ archi create`
                       text: "ArchiTSで最初のバックエンドプロジェクトを作成しましょう：",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# インタラクティブ作成の開始
 archi create`
@@ -4789,6 +4893,8 @@ archi create`
                       text: "ArchiTSが一連の質問を案内します：",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# プロジェクト作成時のインタラクティブな質問
 ? プロジェクト名を入力: mon-api-backend
@@ -4809,6 +4915,8 @@ archi create`
                       text: "プロジェクトが作成されたら、以下が基本的なコマンドです：",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# プロジェクトに移動
 cd mon-api-backend 
@@ -4838,6 +4946,8 @@ npm run lint`
                       text: "プロジェクトの作成と開始の完全な例：",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# 1. プロジェクトの作成
 archi create
@@ -4883,6 +4993,8 @@ curl http://localhost:3000
                       h5Title: "生成される構造：",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TEXT",
                           code: `src/
 ├── controllers/     # HTTPリクエストの処理
@@ -4931,6 +5043,8 @@ curl http://localhost:3000
                       h5Title: "生成される構造：",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TEXT",
                           code: `src/
 ├── domain/          # 純粋なビジネスロジック
@@ -4982,6 +5096,8 @@ curl http://localhost:3000
                       h5Title: "生成される構造：",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TEXT",
                           code: `src/
 ├── core/            # 中央ヘキサゴン
@@ -5223,6 +5339,8 @@ curl http://localhost:3000
                       h5Title: "TypeScript：生成されるnpmスクリプト：",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "JSON",
                           code: `{ 
   "scripts": {
@@ -5241,6 +5359,8 @@ curl http://localhost:3000
                       h5Title: "JavaScript：生成されるnpmスクリプト：",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "JSON",
                           code: `{ 
   "scripts": {
@@ -5258,6 +5378,8 @@ curl http://localhost:3000
                       text: "プロジェクト作成時にExpressJSまたはネイティブNode.jsの使用を選択できます。",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TYPESCRIPT",
                           code: `import express, { Express, Request, Response } from 'express';
 
@@ -5287,6 +5409,8 @@ server.listen(PORT, () => {
                       text: "ArchiTSは重要な変数をすべて含む.envファイルを自動生成します：",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# 環境 
 NODE_ENV=development 
@@ -5353,6 +5477,8 @@ MAIL_AUTH_PASSWORD="my-super-password"`
                       text: "ArchiTSで新しいプロジェクトを作成するためのメインコマンド。",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `archi create`
                         },
@@ -5382,6 +5508,8 @@ MAIL_AUTH_PASSWORD="my-super-password"`
                       text: "バージョンと環境に関する詳細情報を表示します。",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# 短縮版
 archi -v 
@@ -5400,11 +5528,11 @@ archi version`
                       text: "最も一般的な問題の解決策：",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           message: "❌ エラー: archi: command not found",
                           text: "解決策:",
                           type: "BASH",
-                          bgColor: 'red',
-                          borderColor: 'red',
                           code: `# シェルの再読み込み
 source ~/.bashrc 
 
@@ -5458,6 +5586,8 @@ go version`
                       text: "問題を診断するには：",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# インストールの確認 
 which archi 
@@ -6073,6 +6203,8 @@ make install`
                       text: "Sigue estos pasos para instalar ArchiTS en tu sistema:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# 1. Clonar el repositorio
     git clone https://github.com/thomas-bressel/archi-ts-cli.git
@@ -6100,6 +6232,8 @@ make install`
                       text: "Una vez completada la instalación, verifica que todo funcione correctamente:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Verificar la versión de ArchiTS
     archi --version
@@ -6139,6 +6273,8 @@ make install`
                       text: "Creemos juntos tu primer proyecto backend con ArchiTS:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Lanzar la creación interactiva
     archi create`
@@ -6149,6 +6285,8 @@ make install`
                       text: "ArchiTS te guiará a través de una serie de preguntas:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Verificar la versión de ArchiTS
     archi --version
@@ -6169,6 +6307,8 @@ make install`
                       text: "Una vez creado tu proyecto, aquí están los comandos esenciales:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Navegar al proyecto
     cd mi-api-backend 
@@ -6198,6 +6338,8 @@ make install`
                       text: "Aquí tienes un ejemplo completo de creación e inicio de un proyecto:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# 1. Crear el proyecto
     archi create
@@ -6244,6 +6386,8 @@ make install`
                       h5Title: "Estructura generada:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TEXT",
                           code: `src/ ├── controllers/ # Gestión de peticiones HTTP
          │ └── base/ ├── services/ # Lógica de negocio 
@@ -6288,6 +6432,8 @@ make install`
                       h5Title: "Estructura generada:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TEXT",
                           code: `src/ ├── domain/ # Núcleo de negocio puro
          │ └── entities/ 
@@ -6339,6 +6485,8 @@ make install`
                       h5Title: "Estructura generada:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TEXT",
                           code: `src/ ├── core/ # Hexágono central
          │ ├── domain/ 
@@ -6502,6 +6650,8 @@ make install`
                       h5Title: "TypeScript: Scripts npm generados:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "JSON",
                           code: `{ "scripts": 
       { "start": "node dist/src/index.js",
@@ -6519,6 +6669,8 @@ make install`
                       h5Title: "JavaScript: Scripts npm generados:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "JSON",
                           code: `{ "scripts": 
        { "start": "node src/index.js",
@@ -6535,6 +6687,8 @@ make install`
                       text: "Puedes elegir usar ExpressJS o Node.js nativo durante la creación del proyecto.",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "TYPESCRIPT",
                           code: `import express, { Express, Request, Response } from 'express';
     const server = express();
@@ -6563,6 +6717,8 @@ make install`
                       text: "ArchiTS genera automáticamente un archivo .env con todas las variables esenciales:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Entorno 
     NODE_ENV=development 
@@ -6629,6 +6785,8 @@ make install`
                       text: "Comando principal para crear un nuevo proyecto con ArchiTS.",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `archi create`
                         },
@@ -6658,6 +6816,8 @@ make install`
                       text: "Muestra información detallada sobre la versión y el entorno.",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Versión corta
     archi -v 
@@ -6676,11 +6836,11 @@ make install`
                       text: "Aquí están las soluciones a problemas comunes:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           message: "❌ Error: archi: command not found",
                           text: "Soluciones:",
                           type: "BASH",
-                          bgColor: 'red',
-                          borderColor: 'red',
                           code: `# Recargar el shell
     source ~/.bashrc 
     
@@ -6721,6 +6881,8 @@ make install`
                       text: "Para diagnosticar problemas, puedes:",
                       terminal: [
                         {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Verificar la instalación 
     which archi 

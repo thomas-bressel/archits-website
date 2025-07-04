@@ -24,6 +24,8 @@ export interface CardContent {
 }
 
 export interface TerminalContent {
+  bgColor?: string;
+  borderColor?:string;
   type: string;
   content: string;
 }

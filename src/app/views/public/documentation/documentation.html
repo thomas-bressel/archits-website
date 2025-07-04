@@ -41,35 +41,36 @@
 
         <!-- Sub Bloc-->
         @if (section.subBlocs) {
-        <ul>
+        <ul class="documentation__subBloc">
             @for(subBloc of section.subBlocs; track $index) {
-            <li [id]="subBloc.id">
-                <h3>{{subBloc.h3Title}}</h3>
+            <li [id]="subBloc.id" class="documentation__subBloc-content">
+                <h3 class="documentation__h3Title">{{subBloc.h3Title}}</h3>
 
                 <!-- subChild Bloc -->
                 @if(subBloc.subchildBlocs) {
-                <ul>
+                <ul class="documentation__subChildBloc">
                     @for(subChild of subBloc.subchildBlocs ; track $index) {
-                    <li>
+                    <li class="documentation__subChildBloc-content">
                         <h4 class="documentation__h4Title">{{subChild.h4Title}}</h4>
                         <p  class="documentation__text">{{subChild.text}}</p>
 
-                        <h5>{{subChild.h5Title}}</h5>
+                        <h5  class="documentation__h5Title">{{subChild.h5Title}}</h5>
 
 
 
                         <!-- Terminal -->
                         @if(subChild.terminal) {
                            @for(terminal of subChild.terminal ; track $index) {
-                           <div [class]="`bg-${terminal.bgColor} border-${terminal.borderColor}`">
-                               <p>
+                           <div [class]="`documentation__terminal bg-${terminal.bgColor} border-${terminal.borderColor}`">
+                               <p class="documentation__terminal-type">
                                    {{terminal.type}}
                                 </p>
-                                <code>
-                                  <pre>
-                                      {{terminal.code}}
-                                  </pre>
-                                </code>
+                                <p class="documentation__terminal-code">
+                                        <code>
+                                            {{terminal.code}}
+                                        </code>
+                                </p>
+
                             </div>
                            }
                         }
@@ -78,19 +79,19 @@
                         <!-- Arrays -->
                         @if(subChild.arrays) {
                         @for (array of subChild.arrays; track $index) {
-                        <table>
-                            <thead>
+                        <table class="documentation__table">
+                            <thead  class="documentation__header">
                                 <tr>
                                     @for (header of array.headCol; track $index) {
-                                    <th>{{header}}</th>
+                                    <th class="documentation__header-text">{{header}}</th>
                                     }
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="documentation__body">
                                 @for (row of array.rows; track $index) {
                                 <tr>
                                     @for (header of array.headCol; track $index) {
-                                    <td>
+                                    <td  class="documentation__body-text" >
                                         @let columnKey = 'col' + ($index + 1);
                                         @for (item of row[columnKey]; track $index) {
                                         <span [ngClass]="item.label ? 'tag': ''">{{item.text}}</span>
@@ -108,10 +109,10 @@
 
                         <!-- List -->
                         @if (subChild.list) {
-                        <ul>
+                        <ul  class="documentation__lists">
                             @for (item of subChild.list ; track $index) {
-                            <li>
-                                <p>
+                            <li  class="documentation__list">
+                                <p class="documentation__list-text">
                                     {{item}}
                                 </p>
                             </li>
@@ -123,10 +124,10 @@
 
                         <!-- Label List -->
                         @if (subChild.labels) {
-                        <ul>
+                        <ul  class="documentation__lists">
                             @for (label of subChild.labels ; track $index) {
-                            <li>
-                                <p><span>{{label.label}}</span>
+                            <li  class="documentation__list">
+                                <p class="documentation__list-text"><span class="tag">{{label.label}}</span>
                                     {{label.text}}
                                 </p>
                             </li>
@@ -154,19 +155,19 @@
                 <!-- Arrays -->
                 @if(subBloc.arrays) {
                 @for (array of subBloc.arrays; track $index) {
-                <table>
-                    <thead>
+                <table  class="documentation__table">
+                    <thead  class="documentation__header">
                         <tr>
                             @for (header of array.headCol; track $index) {
-                            <th>{{header}}</th>
+                            <th class="documentation__header-text">{{header}}</th>
                             }
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody  class="documentation__body">
                         @for (row of array.rows; track $index) {
                         <tr>
                             @for (header of array.headCol; track $index) {
-                            <td>
+                            <td  class="documentation__body-text">
                                 @let columnKey = 'col' + ($index + 1);
                                 @for (item of row[columnKey]; track $index) {
                                 <span [ngClass]="item.label ? 'tag': ''">{{item.text}}</span>
