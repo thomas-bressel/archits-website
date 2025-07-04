@@ -1,10 +1,66 @@
-
+@use 'mixins' as *;
+@use 'colors' as color;
+@use 'fonts' as font;
 
 :host {
-
+    @include flex($direction: column, $gap: 1.5rem);
     padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    background-color: aquamarine;
+    height: 100vh;
+    background: linear-gradient(135deg, color.$background-blue-linear1, color.$background-blue-linear2 50%, color.$background-blue-linear1);
+    border-right : solid 20px color.$background-blue-linear1;
+    
+    
+    
+    &.opened {
+        @include position($position: fixed, $left: 0, $top: 140px, $zindex: 0);
+        transition: 300ms ease-in-out;
+    }
+    
+    
+    &.closed {
+        @include position($position: fixed, $left: -270px, $top: 140px, $zindex: 0);
+        transition: 300ms ease-in-out;
+    }
+}
+
+
+.overlay {
+    &__btn {
+        @include position($position: relative, $left: 272px, $top: -1px);
+        color: color.$grey;
+        font-weight: bold;
+        font-size: larger;
+        border: 1px solid white;
+        width: 28px;
+        border-radius: 50%;
+        height: 28px;
+        text-align: center;
+        background-color: color.$background-blue-linear1;
+    }
+
+}
+
+@media screen and (min-width: 758px) {
+    
+    
+    :host {
+        position: static;
+        background: linear-gradient(135deg, color.$background-blue-linear1, color.$background-blue-linear2 50%, color.$background-blue-linear1);
+        position: absolute;
+
+        &.closed {
+            @include position($position: fixed, $left: 0, $top: 140px, $zindex: 0);
+            transition: 300ms ease-in-out;
+        }
+
+}
+
+
+.overlay {
+    &__btn {
+        display: none;
+    }
+
+}
+
 }

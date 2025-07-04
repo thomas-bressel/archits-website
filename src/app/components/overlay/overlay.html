@@ -1,6 +1,6 @@
-
+<div class="overlay__btn"  (click)="toggleOverlay($event)">{{isOverlayOpen() ? '>' : '<'}}</div>
 @for (bloc of interfaceService() ; track $index) {
-<h5>
+<h5 class="overlay__title">
     <a [routerLink]="[]" [fragment]="`${bloc.h5Anchor}`">
         @if (bloc.h5Icon) {
         <span>{{bloc.h5Icon}}</span>

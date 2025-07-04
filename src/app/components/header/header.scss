@@ -3,10 +3,8 @@
 @use 'fonts' as font;
 
 :host {
+    @include position($position: fixed, $left: 0, $top: 0, $zindex: 10);
     width: 100vw;
-    position: fixed;
-    left: 0;
-    top: 0;
 }
 
 .header {

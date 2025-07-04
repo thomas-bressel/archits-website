@@ -1,4 +1,8 @@
-<aside app-overlay [interfaceService]="overlayDatas()"></aside>
+<aside app-overlay 
+       [ngClass]="isOverlayOpen() ? 'opened':'closed'" 
+       (overlayToggled)="toggleOverlay($event)" 
+       [interfaceService]="overlayDatas()">
+</aside>
 
 @let blocs = blocsData();
 

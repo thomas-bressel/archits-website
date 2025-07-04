@@ -23,8 +23,5 @@ export class Button {
   handleClick() {
     this.buttonClicked.emit();
   }
-  constructor() {
-    console.log('Button component loaded!');
-  }
 
 }
