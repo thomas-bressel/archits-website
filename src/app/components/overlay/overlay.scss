@@ -70,6 +70,7 @@
             margin-left: -16px;
             margin-top: -16px;
             transition: 200ms ease-in-out;
+            margin-bottom: -160px;
         }
     }
 
@@ -82,6 +83,8 @@
             position: fixed;
             top: 150px;
             padding-left: 1rem ;
+
+            padding-bottom: 160px;
         }
 
         &__title:hover {
