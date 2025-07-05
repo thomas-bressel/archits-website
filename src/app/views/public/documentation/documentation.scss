@@ -13,6 +13,7 @@
         flex-direction: column;
         gap: 5rem;
         padding: 1rem;
+        word-break: break-word;
     }
 
     &__subBloc {
@@ -48,22 +49,22 @@
         width: 100%;
     }
     &__h2Title {
-        font-size: 3.375rem;
+        font-size: 2.375rem;
         font-family: font.$InterBold;
         color: color.$white;
     }
     &__h3Title {
-        font-size: 2.6rem;
+        font-size: 1.6rem;
         font-family: font.$InterMedium;
         color: color.$white;
     }
     &__h4Title {
-        font-size: 2.25rem;
+        font-size: 1.25rem;
         font-family: font.$InterBold;
         color: color.$h4-title;
     }
     &__h5Title {
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-family: font.$InterBold;
         color: color.$h5-title;
     }
@@ -71,14 +72,14 @@
 
     &__text {
         color: color.$grey;
-        font-size: 1.5rem;
-        line-height: 40px;
+        font-size: 1rem;
+        line-height: 25px;
         font-family: font.$InterLight;
 
         &-p {
             color: color.$white;
-            font-size: 1.5rem;
-            line-height: 30px;
+            font-size: 1rem;
+            line-height: 20px;
         }
     }
 
@@ -97,7 +98,7 @@
         width: 300px;
         min-width: 300px;
         padding: 1rem;
-        height: 208px;
+        height: 150px;
         border: 1px solid color.$grey;
         border-radius: 8px;
         background-color: color.$background;
@@ -105,14 +106,14 @@
         &-title {
             color: color.$h4-title;
             font-family: font.$InterBold;
-            font-size: 1.5rem;
+            font-size: 1rem;
         }
         
         &-text {
             color: color.$grey;
             font-family: font.$InterLight;
-            font-size: 1.5rem;
-            line-height: 30px;
+            font-size: 1rem;
+            line-height: 25px;
         }
 
     }
@@ -134,8 +135,8 @@
         &-text {
             font-family: font.$InterLight;
             color: color.$grey;
-            font-size: 1.5rem;
-            line-height: 30px;
+            font-size: 1rem;
+            line-height: 20px;
             padding-left: 2rem;
 
             &::before {
@@ -150,7 +151,7 @@
         overflow-x: scroll;
     }
     &__table {
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-family: font.$InterRegular;
     }
 
@@ -170,13 +171,15 @@
     &__body {
         background-color: color.$background;
         color: color.$grey;
+
         &-text {
-            background-color: color.$background;
+         background-color: color.$background;
          padding: 1.5rem;
          border-bottom: 1px solid color.$grey;
          position: sticky;
          left: 0;
          border-left: dotted 1px white;
+         white-space: nowrap;
 
         }
     }
@@ -195,9 +198,10 @@
 
         &-code {
             white-space: pre-wrap;
-            font-size: 1.25rem;
+            word-wrap: break-word;
+            font-size: .8rem;
             font-family: font.$FiraRegular;
-            line-height: 40px;
+            line-height: 20px;
         }
 
     }
@@ -207,6 +211,76 @@
     :host {
         display: grid;
         grid-template-columns: 320px minmax(10%, 3fr);
+    }
+
+    .documentation {
+
+        &__h2Title {
+            font-size: 3.375rem;
+        
+        }
+        &__h3Title {
+            font-size: 2.6rem;
+           
+        }
+        &__h4Title {
+            font-size: 2.25rem;
+
+        }
+        &__h5Title {
+            font-size: 1.5rem;
+        
+        }
+    
+    
+        &__text {
+          
+            font-size: 1.5rem;
+            line-height: 40px;
+
+    
+            &-p {
+                font-size: 1.5rem;
+                line-height: 30px;
+            }
+        }
+
+        &__card {
+            height: 208px;
+            &-title {
+                font-size: 1.5rem;
+            }
+            
+            &-text {
+                font-size: 1.5rem;
+                line-height: 30px;
+            }
+    
+        }
+
+        &__list {
+    
+            &-text {
+                font-size: 1.5rem;
+                line-height: 30px;
+            }
+    
+        }
+
+
+        &__terminal {
+
+            &-code {
+                font-size: 1.25rem;
+                line-height: 40px;
+            }
+        }
+
+
+        &__table {
+            font-size: 1.5rem;
+        }
+    
     }
 
 }

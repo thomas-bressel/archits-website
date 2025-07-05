@@ -26,9 +26,9 @@
     &__btn {
         @include position($position: relative, $left: 300px, $top: -1px);
         @include standard-border ($radius: 50%, $shape: solid, $color: color.$white, $size: 1px);
-        @include text($color: color.$grey, $size: larger, $align: center);
-        width: 28px;
-        height: 28px;
+        @include text($color: color.$grey, $size: 1.5rem, $align: center);
+        width: 36px;
+        height: 48px;
         background-color: color.$background-blue-linear1;
     }
 

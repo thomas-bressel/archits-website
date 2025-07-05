@@ -43,7 +43,7 @@
         @include text ($color: color.$h4-title, $font: font.$InterBold, $size: 1.25rem);
         position: relative;
         background-color: color.$background;
-        padding: .5rem 2rem;
+        padding: .5rem 1rem;
         border-bottom: 2px solid color.$grey;
         
         &-logo {
@@ -92,6 +92,7 @@
             &-navigation-items {
                 @include flex($align: center, $gap: 1.5rem, $wrap: wrap);
                 @include text($color: color.$link);
+                padding: .5rem 2rem;
                 position:initial;
                 width: auto;
 
