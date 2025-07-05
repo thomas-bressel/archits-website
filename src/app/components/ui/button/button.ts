@@ -13,6 +13,7 @@ export class Button {
   icon = input('');
   img = input('');
   text = input('');
+  staticText = input('');
   bgColor = input();
   borderColor = input('');
   txtColor = input('');

@@ -41,7 +41,7 @@
     <nav class="header__bot-navigation">
         <ul class="header__bot-navigation-items" [class.hidden]="!isMenuOpen()">
             @for(item of interfaceService.headerBotNavigation() ; track $index) {
-            <li class="header__bot-navigation-item">
+            <li class="header__bot-navigation-item" (click)="closeMenu()">
                 <a [routerLink]="item.router" routerLinkActive="active">{{item.name}}</a>
             </li>
             }

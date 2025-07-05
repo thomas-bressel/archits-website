@@ -10,7 +10,14 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
 }
+
+  *::-webkit-scrollbar {
+    display: none; /* Chrome, Safari et Edge */
+  }
 
 body {
   
@@ -45,3 +52,14 @@ body {
 
 }
 
+
+// @media screen and (min-width: 758px) {
+//     * {
+//         scrollbar-width: auto;       /* Firefox */
+//         -ms-overflow-style: auto;     /* IE 10+ */
+//     }
+    
+//     *::-webkit-scrollbar {
+//         display: block; /* Chrome, Safari, Edge */
+//     }
+// }

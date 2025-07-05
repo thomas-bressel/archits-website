@@ -26,6 +26,10 @@ export class Header {
   }
 
 
+  public closeMenu() {
+    this.isMenuOpen.set(false);
+  }
+
   /**
    * Listen to change language
    * @param languageValue 

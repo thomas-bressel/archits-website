@@ -9,7 +9,7 @@
     border: 1px solid color.$grey;
     border-radius: 8px;
     width: 100%;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .terminal {
@@ -23,5 +23,12 @@
         white-space: pre-wrap;
         font-family: font.$FiraRegular;
         color: color.$paragraph-white;
+    }
+}
+
+
+@media screen and (min-width: 758px) {
+    :host {
+        font-size: 1.25rem;
     }
 }
