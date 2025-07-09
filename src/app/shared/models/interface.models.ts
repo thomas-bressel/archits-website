@@ -33,6 +33,7 @@ export interface TerminalContent {
 export interface BlocContent {
   id: string;
   h2Title: string;
+  h2Anchor: string;
   hook: string;
   cards?: CardContent[];
   terminal?: TerminalContent[];
@@ -50,9 +51,9 @@ export interface PageContent {
 }
 
 export interface Overlay {
-    h5Title: string;
-    h5Icon: string;
-    h5Anchor: string;
+    h5Title?: string;
+    h5Icon?: string;
+    h5Anchor?: string;
     items: Array<{
       id: string;
       name: string;
@@ -63,6 +64,7 @@ export interface Overlay {
 export interface Blocs {
   id: string;
   h2Title: string;
+  h2Anchor: string;
   text?: string | undefined;
   cards?: Card[] | undefined;
   alerts?: Alert[] | undefined;
@@ -80,6 +82,7 @@ export interface Card {
 export interface SubBlocs {
   id: string;
   h3Title?: string;
+  h3Anchor?: string;
   subchildBlocs?: SubChildBloc[]| undefined;
   arrays?: Arrays[] | undefined;
 }
@@ -92,6 +95,7 @@ export interface Label {
 
 export interface SubChildBloc {
   h4Title?: string;
+  h4Anchor?: string;
   text?: string;
   h5Title?: string;
   list?: string[];

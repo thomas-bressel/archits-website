@@ -9,7 +9,7 @@
 <div class="documentation__bloc">
     @for (section of blocs; track $index) {
 
-    <section [id]="section.id" class="documentation__section">
+    <section [id]="section.h2Anchor" class="documentation__section">
 
         <!-- Main H2 header section -->
         <h2 class="documentation__h2Title">{{section.h2Title}}</h2>
@@ -43,14 +43,14 @@
         @if (section.subBlocs) {
         <ul class="documentation__subBloc">
             @for(subBloc of section.subBlocs; track $index) {
-            <li [id]="subBloc.id" class="documentation__subBloc-content">
+            <li [id]="subBloc.h3Anchor" class="documentation__subBloc-content">
                 <h3 class="documentation__h3Title">{{subBloc.h3Title}}</h3>
 
                 <!-- subChild Bloc -->
                 @if(subBloc.subchildBlocs) {
                 <ul class="documentation__subChildBloc">
                     @for(subChild of subBloc.subchildBlocs ; track $index) {
-                    <li class="documentation__subChildBloc-content">
+                    <li [id]="subChild.h4Anchor" class="documentation__subChildBloc-content">
                         <h4 class="documentation__h4Title">{{subChild.h4Title}}</h4>
                         <p  class="documentation__text">{{subChild.text}}</p>
 

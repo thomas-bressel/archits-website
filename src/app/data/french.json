@@ -1,0 +1,1399 @@
+[
+
+    // FRANCAIS
+    {
+      version: "1.7.0",
+      language: "français",
+      headerTop: [
+        {
+          icon: 'github.svg',
+          iconColor: 'grey',
+          bgColor: '',
+          borderColor: '',
+          text: 'GitHub',
+          textColor: 'white',
+          link: 'https://github.com/thomas-bressel/archi-ts-cli'
+        },
+        {
+          icon: 'forum.svg',
+          iconColor: 'grey',
+          bgColor: '',
+          borderColor: '',
+          text: 'Discussions',
+          textColor: 'white',
+          link: 'https://github.com/thomas-bressel/archi-ts-cli/discussions'
+        }
+      ],
+      headerBot: [
+        {
+          logo: true,
+          navigation: true,
+          buttons: true
+        }
+      ],
+      navigation: [
+        {
+          name: 'Accueil',
+          router: '/home'
+        },
+        {
+          name: 'Documentation',
+          router: '/documentation'
+        }
+      ],
+      cta: [
+        {
+          icon: 'heart.svg',
+          iconColor: 'white',
+          text: 'Sponsor',
+          textColor: 'white',
+          bgColor: 'linear-red',
+          link: 'https://github.com/sponsors/thomas-bressel',
+          anchor: ''
+        },
+        {
+          icon: 'arrow-start.svg',
+          iconColor: 'white',
+          text: 'Commencer',
+          textColor: 'white',
+          bgColor: 'linear-blue',
+          link: '',
+          anchor: 'start'
+
+        }
+      ],
+      pages: [
+        {
+          id: 'home',
+          pageTitle: 'accueil',
+          h1Title: 'ArchiTS CLI',
+          subtitle: "Générateur d'Architecture Backend",
+          hook: "Créez des structures backend robustes avec TypeScript ou JavaScript. Trois architectures éprouvées, configuration automatisée, prêt en 30 secondes.",
+          blocsContent: [
+            {
+              id: 'bloc1',
+              h2Anchor: 'introduction',
+              h2Title: 'Pourquoi choisir ArchiTS ?',
+              hook: 'Un CLI moderne pour des architectures backend professionnelles',
+              cards: [
+                {
+                  id: 'card1',
+                  icon: 'layer.svg',
+                  h3Title: 'Architectures Professionnelles',
+                  hook: 'Choisissez parmi 3 patterns architecturaux éprouvés pour structurer votre backend de manière optimale.',
+                  checklists: [
+                    {
+                      id: 'check1',
+                      text: 'Layered Architecture - Structure en couches classique'
+                    },
+                    {
+                      id: 'check2',
+                      text: 'Clean Architecture - Séparation domain/infrastructure'
+                    },
+                    {
+                      id: 'check3',
+                      text: 'Hexagonal Architecture - Ports & Adapters pattern'
+                    },
+                  ]
+                },
+                {
+                  id: 'card2',
+                  icon: 'setting.svg',
+                  h3Title: 'Configuration Automatisée',
+                  hook: 'Tous les outils modernes configurés automatiquement pour un développement productif immédiat.',
+                  checklists: [
+                    {
+                      id: 'check4',
+                      text: 'TypeScript/JavaScript - Support complet'
+                    },
+                    {
+                      id: 'check5',
+                      text: 'ExpressJS - Framework optionnel intégré'
+                    },
+                    {
+                      id: 'check6',
+                      text: 'ESLint, Jest, Nodemon - Tooling inclus'
+                    },
+                  ]
+                },
+                {
+                  id: 'card3',
+                  icon: 'flash.svg',
+                  h3Title: 'Productivité Maximale',
+                  hook: 'Interface CLI intuitive et génération automatique pour démarrer vos projets en quelques secondes.',
+                  checklists: [
+                    {
+                      id: 'check7',
+                      text: 'CLI intuitif - Interface en ligne de commande simple'
+                    },
+                    {
+                      id: 'check8',
+                      text: 'Templates prêts - Fichiers de base générés'
+                    },
+                    {
+                      id: 'check9',
+                      text: 'Dépendances gérées - Installation automatique'
+                    },
+                  ]
+                }
+              ],
+              terminal: []
+            },
+            {
+              id: 'bloc2',
+              h2Anchor: 'installation',
+              h2Title: 'Installation Rapide',
+              hook: 'Commencez à utiliser ArchiTS en quelques commandes',
+              cards: [],
+              terminal: [
+                {
+                  bgColor: "terminal-black",
+                  borderColor: "terminal-black",
+                  type: 'bash',
+                  content: `# Cloner le repository
+git clone https://github.com/thomas-bressel/archi-ts-cli.git
+cd archi-ts-cli
+
+# Installation
+make install
+source ~/.bashrc
+
+# Créer votre premier projet
+archi create`
+                }
+              ],
+            }
+          ],
+        },
+        {
+          id: 'documentation',
+          pageTitle: 'documentation',
+          overlay: [
+            {
+              items: [
+                {
+                  id: 'item1',
+                  name: 'Qu’est-ce qu’ArchiTS ?',
+                  anchor: 'section2-1'
+                },
+                {
+                  id: 'item2',
+                  name: 'Pourquoi ArchiTS ?',
+                  anchor: 'section2-2'
+                },
+                {
+                  id: 'item3',
+                  name: 'Fonctionnalités',
+                  anchor: 'section2-3'
+                },
+              ]
+            },
+            {
+              h5Title: 'Installation',
+              h5Icon: '🚀',
+              h5Anchor: 'install',
+              items: [
+                {
+                  id: 'item4',
+                  name: 'Prérequis',
+                  anchor: 'section3-1'
+                },
+                {
+                  id: 'item5',
+                  name: 'Installation Linux',
+                  anchor: 'section3-2'
+                },
+                {
+                  id: 'item6',
+                  name: 'Vérification',
+                  anchor: 'section3-3'
+                },
+              ]
+            },
+            {
+              h5Title: 'Démarrage rapide',
+              h5Icon: '⚡',
+              h5Anchor: 'starting',
+              items: [
+                {
+                  id: 'item7',
+                  name: 'Créer votre premier projet',
+                  anchor: 'section4-1'
+                },
+                {
+                  id: 'item8',
+                  name: 'Commandes de base',
+                  anchor: 'section4-2'
+                },
+                {
+                  id: 'item9',
+                  name: 'Exemple complet',
+                  anchor: 'section4-3'
+                }
+              ]
+            },
+            {
+              h5Title: 'Architectures',
+              h5Icon: '🏗️',
+              h5Anchor: 'archi',
+              items: [
+                {
+                  id: 'item10',
+                  name: 'Layered Architecture',
+                  anchor: 'section5-1'
+                },
+                {
+                  id: 'item11',
+                  name: 'Clean Architecture',
+                  anchor: 'section5-2'
+                },
+                {
+                  id: 'item12',
+                  name: 'Hexagonal Architecture',
+                  anchor: 'section5-3'
+                }
+              ]
+            },
+            {
+              h5Title: 'Configuration',
+              h5Icon: '⚙️',
+              h5Anchor: 'configuration',
+              items: [
+                {
+                  id: 'item13',
+                  name: 'Typescript / Javascript',
+                  anchor: 'section6-1'
+                },
+                {
+                  id: 'item14',
+                  name: 'Express JS',
+                  anchor: 'section6-2'
+                },
+                {
+                  id: 'item15',
+                  name: 'Variables d’environnements',
+                  anchor: 'section6-3'
+                }
+              ]
+            },
+            {
+              h5Title: 'Référence CLI',
+              h5Icon: '🔧',
+              h5Anchor: 'reference',
+              items: [
+                {
+                  id: 'item16',
+                  name: 'archi create',
+                  anchor: 'section7-1'
+                },
+                {
+                  id: 'item17',
+                  name: 'archi version',
+                  anchor: 'section7-2'
+                },
+                {
+                  id: 'item18',
+                  name: 'Dépannage',
+                  anchor: 'section7-3'
+                }
+              ]
+            },
+          ],
+          blocs: [
+            {
+              id: 'section1',
+              h2Title: 'Documentation ArchiTS CLI',
+              h2Anchor: 'introduction',
+              text: "Bienvenue dans la documentation complète d'ArchiTS CLI, votre générateur d'architecture backend moderne pour TypeScript et JavaScript.",
+              cards: [
+                {
+                  title: 'Installation Rapide',
+                  icon: '🚀',
+                  text: "Installez ArchiTS en quelques minutes et créez votre premier projet"
+                },
+                {
+                  title: 'Démarrage Rapide',
+                  icon: '⚡',
+                  text: "Guide pas à pas pour créer votre première architecture backend"
+                },
+                {
+                  title: 'Architectures',
+                  icon: '🏗️',
+                  text: "Découvrez les trois patterns architecturaux supportés"
+                }
+              ],
+            },
+            {
+              id: 'section2',
+              h2Title: "Qu'est-ce qu'ArchiTS ?",
+              h2Anchor: 'section2-1',
+              text: "ArchiTS CLI est un outil en ligne de commande développé en Go qui permet de générer automatiquement des structures de projets backend robustes et bien organisées. Il supporte trois patterns architecturaux éprouvés et peut générer du code TypeScript ou JavaScript moderne.",
+              alerts: [
+                {
+                  bgColor: 'alert-blue',
+                  borderColor: 'alert-blue',
+                  icon: '💡',
+                  text: "Philosophie : ArchiTS vous aide à démarrer vos projets backend avec une architecture solide, des bonnes pratiques et une configuration automatisée, vous permettant de vous concentrer sur votre logique métier."
+                },
+              ],
+              subBlocs: [
+                {
+                  id: 'sub-1',
+                  h3Title: 'Pourquoi utiliser ArchiTS ?',
+                  h3Anchor: 'section2-2',
+                  subchildBlocs: [
+                    {
+                      h4Title: 'Avantages',
+                      list: [
+                        "Gain de temps: Création de projet en 30 secondes",
+                        "Bonnes pratiques : Architectures éprouvées et patterns recommandés",
+                        "Configuration automatique : ESLint, Jest, TypeScript pré-configurés",
+                        "Flexibilité : Support TypeScript/JavaScript et ExpressJS optionnel",
+                        "Maintenabilité : Structure claire et séparation des responsabilités",
+                      ]
+                    },
+                    {
+                      h4Title: "Cas d’usage",
+                      list: [
+                        "Démarrage rapide d'APIs REST",
+                        "Projets backend avec architectures complexes",
+                        "Microservices bien structurés",
+                        "Applications suivant les principes SOLID",
+                        "Projets nécessitant une forte testabilité",
+                      ]
+                    },
+                  ],
+                },
+                {
+                  id: 'sub-2',
+                  h3Title: 'Fonctionnalités principales',
+                  h3Anchor: 'section2-3',
+                  arrays: [
+                    {
+                      headCol: ["Fonctionnalité", "Description", "Support"],
+                      rows: [
+                        {
+                          col1: [
+                            {
+                              text: "Architectures",
+                              label: false,
+                            }
+                          ],
+                          col2: [
+                            {
+                              text: "3 patterns architecturaux professionnels",
+                              label: false,
+                            }
+                          ],
+                          col3: [
+                            {
+                              text: "✅ Layered, Clean, Hexagonal",
+                              label: false,
+                            }
+                          ]
+                        },
+                        {
+                          col1: [
+                            {
+                              text: "Langages",
+                              label: false,
+                            }
+                          ],
+                          col2: [
+                            {
+                              text: "Support complet TypeScript et JavaScript",
+                              label: false,
+                            }
+                          ],
+                          col3: [
+                            {
+                              text: "✅ TS/JS avec configuration optimisée",
+                              label: false,
+                            }
+                          ]
+                        },
+                        {
+                          col1: [
+                            {
+                              text: "Framework",
+                              label: false,
+                            }
+                          ],
+                          col2: [
+                            {
+                              text: "ExpressJS optionnel ou Node.js natif",
+                              label: false,
+                            }
+                          ],
+                          col3: [
+                            {
+                              text: "✅ Choix lors de la création",
+                              label: false,
+                            }
+                          ]
+                        },
+                        {
+                          col1: [
+                            {
+                              text: "Outils",
+                              label: false,
+                            }
+                          ],
+                          col2: [
+                            {
+                              text: "ESLint, Jest, Nodemon pré-configurés",
+                              label: false,
+                            }
+                          ],
+                          col3: [
+                            {
+                              text: "✅ Configuration automatique",
+                              label: false,
+                            }
+                          ]
+                        },
+                        {
+                          col1: [
+                            {
+                              text: "Dépendances",
+                              label: false,
+                            }
+                          ],
+                          col2: [
+                            {
+                              text: "Installation automatique des packages",
+                              label: false,
+                            }
+                          ],
+                          col3: [
+                            {
+                              text: "✅ npm + pnpm",
+                              label: false,
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+
+              ]
+            },
+            {
+              id: 'section3',
+              h2Title: "Installation",
+              h2Anchor: 'install',
+              subBlocs: [
+                {
+                  id: 'sub-1',
+                  subchildBlocs: [
+                    {
+                      h4Title: 'Prérequis',
+                      h4Anchor: 'section3-1',
+                      text: "Avant d'installer ArchiTS, assurez-vous d'avoir les outils suivants installés sur votre système :",
+                      arrays: [
+                        {
+                          headCol: ["Outil", "Version minimale", "Vérification"],
+                          rows: [
+                            {
+                              col1: [
+                                {
+                                  text: "Go",
+                                  label: false,
+                                }
+                              ],
+                              col2: [
+                                {
+                                  text: "1.18+",
+                                  label: false,
+                                }
+                              ],
+                              col3: [
+                                {
+                                  text: "go version",
+                                  label: true,
+                                }
+                              ]
+                            },
+                            {
+                              col1: [
+                                {
+                                  text: "NodeJS",
+                                  label: false,
+                                }
+                              ],
+                              col2: [
+                                {
+                                  text: "16+ (LTS recommandé)",
+                                  label: false,
+                                }
+                              ],
+                              col3: [
+                                {
+                                  text: "node --version",
+                                  label: true,
+                                }
+                              ]
+                            },
+                            {
+                              col1: [
+                                {
+                                  text: "npm",
+                                  label: false,
+                                }
+                              ],
+                              col2: [
+                                {
+                                  text: "8+",
+                                  label: false,
+                                }
+                              ],
+                              col3: [
+                                {
+                                  text: "npm --version",
+                                  label: true,
+                                }
+                              ]
+                            },
+                            {
+                              col1: [
+                                {
+                                  text: "Git",
+                                  label: false,
+                                }
+                              ],
+                              col2: [
+                                {
+                                  text: "2.0+",
+                                  label: false,
+                                }
+                              ],
+                              col3: [
+                                {
+                                  text: "git --version",
+                                  label: true,
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      h4Title: "Installation sur Linux/WSL",
+                      h4Anchor: 'section3-2',
+                      text: "Suivez ces étapes pour installer ArchiTS sur votre système :",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
+                          type: "BASH",
+                          code: `# 1. Cloner le repository
+git clone https://github.com/thomas-bressel/archi-ts-cli.git
+cd archi-ts-cli 
+
+# 2. Installation automatique 
+make install 
+
+# 3. Recharger votre shell 
+# Ou redémarrer votre terminal
+source ~/.bashrc`
+                        },
+                      ],
+                      alerts: [
+                        {
+                          bgColor: 'alert-yellow',
+                          borderColor: 'alert-yellow',
+                          icon: '⚠️',
+                          text: "Note importante : ArchiTS est actuellement optimisé pour Linux et WSL. L'utilisation sur Windows natif nécessite WSL (Windows Subsystem for Linux)."
+                        },
+                      ],
+                    },
+                    {
+                      h4Title: "Vérification de l'installation",
+                      h4Anchor: 'section3-3',
+                      text: "Une fois l'installation terminée, vérifiez que tout fonctionne correctement :",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
+                          type: "BASH",
+                          code: `# Vérifier la version d'ArchiTS
+archi --version
+
+# Sortie attendue: 
+archi version 1.7.0
+
+# Afficher l'aide 
+archi --help 
+
+# Tester la création d'un projet 
+archi create`
+                        },
+                      ],
+                      alerts: [
+                        {
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
+                          icon: '✅',
+                          text: "Installation réussie ! Si toutes les commandes fonctionnent, ArchiTS est prêt à être utilisé."
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ]
+            },
+            {
+              id: 'section4',
+              h2Title: "Démarrage Rapide",
+              h2Anchor: 'starting',
+              subBlocs: [
+                {
+                  id: 'sub-1',
+                  subchildBlocs: [
+                    {
+                      h4Title: 'Créer votre premier projet',
+                      h4Anchor: 'section4-1',
+                      text: "Créons ensemble votre premier projet backend avec ArchiTS :",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
+                          type: "BASH",
+                          code: `# Lancer la création interactive
+archi create`
+                        },
+                      ],
+                    },
+                    {
+                      text: "ArchiTS vous guidera à travers une série de questions :",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
+                          type: "BASH",
+                          code: `# Vérifier la version d'ArchiTS
+archi --version
+
+# Sortie attendue: 
+archi version 1.7.0
+
+# Afficher l'aide 
+archi --help 
+
+# Tester la création d'un projet 
+archi create`
+                        },
+                      ],
+                    },
+                    {
+                      h4Title: "Commandes de base",
+                      h4Anchor: 'section4-2',
+                      text: "Une fois votre projet créé, voici les commandes essentielles :",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
+                          type: "BASH",
+                          code: `# Se déplacer dans le projet
+cd mon-api-backend 
+
+# Installation des dépendances (déjà fait automatiquement)
+npm install 
+
+# Développement avec rechargement automatique 
+npm run dev 
+
+# Construction du projet (TypeScript uniquement) 
+npm run build 
+
+# Démarrer en production 
+npm start 
+
+# Exécuter les tests 
+npm test 
+
+# Linter le code 
+npm run lint`
+                        },
+                      ],
+
+                    },
+                    {
+                      h4Title: "Exemple complet",
+                      h4Anchor: 'section4-3',
+                      text: "Voici un exemple complet de création et démarrage d'un projet :",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
+                          type: "BASH",
+                          code: `# 1. Créer le projet
+archi create
+
+# → Choisir: Clean Architecture, TypeScript, ExpressJS 
+
+# 2. Naviguer dans le projet
+cd mon-api-backend 
+
+# 3. Démarrer le serveur de développement 
+npm run dev 
+
+# 4. Tester l'API
+curl http://localhost:3000 
+
+# Réponse JSON avec informations du projet
+`
+                        },
+                      ],
+                      alerts: [
+                        {
+                          bgColor: 'alert-blue',
+                          borderColor: 'alert-blue',
+                          icon: '🎯',
+                          text: "Résultat : Vous avez maintenant une API fonctionnelle avec une architecture Clean, TypeScript et ExpressJS, prête à recevoir votre logique métier !"
+                        },
+                      ],
+                    },
+                  ],
+                },
+
+              ]
+            },
+            {
+              id: 'section5',
+              h2Title: "Architectures supportées",
+              h2Anchor: 'archi',
+              text: "ArchiTS propose trois patterns architecturaux éprouvés, chacun adapté à différents types de projets et niveaux de complexité.",
+              subBlocs: [
+                {
+                  id: 'sub-1',
+                  subchildBlocs: [
+                    {
+                      h4Title: '1. Layered Architecture (Architecture en couches)',
+                      h4Anchor: 'section5-1',
+                      text: "Description : Architecture traditionnelle organisée en couches horizontales avec séparation claire des responsabilités.",
+                      h5Title: "Structure générée :",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
+                          type: "TEXT",
+                          code: `src/ ├── controllers/ # Gestion des requêtes HTTP
+     │ └── base/ ├── services/ # Logique métier 
+     │ └── base/ ├── repositories/ # Accès aux données 
+     │ └── base/ ├── models/ # Entités et DTOs    
+     │ ├── entities/ 
+     │ ├── dtos/ 
+     │ ├── requests/ 
+     │ ├── responses/ 
+     │ └── database/ 
+     ├── middleware/ # Middlewares Express 
+     │ ├── auth/ 
+     │ ├── validation/ 
+     │ └── security/ 
+     ├── routes/ # Définition des routes 
+     │ ├── api/ 
+     │ └── web/ └── utils/ # Utilitaires
+`
+                        },
+                      ],
+                    },
+                    {
+                      h4Title: "Cas d’usage recommandés :",
+                      list: [
+                        "Applications CRUD simples à moyennes",
+                        "APIs REST traditionnelles",
+                        "Projets avec équipe junior",
+                        "Prototypage rapide",
+                      ],
+                      alerts: [
+                        {
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
+                          icon: '👍',
+                          text: "Avantages : Simple à comprendre, rapide à développer, idéal pour débuter"
+                        },
+                      ],
+                    },
+
+                    {
+                      h4Title: '2. Clean Architecture ',
+                      h4Anchor: 'section5-2',
+                      text: "Description : ---- A CORRIGER -----",
+                      h5Title: "Structure générée :",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
+                          type: "TEXT",
+                          code: `src/ ├── domain/ # Cœur métier pur
+     │ └── entities/ 
+     ├── data/ # Couche de données 
+     │ ├── repositories/ 
+     │ ├── data-sources/ 
+     │ │ └── local/ 
+     │ ├── services/ 
+     │ ├── dtos/ 
+     │ ├── models/ 
+     │ └── mappers/ 
+     ├── presentation/ # Interface utilisateur 
+     │ ├── controllers/ 
+     │ ├── routes/ 
+     │ ├── middlewares/ 
+     │ └── models/ 
+     ├── infrastructure/ # Services externes 
+     │ ├── database/ 
+     │ ├── cache/ 
+     │ ├── email/ 
+     │ └── server/ 
+     └── shared/ # Code partagé 
+     ├── utils/ 
+     └── constants/
+`
+                        },
+                      ],
+                    },
+                    {
+                      h4Title: "Cas d’usage recommandés :",
+                      list: [
+                        "Applications avec domaine métier complexe",
+                        "Projets nécessitant une forte testabilité",
+                        "Équipes expérimentées",
+                        "Applications évolutives",
+                      ],
+                      alerts: [
+                        {
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
+                          icon: '👍',
+                          text: "Avantages : Indépendance technologique, testabilité maximale, évolutivité"
+                        },
+                      ],
+                    },
+                    {
+                      h4Title: '3. Hexagonal Architecture (Ports & Adapters) ',
+                      h4Anchor: 'section5-3',
+                      text: "Description : Architecture qui isole complètement le cœur métier des détails techniques via des ports et adaptateurs.",
+                      h5Title: "Structure générée :",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
+                          type: "TEXT",
+                          code: `src/ ├── core/ # Hexagone central
+     │ ├── domain/ 
+     │ │ ├── entities/ 
+     │ │ ├── value-objects/ 
+     │ │ ├── services/ 
+     │ │ └── exceptions/ 
+     │ └── application/ 
+     │ ├── use-cases/
+     │ ├── commands/ 
+     │ ├── queries/ 
+     │ ├── handlers/ 
+     │ └── dtos/ 
+     ├── ports/ # Interfaces 
+     │ ├── inbound/ 
+     │ │ ├── http/ 
+     │ │ └── cli/ 
+     │ └── outbound/ 
+     │ ├── repositories/ 
+     │ ├── external-services/ 
+     │ └── infrastructure/ *
+     ├── adapters/ # Implémentations 
+     │ ├── inbound/ 
+     │ │ └── http/ 
+     │ │ ├── controllers/ 
+     │ │ ├── middleware/ 
+     │ │ └── routes/ 
+     │ └── outbound/ 
+     │ ├── repositories/ 
+     │ │ ├── mysql/ 
+     │ │ ├── redis/ 
+     │ │ └── mappers/ 
+     │ └── external-services/ 
+     ├── config/ # Configuration et DI 
+     │ ├── dependencies/ 
+     │ ├── database/ 
+     │ └── environment/ 
+     └── main/ # Point d'entrée
+`
+                        },
+                      ],
+                    },
+                    {
+                      h4Title: "Cas d’usage recommandés :",
+                      list: [
+                        "Microservices complexes",
+                        "Applications nécessitant multiple interfaces",
+                        "Projets avec changements fréquents d'infrastructure",
+                        "Architecture modulaire poussée",
+                      ],
+                      alerts: [
+                        {
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
+                          icon: '👍',
+                          text: "Avantages : Isolation maximale, flexibilité des adaptateurs, testabilité parfaite"
+                        },
+                      ],
+                      arrays: [
+                        {
+                          headCol: ["Critère", "Layered", "Clean", "Hexagonal"],
+                          rows: [
+                            {
+                              col1: [
+                                {
+                                  text: "Complexité",
+                                  label: false,
+                                }
+                              ],
+                              col2: [
+                                {
+                                  text: "⭐⭐",
+                                  label: false,
+                                }
+                              ],
+                              col3: [
+                                {
+                                  text: "⭐⭐⭐⭐",
+                                  label: false,
+                                }
+                              ],
+                              col4: [
+                                {
+                                  text: "⭐⭐⭐⭐⭐",
+                                  label: false,
+                                }
+                              ]
+                            },
+                            {
+                              col1: [
+                                {
+                                  text: "Testabilité",
+                                  label: false,
+                                }
+                              ],
+                              col2: [
+                                {
+                                  text: "⭐⭐⭐",
+                                  label: false,
+                                }
+                              ],
+                              col3: [
+                                {
+                                  text: "⭐⭐⭐⭐⭐",
+                                  label: false,
+                                }
+                              ],
+                              col4: [
+                                {
+                                  text: "⭐⭐⭐⭐⭐",
+                                  label: false,
+                                }
+                              ]
+                            },
+                            {
+                              col1: [
+                                {
+                                  text: "Évolutivité",
+                                  label: false,
+                                }
+                              ],
+                              col2: [
+                                {
+                                  text: "⭐⭐",
+                                  label: false,
+                                }
+                              ],
+                              col3: [
+                                {
+                                  text: "⭐⭐⭐⭐",
+                                  label: false,
+                                }
+                              ],
+                              col4: [
+                                {
+                                  text: "⭐⭐⭐⭐⭐",
+                                  label: false,
+                                }
+                              ]
+                            },
+                            {
+                              col1: [
+                                {
+                                  text: "Courbe d'apprentissage",
+                                  label: false,
+                                }
+                              ],
+                              col2: [
+                                {
+                                  text: "Douce",
+                                  label: false,
+                                }
+                              ],
+                              col3: [
+                                {
+                                  text: "Modérée",
+                                  label: false,
+                                }
+                              ],
+                              col4: [
+                                {
+                                  text: "Steep",
+                                  label: false,
+                                }
+                              ]
+                            },
+                            {
+                              col1: [
+                                {
+                                  text: "Idéal pour",
+                                  label: false,
+                                }
+                              ],
+                              col2: [
+                                {
+                                  text: "CRUD, APIs simples",
+                                  label: false,
+                                }
+                              ],
+                              col3: [
+                                {
+                                  text: "Domaine complexe",
+                                  label: false,
+                                }
+                              ],
+                              col4: [
+                                {
+                                  text: "Microservices",
+                                  label: false,
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                  ],
+                },
+
+              ]
+            },
+            {
+              id: 'section6',
+              h2Title: "Configuration",
+              h2Anchor: 'configuration',
+              subBlocs: [
+                {
+                  id: 'sub-1',
+                  subchildBlocs: [
+                    {
+                      h4Title: 'TypeScript vs JavaScript',
+                      h4Anchor: 'section6-1',
+                      text: "ArchiTS supporte complètement TypeScript et JavaScript avec des configurations optimisées pour chaque langage.",
+                      h5Title: "TypeScript (Fortement recommandé)",
+                      alerts: [
+                        {
+                          bgColor: 'alert-green',
+                          borderColor: 'alert-green',
+                          icon: '👍',
+                          text: "Avantages TypeScript : Typage statique, IntelliSense amélioré, détection d'erreurs à la compilation, meilleure documentation du code"
+                        },
+                      ],
+                    },
+                    {
+                      h5Title: "Fichiers générés :",
+                      labels: [
+                        {
+                          label: "tsconfig.json",
+                          text: "Configuration TypeScript optimisée",
+                        },
+
+                        {
+                          label: "src/index.ts",
+                          text: "Point d'entrée TypeScript",
+                        },
+                        {
+                          label: "jest.config.ts",
+                          text: "Configuration Jest pour TypeScript",
+                        },
+
+                      ],
+                    },
+                    {
+                      h5Title: "Typescript : Scripts npm générés :",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
+                          type: "JSON",
+                          code: `{ "scripts": 
+  { "start": "node dist/src/index.js",
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix"
+  }
+}`
+                        },
+                      ],
+                    },
+                    {
+                      h5Title: "Javascript : Scripts npm générés :",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
+                          type: "JSON",
+                          code: `{ "scripts": 
+   { "start": "node src/index.js",
+     "dev": "nodemon src/index.js",
+     "lint": "eslint src/**/*.js",
+     "lint:fix": "eslint src/**/*.js --fix" 
+   } 
+}`
+                        },
+                      ],
+                    },
+                    {
+                      h4Title: "Configuration ExpressJS",
+                      h4Anchor: 'section6-2',
+                      text: "Vous pouvez choisir d'utiliser ExpressJS ou Node.js natif lors de la création du projet.",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
+                          type: "TYPESCRIPT",
+                          code: `import express, { Express, Request, Response } from 'express';
+const server = express();
+const PORT = 3000; // Routes 
+
+server.get('/', (req: Request, res: Response) => { 
+    res.json({ 
+         message: 'Welcome to Archi API',
+         version: '1.0.0', 
+         status: 'running', 
+         stack: 'NodeJS, Typescript',
+         library: 'ExpressJS' 
+    });
+}); 
+
+// Start server 
+server.listen(PORT, () => { 
+    console.log('Server running on http://localhost:' + PORT); 
+});
+`
+                        },
+                      ],
+                    },
+                    {
+                      h4Title: "Variables d’environnements",
+                      h4Anchor: 'section6-3',
+                      text: "ArchiTS génère automatiquement un fichier .env avec toutes les variables essentielles :",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
+                          type: "BASH",
+                          code: `# Environment 
+NODE_ENV=development 
+
+# Server 
+LISTEN_PORT="3000" 
+SERVER_NAME="ArchiTS API" 
+VERSION="1.0.0" 
+
+# Database DB_HOST="localhost" 
+DB_PORT="3306" 
+DB_NAME="archi_db" 
+DB_USER="root" 
+DB_PASSWORD="my-super-password" 
+DB_CONNEXION_LIMIT="100" 
+
+# Redis 
+REDIS_PORT="6379" 
+REDIS_HOST="localhost" 
+REDIS_PASSWORD="my-super-password" 
+REDIS_EXPIRES_IN="3600" 
+
+# JWT 
+JWT_SECRET_KEY="your-secret-key" 
+JWT_REFRESH_SECRET_KEY="your-refresh-secret-key" 
+JWT_DURATION="2h" 
+JWT_REFRESH_TOKEN_TIME="20h" 
+
+# CORS 
+CORS_ALLOWED_ORIGINS="http://localhost:3000" 
+CORS_CREDENTIALS="true" 
+
+# SMTP 
+MAIL_HOST="mail.domain.fr" 
+MAIL_PORT="465" MAIL_SECURE="true" 
+MAIL_AUTH_USER="exemple@domain.fr" 
+MAIL_AUTH_PASSWORD="my-super-password"`
+                        },
+                      ],
+                      alerts: [
+                        {
+                          bgColor: 'alert-red',
+                          borderColor: 'alert-red',
+                          icon: '🔒',
+                          text: "Sécurité : N'oubliez pas de modifier les valeurs par défaut, surtout les mots de passe et clés secrètes avant de passer en production !"
+                        },
+                      ],
+                    },
+                  ],
+                },
+
+              ]
+            },
+            {
+              id: 'section7',
+              h2Title: "Référence CLI",
+              h2Anchor: 'reference',
+              subBlocs: [
+                {
+                  id: 'sub-1',
+                  subchildBlocs: [
+                    {
+                      h4Title: 'archi create',
+                      h4Anchor: 'section7-1',
+                      text: "Commande principale pour créer un nouveau projet avec ArchiTS.",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
+                          type: "BASH",
+                          code: `archi create`
+                        },
+                      ],
+                    },
+                    {
+                      h5Title: "Processus interactif :",
+                      list: ["Nom du projet : Définit le nom du dossier et du package",
+                        "Architecture : Choix entre Layered, Clean ou Hexagonal",
+                        "Langage : TypeScript ou JavaScript",
+                        "ExpressJS : Inclure ou non le framework Express"]
+
+                    },
+                    {
+                      h5Title: "Actions automatiques :",
+                      list: ["Création de la structure de dossiers",
+                        "Génération des fichiers de configuration",
+                        "Installation des dépendances npm",
+                        "Installation de pnpm",
+                        "Initialisation Git (si applicable)"]
+
+                    },
+                    {
+                      h4Title: 'archi version',
+                      h4Anchor: 'section7-2',
+                      text: "Affiche les informations détaillées sur la version et l'environnement.",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
+                          type: "BASH",
+                          code: `# Version courte
+archi -v 
+
+# ou 
+archi --version 
+
+# Informations détaillées
+archi version`
+                        },
+                      ],
+                    },
+                    {
+                      h4Title: 'Dépanage',
+                      h4Anchor: 'section7-3',
+                      h5Title: 'Problèmes courants',
+                      text: "Affiche les informations détaillées sur la version et l'environnement.",
+                      terminal: [
+                        {
+                          message: "❌ Erreur : archi: command not found",
+                          text: "Solutions:",
+                          type: "BASH",
+                          bgColor: 'red',
+                          borderColor: 'red',
+                          code: `# Recharger le shell
+source ~/.bashrc 
+
+# Ou vérifier l'installation 
+cd archi-ts-cli make install`
+                        },
+                        {
+                          message: "❌ Erreur : archi: command not found",
+                          text: "Solutions:",
+                          type: "BASH",
+                          bgColor: 'red',
+                          borderColor: 'red',
+                          code: `# Recharger le shell
+source ~/.bashrc 
+
+# Ou vérifier l'installation 
+cd archi-ts-cli make install`
+                        },
+                        {
+                          message: "❌ Erreur : archi: command not found",
+                          text: "Solutions:",
+                          type: "BASH",
+                          bgColor: 'red',
+                          borderColor: 'red',
+                          code: `# Donner les permissions d'exécution
+chmod +x archi 
+
+# Ou réinstaller 
+make clean make install`
+                        },
+                      ],
+                    },
+                    {
+                      h5Title: "Logs et diagnostic",
+                      text: "Pour diagnostiquer les problèmes, vous pouvez :",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
+                          type: "BASH",
+                          code: `# Vérifier l'installation 
+which archi 
+
+# Tester la compilation 
+make build 
+
+# Nettoyer et réinstaller 
+make clean 
+make install`
+                        },
+                      ],
+                    },
+                    {
+                      h5Title: "Support",
+                      text: "Si vous rencontrez des problèmes non couverts ici :",
+                    },
+                  ],
+                },
+
+              ]
+            },
+          ],
+
+        },
+
+      ],
+      footer: [
+        {
+          line1: '©2025 ArchiTS CLI – Développé par Thomas Bressel',
+          line2: 'Publié sous licence MIT.',
+        }
+      ],
+    },
+    
+
+  ]

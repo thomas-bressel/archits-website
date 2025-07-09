@@ -12,11 +12,8 @@
 
         <li class="header__top-button">
             <div app-select-field [label]="'langOptions'" [optionsList]="[
+                {value: 'english', label: 'English'},
 {value: 'français', label: 'Français'},
-  {value: 'english', label: 'English'},
-  {value: 'español', label: 'Español'},
-  {value: 'русский', label: 'Pyccкий'},
-  {value: '日本語', label: '日本語'},
  
 
             ]" [placeholder]="interfaceService.currentLanguageLabel()" (fieldValue)="onLanguageChange($event)">
