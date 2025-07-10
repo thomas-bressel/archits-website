@@ -1,17 +1,25 @@
-<button class="button " 
-    [ngClass]="['bg-' + bgColor(), 'border-' + borderColor(), 'color-' + txtColor(), 'shadow-' + shadowColor()]" 
-    [type]="type() === 'submit' ? 'submit' : 'button'"(click)="handleClick()">
-@if(icon()) {
+<button
+  class="button"
+  [ngClass]="['bg-' + bgColor(), 'border-' + borderColor(), 'color-' + txtColor(), 'shadow-' + shadowColor()]"
+  [type]="type() === 'submit' ? 'submit' : 'button'"
+  (click)="handleClick()"
+  [attr.aria-label]="text() || staticText() || 'Button'"
+  [attr.title]="text() || staticText() || 'Button'">
+
+  @if(icon()) {
     <img class="button__icn" [src]="`./icons/${iconColor()}/${icon()}`" alt="">
-}
-@if(img()) {
+  }
+
+  @if(img()) {
     <img class="button__img" [src]="`./logos/${img()}.webp`" alt="">
-}
-@if (text()) {
+  }
+
+  @if(text()) {
     <span class="button__text">{{text()}}</span>
-}
-@if (staticText()) {
+  }
+
+  @if(staticText()) {
     <span class="button__staticText">{{staticText()}}</span>
-}
+  }
 
 </button>

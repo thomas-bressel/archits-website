@@ -1,54 +1,71 @@
 <!-- Introduce Bloc with terminal -->
-<section class="home__blocintro">
+<section class="home__blocintro" role="region" aria-label="Introduction section">
 
     <div class="home__introduce">
-        <h1 class="home__introduce-title">
-            {{ homePageData()?.h1Title }}<span class="home__introduce-version"> {{ interfaceService.interface()[0].version }}</span>
-        </h1>
-        <article class="home__introduce-text">
-            <p>{{ homePageData()?.subtitle }}</p>
-            <p>{{ homePageData()?.hook }}</p>
-        </article>
+      <h1 class="home__introduce-title">
+        {{ homePageData()?.h1Title }}
+        <span class="home__introduce-version">{{ interfaceService.interface()[0].version }}</span>
+      </h1>
+  
+      <article class="home__introduce-text">
+        <p>{{ homePageData()?.subtitle }}</p>
+        <p>{{ homePageData()?.hook }}</p>
+      </article>
     </div>
-
-    <app-console class="home__console"></app-console>
-
-    <ul class="home__buttons">
-        <li>
-            <a href="https://github.com/thomas-bressel/archi-ts-cli" target="_blank">
-                <div app-button [icon]="'star.svg'" [iconColor]="'yellow'" [staticText]="'GitHub'" [borderColor]="'grey'"></div>
-            </a>
-        </li>
+  
+    <!-- Terminal not accessible: no tabindex, no ARIA -->
+    <app-console class="home__console" aria-hidden="true"></app-console>
+  
+    <ul class="home__buttons" role="list" aria-label="External links">
+      <li role="listitem">
+        <a href="https://github.com/thomas-bressel/archi-ts-cli" target="_blank" role="link" aria-label="Visit the ArchiTS project on GitHub">
+          <div
+            app-button
+            [icon]="'star.svg'"
+            [iconColor]="'yellow'"
+            [staticText]="'GitHub'"
+            [borderColor]="'grey'">
+          </div>
+        </a>
+      </li>
     </ul>
-</section>
-
-
-@let bloc1 = interfaceService.getBlocById('bloc1');
-<section [id]="bloc1?.id" class="home__bloc1">
-    <h2 class="home__bloc1-title">{{bloc1?.h2Title}}</h2>
-    <p class="home__bloc1-hook">{{bloc1?.hook}}</p>
-    
+  
+  </section>
+  
+  
+  @let bloc1 = interfaceService.getBlocById('bloc1');
+  <section [id]="bloc1?.id" class="home__bloc1" role="region" [attr.aria-label]="bloc1?.h2Title + ' section'">
+    <h2 class="home__bloc1-title">{{ bloc1?.h2Title }}</h2>
+    <p class="home__bloc1-hook">{{ bloc1?.hook }}</p>
+  
     <div class="home__cards">
-        @for(card of bloc1?.cards ; track $index) {
-            <div app-card [cardContent]="card"></div>
-        }
+      @for(card of bloc1?.cards; track $index) {
+        <div app-card [cardContent]="card"></div>
+      }
     </div>
-</section>
-
-
-
-@let bloc2 = interfaceService.getBlocById('bloc2');
-<section [id]="bloc2?.id" class="home__bloc2">
-    <h2  class="home__bloc2-title">{{bloc2?.h2Title}}</h2>
-    <p  class="home__bloc2-hook">{{bloc2?.hook}}</p>
-
-    <app-terminal id="start" [terminalContent]="interfaceService.getTerminalByBlocId('bloc2')"></app-terminal>
-
-    <ul class="home__buttons">
-        <li>
-            <a href="https://github.com/thomas-bressel/archi-ts-cli" target="_blank">
-                <div app-button [icon]="'star.svg'" [iconColor]="'yellow'" [staticText]="'GitHub'" [borderColor]="'grey'"></div>
-            </a>       
-        </li>
+  </section>
+  
+  
+  @let bloc2 = interfaceService.getBlocById('bloc2');
+  <section [id]="bloc2?.id" class="home__bloc2" role="region" [attr.aria-label]="bloc2?.h2Title + ' section'">
+    <h2 class="home__bloc2-title">{{ bloc2?.h2Title }}</h2>
+    <p class="home__bloc2-hook">{{ bloc2?.hook }}</p>
+  
+    <!-- Terminal not accessible -->
+    <app-terminal id="start" [terminalContent]="interfaceService.getTerminalByBlocId('bloc2')" aria-hidden="true"></app-terminal>
+  
+    <ul class="home__buttons" role="list" aria-label="External links">
+      <li role="listitem">
+        <a href="https://github.com/thomas-bressel/archi-ts-cli" target="_blank" role="link" aria-label="Visit the ArchiTS project on GitHub">
+          <div
+            app-button
+            [icon]="'star.svg'"
+            [iconColor]="'yellow'"
+            [staticText]="'GitHub'"
+            [borderColor]="'grey'">
+          </div>
+        </a>
+      </li>
     </ul>
-</section>
+  </section>
+  

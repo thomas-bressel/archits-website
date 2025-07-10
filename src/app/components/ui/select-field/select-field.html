@@ -1,12 +1,17 @@
-<label [for]="label()" hidden></label>
+<label [for]="label()" class="sr-only"></label>
 
 @if(icon()) {
   <img class="select__icn" [src]="'icons/grey/' + icon()" alt="">
 }
 
-<select class="select"
- [id]="label()" (change)="onSelectChange($event)">
-    @for(option of optionsList() ; track $index) {
-      <option [value]="option.value">{{ option.label }}</option>
-    }
+<select
+  class="select"
+  [id]="label()"
+  (change)="onSelectChange($event)"
+  [attr.aria-label]="label() || 'Selection'"
+  [attr.title]="label() || 'Selection'">
+  
+  @for(option of optionsList(); track $index) {
+    <option [value]="option.value">{{ option.label }}</option>
+  }
 </select>

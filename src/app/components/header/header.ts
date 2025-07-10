@@ -1,6 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { Button } from '../ui/button/button';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink, NavigationEnd } from '@angular/router';
 import { Interface } from '../../shared/services/interface';
 import { SelectField } from '../ui/select-field/select-field';
 
@@ -17,6 +17,17 @@ export class Header {
 
   interfaceService = inject(Interface);
   isMenuOpen = signal(false);
+  currentRoute = signal('');
+
+
+
+  constructor(private router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.currentRoute.set(event.url);
+      }
+    });
+  }
 
   /**
    * Toggle burger menu

@@ -1,73 +1,89 @@
 <!-- Top section -->
-<section class="header__top center">
-    <ul class="header__top-buttons">
-
-        @for(button of interfaceService.headerTopButtons(); track $index ) {
-        <li class="header__top-button">
-            <a [href]="button.link" target="_blank">
-                <div app-button [icon]="button.icon" [iconColor]="button.iconColor" [text]="button.text"></div>
-            </a>
+<section class="header__top center" role="banner" aria-label="Top toolbar">
+    <ul class="header__top-buttons" role="list" aria-label="Quick action buttons">
+  
+      @for(button of interfaceService.headerTopButtons(); track $index ) {
+        <li class="header__top-button" role="listitem">
+          <a [href]="button.link" target="_blank" role="link" [attr.aria-label]="button.text">
+            <div app-button [icon]="button.icon" [iconColor]="button.iconColor" [text]="button.text"></div>
+          </a>
         </li>
-        }
-
-        <li class="header__top-button">
-            <div app-select-field [label]="'langOptions'" [optionsList]="[
-                {value: 'english', label: 'English'},
-{value: 'français', label: 'Français'},
- 
-
-            ]" [placeholder]="interfaceService.currentLanguageLabel()" (fieldValue)="onLanguageChange($event)">
-            </div>
-        </li>
+      }
+  
+      <li class="header__top-button" role="listitem">
+        <div app-select-field
+          [label]="'langOptions'"
+          [optionsList]="[
+            {value: 'english', label: 'English'},
+            {value: 'français', label: 'Français'}
+          ]"
+          [placeholder]="interfaceService.currentLanguageLabel()"
+          (fieldValue)="onLanguageChange($event)"
+          aria-label="Language selector">
+        </div>
+      </li>
     </ul>
-</section>
-
-
-<!-- Bottom section -->
-<section class="header__bot center">
-
-
-    <!-- Logo Archi TS-->
+  </section>
+  
+  <!-- Bottom section -->
+  <section class="header__bot center" role="navigation" aria-label="Main navigation">
+  
     <div class="header__bot-logo">
-        <img src="logo/logo-v1.svg" alt="">
-        <p>ArchiTS</p>
+      <img src="logo/logo-v1.svg" alt="ArchiTS Logo">
+      <p>ArchiTS</p>
     </div>
-
-
-    <!-- Navigation -->
-    <nav class="header__bot-navigation">
-        <ul class="header__bot-navigation-items" [class.hidden]="!isMenuOpen()">
-            @for(item of interfaceService.headerBotNavigation() ; track $index) {
-            <li class="header__bot-navigation-item" (click)="closeMenu()">
-                <a [routerLink]="item.router" routerLinkActive="active">{{item.name}}</a>
-            </li>
-            }
-        </ul>
-    </nav>
-
-
-    <!-- CTA -->
-    <ul class="header__bot-ctas">
-        @for (item of interfaceService.headerBotCta(); track $index) {
-        <li class="header__bot-cta">
-
-            @if(item.link) {
-                <a [href]="item.link" target="_blank">
-                    <div app-button [icon]="item.icon" [iconColor]="item.iconColor" [text]="item.text"
-                    [txtColor]="item.textColor" [bgColor]="item.bgColor"></div>
-                </a>
-            } @else {
-                <a [href]="`#${item.anchor}`">
-                    <div app-button [icon]="item.icon" [iconColor]="item.iconColor" [text]="item.text"
-                    [txtColor]="item.textColor" [bgColor]="item.bgColor"></div>
-                </a>
-            }
-        </li>
+  
+    <nav class="header__bot-navigation" role="navigation" aria-label="Main site links">
+      <ul class="header__bot-navigation-items" [class.hidden]="!isMenuOpen()" role="list">
+        @for(item of interfaceService.headerBotNavigation() ; track $index) {
+          <li class="header__bot-navigation-item" role="listitem">
+            <a [routerLink]="item.router" routerLinkActive="active" role="link" (click)="closeMenu()">
+              {{item.name}}
+            </a>
+          </li>
         }
-
-        <li class="header__bot-burger" (click)="toggleBurger()">
-            <div app-button [icon]="!isMenuOpen() ? 'burger.svg': 'cross.svg'" [iconColor]="'white'" [borderColor]="'grey'"></div>
-        </li>
-
+      </ul>
+    </nav>
+  
+    <ul class="header__bot-ctas" role="list" aria-label="Call to actions">
+        @for (item of interfaceService.headerBotCta(); track $index) {
+            <li class="header__bot-cta" role="listitem">
+              @if(item.link) {
+                <a [href]="item.link" target="_blank" role="link" [attr.aria-label]="item.text">
+                  <div
+                    app-button
+                    [icon]="item.icon"
+                    [iconColor]="item.iconColor"
+                    [text]="item.text"
+                    [txtColor]="item.textColor"
+                    [bgColor]="item.bgColor">
+                  </div>
+                </a>
+              } @else {
+                <a [href]="`#${item.anchor}`" role="link" [attr.aria-label]="item.text">
+                  <div
+                    app-button
+                    [icon]="item.icon"
+                    [iconColor]="item.iconColor"
+                    [text]="item.text"
+                    [txtColor]="item.textColor"
+                    [bgColor]="item.bgColor">
+                  </div>
+                </a>
+              }
+            </li>
+          }
+  
+          <li class="header__bot-burger" role="listitem">
+            <div aria-label="Toggle menu" (click)="toggleBurger()">
+              <div
+                app-button
+                [icon]="!isMenuOpen() ? 'burger.svg' : 'cross.svg'"
+                [iconColor]="'white'"
+                [borderColor]="'grey'">
+              </div>
+            </div>
+          </li>
     </ul>
-</section>
+  </section>
+  

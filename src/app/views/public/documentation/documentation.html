@@ -1,5 +1,9 @@
-<aside app-overlay [ngClass]="isOverlayOpen() ? 'opened':'closed'" (overlayToggled)="toggleOverlay($event)"
-    [interfaceService]="overlayDatas()">
+<aside
+  app-overlay
+  [ngClass]="isOverlayOpen() ? 'opened' : 'closed'"
+  (overlayToggled)="toggleOverlay($event)"
+  [interfaceService]="overlayDatas()"
+  aria-hidden="true" tabindex="-1">
 </aside>
 
 @let blocs = blocsData();
@@ -123,6 +127,9 @@
                         </div>
                     }
                     
+
+
+
 
                         <!-- Link List -->
                         @if (subChild.linksList) {
