@@ -16,7 +16,7 @@
     }
 
     &.closed {
-        @include position($position: fixed, $left: -290px, $top: 140px, $zindex: 0);
+        @include position($position: fixed, $left: -290px, $top: 140px, $zindex: 10);
         transition: 300ms ease-in-out;
     }
 }

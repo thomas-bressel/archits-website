@@ -23,5 +23,10 @@ export class Overlay {
   }
 
 
+  public closeOverlay(event: MouseEvent) {
+    this.isOverlayOpen.set(false)
+    this.overlayToggled.emit(this.isOverlayOpen());
+  }
+
 
 }
