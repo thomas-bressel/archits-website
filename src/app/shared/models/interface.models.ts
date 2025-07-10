@@ -92,6 +92,14 @@ export interface Label {
   text?: string;
 }
 
+export interface linksList {
+  icon?: string;
+  textLink: string;
+  urlLink?: string;
+  description: string
+}
+
+
 
 export interface SubChildBloc {
   h4Title?: string;
@@ -103,6 +111,7 @@ export interface SubChildBloc {
   terminal?: TerminalError[] | undefined;
   alerts?: Alert[] | undefined;
   labels?: Label[] | undefined;
+  linksList?: linksList[] | undefined;
 }
 
 export interface Alert {

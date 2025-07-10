@@ -35,27 +35,31 @@
     }
 
     &__h2Title {
-        @include text($font: font.$InterBold, $size: 2.375rem, $color: color.$white);
+        @include text($font: font.$InterBold, $size: font.$title-h2-mobile, $color: color.$white);
     }
     
     &__h3Title {
-        @include text($font: font.$InterMedium, $size: 1.6rem, $color: color.$white);
+        @include text($font: font.$InterMedium, $size: font.$title-h3-mobile, $color: color.$white);
     }
     
     &__h4Title {
-        @include text($font: font.$InterBold, $size: 1.25rem, $color: color.$h4-title);
+        @include text($font: font.$InterBold, $size: font.$title-h4-mobile, $color: color.$h4-title);
     }
     
     &__h5Title {
-        @include text($font: font.$InterBold, $size: 1rem, $color: color.$h5-title);
+        @include text($font: font.$InterBold, $size: font.$title-h5-mobile, $color: color.$h5-title);
     }
     
     
     &__text {
-        @include text($font: font.$InterLight, $size: 1rem, $color: color.$grey, $line: 25px);
+        @include text($font: font.$InterLight, $size: font.$paragraph-text-mobile, $color: color.$grey, $line: 25px);
         
         &-p {
             @include text($size: 1rem, $color: color.$white, $line: 20px);
+
+            span {
+                margin-right: .5rem;;
+            }
         }
     }
 
@@ -72,11 +76,11 @@
 
         &-title {
             @include flex($direction: row, $align: center, $gap: .5rem); 
-            @include text($font: font.$InterBold, $color: color.$h4-title, $size: 1rem);
+            @include text($font: font.$InterBold, $color: color.$h4-title, $size: font.$paragraph-text-mobile);
         }
         
         &-text {
-            @include text($font: font.$InterLight, $color: color.$grey, $size: 1rem, $line: 25px);
+            @include text($font: font.$InterLight, $color: color.$grey, $size: font.$paragraph-text-mobile, $line: 25px);
         }
 
         &-icon {
@@ -98,7 +102,7 @@
     &__list {
 
         &-text {
-            @include text($font: font.$InterLight, $color: color.$grey, $size: 1rem, $line: 20px);
+            @include text($font: font.$InterLight, $color: color.$grey, $size: font.$list-text-mobile, $line: 20px);
             padding-left: 2rem;
             
             &::before {
@@ -108,13 +112,15 @@
 
     }
     
-    
+    /*
+    *   All array tables which horizontally scroll with a sticky on left
+    */
     &__table-mask {
         overflow-x: scroll;
     }
     
     &__table {
-        @include text($font: font.$InterRegular, $size: 1rem);
+        @include text($font: font.$InterRegular, $size: font.$array-text-mobile);
     }
 
     &__header {
@@ -145,6 +151,9 @@
     }
 
 
+    /*
+    *   Terminal which contains code
+    */
     &__terminal {
         @include standard-border($size: 4px, $shape: solid, $color: transparent, $radius: 8px);
         color: color.$white;
@@ -162,7 +171,7 @@
         }
 
         &-code {
-            @include text($font: font.$FiraRegular, $size: .8rem, $line: 20px);
+            @include text($font: font.$FiraRegular, $size: font.$code-text-mobile, $line: 20px);
             background-color: black;
             border-radius: 8px;
             padding: 1rem;
@@ -182,29 +191,26 @@
     .documentation {
 
         &__h2Title {
-            font-size: 3.375rem;
+            font-size: font.$title-h2-desktop;
         }
 
         &__h3Title {
-            font-size: 2.6rem;
+            font-size:  font.$title-h3-desktop;
         }
 
         &__h4Title {
-            font-size: 2.25rem;
+            font-size:  font.$title-h4-desktop;
         }
 
         &__h5Title {
-            font-size: 1.5rem;
+            font-size:  font.$title-h5-desktop;
         }
 
 
         &__text {
-           font-size: 1.5rem;
-            line-height: 40px;
-
+            @include text($size: font.$paragraph-text-desktop, $line: 40px);
             &-p {
-                font-size: 1.5rem;
-                line-height: 30px;
+                @include text($size: font.$paragraph-text-desktop, $line: 30px);
             }
         }
 
@@ -214,34 +220,32 @@
             height: 208px;
 
             &-title {
-                font-size: 1.5rem;
+                font-size: font.$title-h5-desktop;
             }
 
             &-text {
-                font-size: 1.5rem;
-                line-height: 30px;
+                @include text($size: font.$paragraph-text-desktop, $line: 30px);
             }
 
         }
 
         &__list {
             &-text {
-                font-size: 1.5rem;
-                line-height: 30px;
+                @include text($size: font.$list-text-desktop, $line: 30px);
             }
         }
-
-
+        
+        
         &__terminal {
             &-code {
-                font-size: 1.25rem;
-                line-height: 40px;
+                @include text($size: font.$code-text-desktop, $line: 40px);
+
             }
         }
 
 
         &__table {
-            font-size: 1.5rem;
+            font-size: font.$array-text-desktop;
         }
 
 

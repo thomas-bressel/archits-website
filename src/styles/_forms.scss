@@ -12,8 +12,12 @@
 
 /* */
 .select {
-  @include standard-border($radius: .5rem, $size: 2px, $color: color.$grey);
-  @include flex($direction: row, $align: center, $justify: center, $gap: .5rem);
+  @include standard-border($radius: 8px, $size: 2px, $color: transparent);
+  padding: .5rem;
+  font-size: 1.5rem;
+  color: color.$paragraph-grey;
+  background-color: transparent;
+
 
   &__list {
     width: 100%;

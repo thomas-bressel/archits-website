@@ -64,12 +64,13 @@
                         @if(subChild.h4Title) {
                             <h4 class="documentation__h4Title">{{subChild.h4Title}}</h4>
                         }
-                        @if(subChild.text) {
-                            <p class="documentation__text">{{subChild.text}}</p>
-                        }
                         @if (subChild.h5Title) {
                             <h5 class="documentation__h5Title">{{subChild.h5Title}}</h5>
                         }
+                        @if(subChild.text) {
+                            <p class="documentation__text">{{subChild.text}}</p>
+                        }
+
 
 
 
@@ -122,6 +123,21 @@
                         </div>
                     }
                     
+
+                        <!-- Link List -->
+                        @if (subChild.linksList) {
+                        <ul class="documentation__lists">
+                            @for (item of subChild.linksList ; track $index) {
+                            <li class="documentation__list">
+                                <a [href]="item.urlLink" target="_blank">
+                                    <h5  class="documentation__h5Title"><span class="documentation__list-icon">{{item.icon}}</span>{{item.textLink}}</h5></a>
+                                <p class="documentation__list-text">
+                                    {{item.description}}
+                                </p>
+                            </li>
+                            }
+                        </ul>
+                        }
 
 
                         <!-- List -->

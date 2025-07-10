@@ -36,3 +36,35 @@ $FiraRegular: 'Fira Regular';
     src: url('/fonts/FiraMono-Regular.woff2') format('woff2');
     font-weight: 900;
 }
+
+
+
+// font size table array
+$array-text-mobile: 1rem;
+$array-text-desktop: 1.3rem;
+
+// font size titles
+$title-h2-mobile: 2.375rem; 
+$title-h2-desktop: 3.375rem;
+
+$title-h3-mobile: 1.6rem; 
+$title-h3-desktop: 2.6rem;
+
+$title-h4-mobile: 1.25rem; 
+$title-h4-desktop: 2.25rem;
+
+$title-h5-mobile:  1rem; 
+$title-h5-desktop: 1.5rem;
+
+// font size paragraphs
+$paragraph-text-mobile: 1rem;
+$paragraph-text-desktop: 1.5rem;
+
+// font size code
+$code-text-mobile: .8rem;
+$code-text-desktop: 1.25rem;
+
+// font size list
+$list-text-mobile: 1rem;
+$list-text-desktop: 1.5rem;
+

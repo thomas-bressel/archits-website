@@ -252,15 +252,15 @@ export class Interface {
                   borderColor: "terminal-black",
                   type: 'bash',
                   content: `# Cloner le repository
-git clone https://github.com/thomas-bressel/archi-ts-cli.git
-cd archi-ts-cli
+  git clone https://github.com/thomas-bressel/archi-ts-cli.git
+  cd archi-ts-cli
 
 # Installation
-make install
-source ~/.bashrc
+  make install
+  source ~/.bashrc
 
 # Créer votre premier projet
-archi create`
+  archi create`
                 }
               ],
             }
@@ -690,15 +690,15 @@ archi create`
                           bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# 1. Cloner le repository
-git clone https://github.com/thomas-bressel/archi-ts-cli.git
-cd archi-ts-cli 
+  git clone https://github.com/thomas-bressel/archi-ts-cli.git
+  cd archi-ts-cli 
 
 # 2. Installation automatique 
-make install 
+  make install 
 
 # 3. Recharger votre shell 
 # Ou redémarrer votre terminal
-source ~/.bashrc`
+  source ~/.bashrc`
                         },
                       ],
                       alerts: [
@@ -720,16 +720,16 @@ source ~/.bashrc`
                           bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Vérifier la version d'ArchiTS
-archi --version
+  archi --version
 
 # Sortie attendue: 
-archi version 1.7.0
+  archi version 1.7.0
 
 # Afficher l'aide 
-archi --help 
+  archi --help 
 
 # Tester la création d'un projet 
-archi create`
+  archi create`
                         },
                       ],
                       alerts: [
@@ -763,7 +763,7 @@ archi create`
                           bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Lancer la création interactive
-archi create`
+  archi create`
                         },
                       ],
                     },
@@ -774,17 +774,23 @@ archi create`
                           borderColor: "terminal-black",
                           bgColor: "terminal-black", 
                           type: "BASH",
-                          code: `# Vérifier la version d'ArchiTS
-archi --version
+                          code: `🚀 ArchiTS CLI - Project Scaffolding
+Project Name: mon-api-backend
+Use the arrow keys to navigate: ↓ ↑ → ← 
+Select an architecture: 
+Layered Architecture 
+▸ Clean Architecture 
+Hexagonal Architecture 
 
-# Sortie attendue: 
-archi version 1.7.0
+Select a language: 
+▸ TypeScript 
+JavaScript (please don't, if you're a true developer) 
 
-# Afficher l'aide 
-archi --help 
+Do you want to use ExpressJS library? 
+▸ Yes, install Express 
+No, I don't need Express 
 
-# Tester la création d'un projet 
-archi create`
+✅ Project structure created successfully!`
                         },
                       ],
                     },
@@ -798,25 +804,25 @@ archi create`
                           bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Se déplacer dans le projet
-cd mon-api-backend 
+  cd mon-api-backend 
 
 # Installation des dépendances (déjà fait automatiquement)
-npm install 
+  npm install 
 
 # Développement avec rechargement automatique 
-npm run dev 
+  npm run dev 
 
 # Construction du projet (TypeScript uniquement) 
-npm run build 
+  npm run build 
 
 # Démarrer en production 
-npm start 
+  npm start 
 
 # Exécuter les tests 
-npm test 
+  npm test 
 
 # Linter le code 
-npm run lint`
+  npm run lint`
                         },
                       ],
 
@@ -831,18 +837,17 @@ npm run lint`
                           bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# 1. Créer le projet
-archi create
+  archi create
 
 # → Choisir: Clean Architecture, TypeScript, ExpressJS 
-
 # 2. Naviguer dans le projet
-cd mon-api-backend 
+  cd mon-api-backend 
 
 # 3. Démarrer le serveur de développement 
-npm run dev 
+  npm run dev 
 
 # 4. Tester l'API
-curl http://localhost:3000 
+  curl http://localhost:3000 
 
 # Réponse JSON avec informations du projet
 `
@@ -1400,13 +1405,13 @@ MAIL_AUTH_PASSWORD="my-super-password"`
                           bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Version courte
-archi -v 
+  archi -v 
 
 # ou 
-archi --version 
+  archi --version 
 
 # Informations détaillées
-archi version`
+  archi version`
                         },
                       ],
                     },
@@ -1423,10 +1428,10 @@ archi version`
                           bgColor: 'alert-red',
                           borderColor: 'red',
                           code: `# Recharger le shell
-source ~/.bashrc 
+  source ~/.bashrc 
 
 # Ou vérifier l'installation 
-cd archi-ts-cli make install`
+  cd archi-ts-cli make install`
                         },
                         {
                           message: "❌ Erreur : archi: command not found",
@@ -1435,10 +1440,10 @@ cd archi-ts-cli make install`
                           bgColor: 'alert-red',
                           borderColor: 'red',
                           code: `# Recharger le shell
-source ~/.bashrc 
+  source ~/.bashrc 
 
 # Ou vérifier l'installation 
-cd archi-ts-cli make install`
+  cd archi-ts-cli make install`
                         },
                         {
                           message: "❌ Erreur : archi: command not found",
@@ -1447,10 +1452,10 @@ cd archi-ts-cli make install`
                           bgColor: 'alert-red',
                           borderColor: 'red',
                           code: `# Donner les permissions d'exécution
-chmod +x archi 
+  chmod +x archi 
 
 # Ou réinstaller 
-make clean make install`
+  make clean make install`
                         },
                       ],
                     },
@@ -1463,21 +1468,41 @@ make clean make install`
                           bgColor: "terminal-black", 
                           type: "BASH",
                           code: `# Vérifier l'installation 
-which archi 
+  which archi 
 
 # Tester la compilation 
-make build 
+  make build 
 
 # Nettoyer et réinstaller 
-make clean 
-make install`
+  make clean 
+  make install`
                         },
                       ],
                     },
                     {
                       h5Title: "Support",
                       text: "Si vous rencontrez des problèmes non couverts ici :",
-                    },
+                      linksList: [
+                        {
+                          icon: '💬',
+                          textLink: 'Rejoindre la Discussion',
+                          urlLink: 'https://github.com/thomas-bressel/archi-ts-cli/discussions',
+                          description: "Parfait pour : Questions, astuces, partage de vos projets, ou simplement discuter d'ArchiTS",
+                        },
+                        {
+                          icon: '🐛',
+                          textLink: 'Signaler un Problème',
+                          urlLink: 'https://github.com/thomas-bressel/archi-ts-cli/issues',
+                          description: "Parfait pour : Bugs, problèmes d'installation, ou difficultés techniques",
+                        },
+                        {
+                          icon: '☝️',
+                          textLink: 'Demandes de Fonctionnalités',
+                          urlLink: 'https://github.com/thomas-bressel/archi-ts-cli/discussions/categories/ideas',
+                          description: "Parfait pour : Idées de nouvelles fonctionnalités ou améliorations",
+                        },
+                      ]
+                    }
                   ],
                 },
 
@@ -1649,10 +1674,12 @@ make install`
                   content: `# Clone the repository
   git clone https://github.com/thomas-bressel/archi-ts-cli.git
   cd archi-ts-cli
-  # Installation
+
+# Installation
   make install
   source ~/.bashrc
-  # Create your first project
+
+# Create your first project
   archi create`
                 }
               ],
@@ -2084,10 +2111,12 @@ make install`
                           code: `# 1. Clone the repository
   git clone https://github.com/thomas-bressel/archi-ts-cli.git
   cd archi-ts-cli
-  # 2. Automatic installation
+
+# 2. Automatic installation
   make install
-  # 3. Reload your shell
-  # Or restart your terminal
+
+# 3. Reload your shell
+# Or restart your terminal
   source ~/.bashrc`
                         },
                       ],
@@ -2111,11 +2140,14 @@ make install`
                           type: "BASH",
                           code: `# Check ArchiTS version
   archi --version
-  # Expected output:
+
+# Expected output:
   archi version 1.7.0
-  # Display help
+
+# Display help
   archi --help
-  # Test project creation
+
+# Test project creation
   archi create`
                         },
                       ],
@@ -2161,14 +2193,23 @@ make install`
                           borderColor: "terminal-black",
                           bgColor: "terminal-black",
                           type: "BASH",
-                          code: `# Check ArchiTS version
-  archi --version
-  # Expected output:
-  archi version 1.7.0
-  # Display help
-  archi --help
-  # Test project creation
-  archi create`
+                          code: `🚀 ArchiTS CLI - Project Scaffolding
+Project Name: mon-api-backend
+Use the arrow keys to navigate: ↓ ↑ → ← 
+Select an architecture: 
+Layered Architecture 
+▸ Clean Architecture 
+Hexagonal Architecture 
+
+Select a language: 
+▸ TypeScript 
+JavaScript (please don't, if you're a true developer) 
+
+Do you want to use ExpressJS library? 
+▸ Yes, install Express 
+No, I don't need Express 
+
+✅ Project structure created successfully!`
                         },
                       ],
                     },
@@ -2183,17 +2224,23 @@ make install`
                           type: "BASH",
                           code: `# Navigate to the project
   cd my-backend-api
-  # Install dependencies (already done automatically)
+
+# Install dependencies (already done automatically)
   npm install
-  # Development with automatic reloading
+
+# Development with automatic reloading
   npm run dev
-  # Build the project (TypeScript only)
+
+# Build the project (TypeScript only)
   npm run build
-  # Start in production
+
+# Start in production
   npm start
-  # Run tests
+
+# Run tests
   npm test
-  # Lint the code
+
+# Lint the code
   npm run lint`
                         },
                       ],
@@ -2209,14 +2256,18 @@ make install`
                           type: "BASH",
                           code: `# 1. Create the project
   archi create
-  # → Choose: Clean Architecture, TypeScript, ExpressJS
-  # 2. Navigate to the project
+
+# → Choose: Clean Architecture, TypeScript, ExpressJS
+# 2. Navigate to the project
   cd my-backend-api
-  # 3. Start the development server
+
+# 3. Start the development server
   npm run dev
-  # 4. Test the API
+
+# 4. Test the API
   curl http://localhost:3000
-  # JSON response with project information
+
+# JSON response with project information
   `
                         },
                       ],
@@ -2253,21 +2304,21 @@ make install`
                           bgColor: "terminal-black",
                           type: "TEXT",
                           code: `src/ ├── controllers/ # HTTP request handling
-   │ └── base/ ├── services/ # Business logic
-   │ └── base/ ├── repositories/ # Data access
-   │ └── base/ ├── models/ # Entities and DTOs
-   │ ├── entities/
-   │ ├── dtos/
-   │ ├── requests/
-   │ ├── responses/
-   │ └── database/
-   ├── middleware/ # Express Middlewares
-   │ ├── auth/
-   │ ├── validation/
-   │ └── security/
-   ├── routes/ # Route definition
-   │ ├── api/
-   │ └── web/ └── utils/ # Utilities
+     │ └── base/ ├── services/ # Business logic
+     │ └── base/ ├── repositories/ # Data access
+     │ └── base/ ├── models/ # Entities and DTOs
+     │ ├── entities/
+     │ ├── dtos/
+     │ ├── requests/
+     │ ├── responses/
+     │ └── database/
+     ├── middleware/ # Express Middlewares
+     │ ├── auth/
+     │ ├── validation/
+     │ └── security/
+     ├── routes/ # Route definition
+     │ ├── api/
+     │ └── web/ └── utils/ # Utilities
   `
                         },
                       ],
@@ -2300,28 +2351,28 @@ make install`
                           bgColor: "terminal-black",
                           type: "TEXT",
                           code: `src/ ├── domain/ # Pure business core
-   │ └── entities/
-   ├── data/ # Data layer
-   │ ├── repositories/
-   │ ├── data-sources/
-   │ │ └── local/
-   │ ├── services/
-   │ ├── dtos/
-   │ ├── models/
-   │ └── mappers/
-   ├── presentation/ # User interface
-   │ ├── controllers/
-   │ ├── routes/
-   │ ├── middlewares/
-   │ └── models/
-   ├── infrastructure/ # External services
-   │ ├── database/
-   │ ├── cache/
-   │ ├── email/
-   │ └── server/
-   └── shared/ # Shared code
-   ├── utils/
-   └── constants/
+     │ └── entities/
+     ├── data/ # Data layer
+     │ ├── repositories/
+     │ ├── data-sources/
+     │ │ └── local/
+     │ ├── services/
+     │ ├── dtos/
+     │ ├── models/
+     │ └── mappers/
+     ├── presentation/ # User interface
+     │ ├── controllers/
+     │ ├── routes/
+     │ ├── middlewares/
+     │ └── models/
+     ├── infrastructure/ # External services
+     │ ├── database/
+     │ ├── cache/
+     │ ├── email/
+     │ └── server/
+     └── shared/ # Shared code
+     ├── utils/
+     └── constants/
   `
                         },
                       ],
@@ -2354,42 +2405,42 @@ make install`
                           bgColor: "terminal-black",
                           type: "TEXT",
                           code: `src/ ├── core/ # Central hexagon
-   │ ├── domain/
-   │ │ ├── entities/
-   │ │ ├── value-objects/
-   │ │ ├── services/
-   │ │ └── exceptions/
-   │ └── application/
-   │ ├── use-cases/
-   │ ├── commands/
-   │ ├── queries/
-   │ ├── handlers/
-   │ └── dtos/
-   ├── ports/ # Interfaces
-   │ ├── inbound/
-   │ │ ├── http/
-   │ │ └── cli/
-   │ └── outbound/
-   │ ├── repositories/
-   │ ├── external-services/
-   │ └── infrastructure/ *
-   ├── adapters/ # Implementations
-   │ ├── inbound/
-   │ │ └── http/
-   │ │ ├── controllers/
-   │ │ ├── middleware/
-   │ │ └── routes/
-   │ └── outbound/
-   │ ├── repositories/
-   │ │ ├── mysql/
-   │ │ ├── redis/
-   │ │ └── mappers/
-   │ └── external-services/
-   ├── config/ # Configuration and DI
-   │ ├── dependencies/
-   │ ├── database/
-   │ └── environment/
-   └── main/ # Entry point
+     │ ├── domain/
+     │ │ ├── entities/
+     │ │ ├── value-objects/
+     │ │ ├── services/
+     │ │ └── exceptions/
+     │ └── application/
+     │ ├── use-cases/
+     │ ├── commands/
+     │ ├── queries/
+     │ ├── handlers/
+     │ └── dtos/
+     ├── ports/ # Interfaces
+     │ ├── inbound/
+     │ │ ├── http/
+     │ │ └── cli/
+     │ └── outbound/
+     │ ├── repositories/
+     │ ├── external-services/
+     │ └── infrastructure/ *
+     ├── adapters/ # Implementations
+     │ ├── inbound/
+     │ │ └── http/
+     │ │ ├── controllers/
+     │ │ ├── middleware/
+     │ │ └── routes/
+     │ └── outbound/
+     │ ├── repositories/
+     │ │ ├── mysql/
+     │ │ ├── redis/
+     │ │ └── mappers/
+     │ └── external-services/
+     ├── config/ # Configuration and DI
+     │ ├── dependencies/
+     │ ├── database/
+     │ └── environment/
+     └── main/ # Entry point
   `
                         },
                       ],
@@ -2667,30 +2718,36 @@ make install`
                           type: "BASH",
                           code: `# Environment
   NODE_ENV=development
-  # Server
+
+# Server
   LISTEN_PORT="3000"
   SERVER_NAME="ArchiTS API"
   VERSION="1.0.0"
-  # Database DB_HOST="localhost"
+
+# Database DB_HOST="localhost"
   DB_PORT="3306"
   DB_NAME="archi_db"
   DB_USER="root"
   DB_PASSWORD="my-super-password"
   DB_CONNEXION_LIMIT="100"
-  # Redis
+
+# Redis
   REDIS_PORT="6379"
   REDIS_HOST="localhost"
   REDIS_PASSWORD="my-super-password"
   REDIS_EXPIRES_IN="3600"
-  # JWT
+
+# JWT
   JWT_SECRET_KEY="your-secret-key"
   JWT_REFRESH_SECRET_KEY="your-refresh-secret-key"
   JWT_DURATION="2h"
   JWT_REFRESH_TOKEN_TIME="20h"
-  # CORS
+
+# CORS
   CORS_ALLOWED_ORIGINS="http://localhost:3000"
   CORS_CREDENTIALS="true"
-  # SMTP
+
+# SMTP
   MAIL_HOST="mail.domain.fr"
   MAIL_PORT="465" MAIL_SECURE="true"
   MAIL_AUTH_USER="exemple@domain.fr"
@@ -2757,9 +2814,11 @@ make install`
                           type: "BASH",
                           code: `# Short version
   archi -v
-  # or
+
+# or
   archi --version
-  # Detailed information
+
+# Detailed information
   archi version`
                         },
                       ],
@@ -2778,7 +2837,8 @@ make install`
                           borderColor: 'red',
                           code: `# Reload the shell
   source ~/.bashrc
-  # Or check the installation
+  
+# Or check the installation
   cd archi-ts-cli make install`
                         },
                         {
@@ -2789,7 +2849,8 @@ make install`
                           borderColor: 'red',
                           code: `# Reload the shell
   source ~/.bashrc
-  # Or check the installation
+  
+# Or check the installation
   cd archi-ts-cli make install`
                         },
                         {
@@ -2800,7 +2861,8 @@ make install`
                           borderColor: 'red',
                           code: `# Give execution permissions
   chmod +x archi
-  # Or reinstall
+ 
+# Or reinstall
   make clean make install`
                         },
                       ],
@@ -2815,9 +2877,11 @@ make install`
                           type: "BASH",
                           code: `# Check installation
   which archi
-  # Test compilation
+  
+# Test compilation
   make build
-  # Clean and reinstall
+  
+# Clean and reinstall
   make clean
   make install`
                         },
@@ -2826,6 +2890,27 @@ make install`
                     {
                       h5Title: "Support",
                       text: "If you encounter problems not covered here:",
+                      linksList: [
+                        {
+                          icon: '💬',
+                          textLink: 'Join the Discussion',
+                          urlLink: 'https://github.com/thomas-bressel/archi-ts-cli/discussions',
+                          description: "Perfect for: Questions, tips, sharing your projects, or just chatting about ArchiTS",
+                        },
+                        {
+                          icon: '🐛',
+                          textLink: 'Report Issues',
+                          urlLink: 'https://github.com/thomas-bressel/archi-ts-cli/issues',
+                          description: "Perfect for: Bugs, installation problems, or technical difficulties",
+                        },
+                        {
+                          icon: '☝️',
+                          textLink: 'Feature Requests',
+                          urlLink: 'https://github.com/thomas-bressel/archi-ts-cli/discussions/categories/ideas',
+                          description: "Perfect for: Ideas for new features or improvements",
+                        },
+                      ]
+                      
                     },
                   ],
                 }
