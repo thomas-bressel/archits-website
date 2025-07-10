@@ -40,11 +40,18 @@
     }
 
     &__title {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
         color: color.$white;
         font-size: 1.25rem;
         border-radius: 8px;
         padding: .5rem 1rem;
         transition: 200ms ease-in-out;
+    }
+
+    &__icon {
+        width: 24px;
     }
 
     &__subtitle {

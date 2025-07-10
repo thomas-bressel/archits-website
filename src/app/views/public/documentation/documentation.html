@@ -21,7 +21,10 @@
         <ul class="documentation__cards">
             @for (card of section.cards ; track $index) {
             <li class="documentation__card">
-                <h5  class="documentation__card-title"><span>{{card.icon}}</span>{{card.title}}</h5>
+                
+                <h5  class="documentation__card-title">
+                    <img  class="documentation__card-icon" [src]="`icons/white/${card.icon}`" alt="">
+                    {{card.title}}</h5>
                 <p  class="documentation__card-text">{{card.text}}</p>
             </li>
             }
@@ -60,19 +63,19 @@
 
                         <!-- Terminal -->
                         @if(subChild.terminal) {
-                           @for(terminal of subChild.terminal ; track $index) {
-                           <div [class]="`documentation__terminal bg-${terminal.bgColor} border-${terminal.borderColor}`">
-                               <p class="documentation__terminal-type">
-                                   {{terminal.type}}
-                                </p>
-                                <p class="documentation__terminal-code">
-                                        <code>
-                                            {{terminal.code}}
-                                        </code>
-                                </p>
-
-                            </div>
-                           }
+                        @for(terminal of subChild.terminal ; track $index) {
+                        <div [class]="`documentation__terminal bg-${terminal.bgColor} border-${terminal.borderColor}`">
+                            <p class="documentation__terminal-type">{{terminal.type}}</p>
+                            @if(terminal.message && terminal.text) {
+                                <p class="documentation__terminal-message">{{terminal.message}}</p>
+                                <p class="documentation__terminal-text">{{terminal.text}}</p>
+                            }
+                            <p class="documentation__terminal-code">
+                                <code>{{terminal.code}}</code>
+                            </p>
+                        
+                        </div>
+                        }
                         }
 
 

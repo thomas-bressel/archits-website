@@ -291,7 +291,7 @@ archi create`
             },
             {
               h5Title: 'Installation',
-              h5Icon: '🚀',
+              h5Icon: 'download.svg',
               h5Anchor: 'install',
               items: [
                 {
@@ -313,7 +313,7 @@ archi create`
             },
             {
               h5Title: 'Démarrage rapide',
-              h5Icon: '⚡',
+              h5Icon: 'arrow-start.svg',
               h5Anchor: 'starting',
               items: [
                 {
@@ -335,7 +335,7 @@ archi create`
             },
             {
               h5Title: 'Architectures',
-              h5Icon: '🏗️',
+              h5Icon: 'layer.svg',
               h5Anchor: 'archi',
               items: [
                 {
@@ -357,7 +357,7 @@ archi create`
             },
             {
               h5Title: 'Configuration',
-              h5Icon: '⚙️',
+              h5Icon: 'setting.svg',
               h5Anchor: 'configuration',
               items: [
                 {
@@ -379,7 +379,7 @@ archi create`
             },
             {
               h5Title: 'Référence CLI',
-              h5Icon: '🔧',
+              h5Icon: 'console.svg',
               h5Anchor: 'reference',
               items: [
                 {
@@ -409,17 +409,17 @@ archi create`
               cards: [
                 {
                   title: 'Installation Rapide',
-                  icon: '🚀',
+                  icon: 'download.svg',
                   text: "Installez ArchiTS en quelques minutes et créez votre premier projet"
                 },
                 {
                   title: 'Démarrage Rapide',
-                  icon: '⚡',
+                  icon: 'arrow-start.svg',
                   text: "Guide pas à pas pour créer votre première architecture backend"
                 },
                 {
                   title: 'Architectures',
-                  icon: '🏗️',
+                  icon: 'layer.svg',
                   text: "Découvrez les trois patterns architecturaux supportés"
                 }
               ],
@@ -1417,10 +1417,10 @@ archi version`
                       text: "Affiche les informations détaillées sur la version et l'environnement.",
                       terminal: [
                         {
-                          message: "❌ Erreur : archi: command not found",
+                          message: "❌ Erreur : archi: command not found",
                           text: "Solutions:",
                           type: "BASH",
-                          bgColor: 'red',
+                          bgColor: 'alert-red',
                           borderColor: 'red',
                           code: `# Recharger le shell
 source ~/.bashrc 
@@ -1432,7 +1432,7 @@ cd archi-ts-cli make install`
                           message: "❌ Erreur : archi: command not found",
                           text: "Solutions:",
                           type: "BASH",
-                          bgColor: 'red',
+                          bgColor: 'alert-red',
                           borderColor: 'red',
                           code: `# Recharger le shell
 source ~/.bashrc 
@@ -1444,7 +1444,7 @@ cd archi-ts-cli make install`
                           message: "❌ Erreur : archi: command not found",
                           text: "Solutions:",
                           type: "BASH",
-                          bgColor: 'red',
+                          bgColor: 'alert-red',
                           borderColor: 'red',
                           code: `# Donner les permissions d'exécution
 chmod +x archi 
@@ -1684,7 +1684,7 @@ make install`
             },
             {
               h5Title: 'Installation',
-              h5Icon: '🚀',
+              h5Icon: 'download.svg',
               h5Anchor: 'install',
               items: [
                 {
@@ -1706,7 +1706,7 @@ make install`
             },
             {
               h5Title: 'Quick Start',
-              h5Icon: '⚡',
+              h5Icon: 'arrow-start.svg',
               h5Anchor: 'starting',
               items: [
                 {
@@ -1728,7 +1728,7 @@ make install`
             },
             {
               h5Title: 'Architectures',
-              h5Icon: '🏗️',
+              h5Icon: 'layer.svg',
               h5Anchor: 'archi',
               items: [
                 {
@@ -1750,7 +1750,7 @@ make install`
             },
             {
               h5Title: 'Configuration',
-              h5Icon: '⚙️',
+              h5Icon: 'setting.svg',
               h5Anchor: 'configuration',
               items: [
                 {
@@ -1772,7 +1772,7 @@ make install`
             },
             {
               h5Title: 'CLI Reference',
-              h5Icon: '🔧',
+              h5Icon: 'console.svg',
               h5Anchor: 'reference',
               items: [
                 {
@@ -1802,17 +1802,17 @@ make install`
               cards: [
                 {
                   title: 'Quick Installation',
-                  icon: '🚀',
+                  icon: 'download.svg',
                   text: "Install ArchiTS in a few minutes and create your first project"
                 },
                 {
                   title: 'Quick Start',
-                  icon: '⚡',
+                  icon: 'arrow-start.svg',
                   text: "Step-by-step guide to create your first backend architecture"
                 },
                 {
                   title: 'Architectures',
-                  icon: '🏗️',
+                  icon: 'layer.svg',
                   text: "Discover the three supported architectural patterns"
                 }
               ],
@@ -2774,7 +2774,7 @@ make install`
                           message: "❌ Error: archi: command not found",
                           text: "Solutions:",
                           type: "BASH",
-                          bgColor: 'red',
+                          bgColor: 'alert-red',
                           borderColor: 'red',
                           code: `# Reload the shell
   source ~/.bashrc
@@ -2785,7 +2785,7 @@ make install`
                           message: "❌ Error: archi: command not found",
                           text: "Solutions:",
                           type: "BASH",
-                          bgColor: 'red',
+                          bgColor: 'alert-red',
                           borderColor: 'red',
                           code: `# Reload the shell
   source ~/.bashrc
@@ -2796,7 +2796,7 @@ make install`
                           message: "❌ Error: archi: command not found",
                           text: "Solutions:",
                           type: "BASH",
-                          bgColor: 'red',
+                          bgColor: 'alert-red',
                           borderColor: 'red',
                           code: `# Give execution permissions
   chmod +x archi
