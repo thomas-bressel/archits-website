@@ -1,6 +1,8 @@
 <label [for]="label()" hidden></label>
 
-<img class="select__icn" [src]="'icons/grey/' + icon()" alt="">
+@if(icon()) {
+  <img class="select__icn" [src]="'icons/grey/' + icon()" alt="">
+}
 
 <select class="select"
  [id]="label()" (change)="onSelectChange($event)">

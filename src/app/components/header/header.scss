@@ -27,8 +27,8 @@
         }
 
         &-buttons {
-            @include flex($gap: 1rem, $justify: flex-end);
-            padding: 0 1.5rem;
+            @include flex($gap: 0rem, $justify: flex-end);
+            padding: 0 .5rem;
             max-width: 1400px;
             margin-left: auto;
             margin-right: auto;
