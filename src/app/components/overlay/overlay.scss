@@ -40,11 +40,8 @@
     }
 
     &__title {
-        display: flex;
-        align-items: center;
-        gap: .5rem;
-        color: color.$white;
-        font-size: 1.25rem;
+        @include flex($align: center, $gap: .5rem);
+        @include text($color: color.$white, $size: 1.25rem);
         border-radius: 8px;
         padding: .5rem 1rem;
         transition: 200ms ease-in-out;
@@ -55,9 +52,7 @@
     }
 
     &__subtitle {
-        color: color.$grey;
-        font-size: 1.25rem;
-        font-family: font.$InterLight;
+        @include text($color: color.$grey, $size: 1.25rem, $font: font.$InterLight);
         padding: .5rem 1rem;
         width: fit-content;
         border-radius: 8px;

@@ -3,200 +3,155 @@
 @use 'fonts' as font;
 
 
-
-:host {}
-
 .documentation {
     scroll-margin-top: 80px;
 
     &__bloc {
-        display: flex;
-        flex-direction: column;
-        gap: 5rem;
+        @include flex($direction: column, $gap: 5rem);
         padding: 1rem;
         word-break: break-word;
     }
 
     &__subBloc {
-        display: flex;
-        flex-direction: column;
-        gap: 4rem;
+        @include flex($direction: column, $gap: 4rem);
 
         &-content {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
+            @include flex($direction: column, $gap: 2rem);
         }
     }
 
     &__subChildBloc {
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
+        @include flex($direction: column, $gap: 3rem);
 
         &-content {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
+            @include flex($direction: column, $gap: 1rem);
         }
     }
 
 
     &__section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 3.3rem;
+        @include flex($direction: column, $justify: center, $gap: 3.3rem);
         width: 100%;
     }
+
     &__h2Title {
-        font-size: 2.375rem;
-        font-family: font.$InterBold;
-        color: color.$white;
+        @include text($font: font.$InterBold, $size: 2.375rem, $color: color.$white);
     }
+    
     &__h3Title {
-        font-size: 1.6rem;
-        font-family: font.$InterMedium;
-        color: color.$white;
+        @include text($font: font.$InterMedium, $size: 1.6rem, $color: color.$white);
     }
+    
     &__h4Title {
-        font-size: 1.25rem;
-        font-family: font.$InterBold;
-        color: color.$h4-title;
+        @include text($font: font.$InterBold, $size: 1.25rem, $color: color.$h4-title);
     }
+    
     &__h5Title {
-        font-size: 1rem;
-        font-family: font.$InterBold;
-        color: color.$h5-title;
+        @include text($font: font.$InterBold, $size: 1rem, $color: color.$h5-title);
     }
-
-
+    
+    
     &__text {
-        color: color.$grey;
-        font-size: 1rem;
-        line-height: 25px;
-        font-family: font.$InterLight;
-
+        @include text($font: font.$InterLight, $size: 1rem, $color: color.$grey, $line: 25px);
+        
         &-p {
-            color: color.$white;
-            font-size: 1rem;
-            line-height: 20px;
+            @include text($size: 1rem, $color: color.$white, $line: 20px);
         }
     }
 
     &__cards {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 2rem;
-        justify-content: space-evenly;
+        @include flex($direction: row, $justify: space-evenly, $gap: 2rem, $wrap: wrap);
     }
 
     &__card {
+        @include standard-border($size: 1px, $shape: solid, $color: color.$grey, $radius: 8px);
+        background-color: color.$background;
         width: 100%;
         min-width: 300px;
         padding: 1rem;
-        border: 1px solid color.$grey;
-        border-radius: 8px;
-        background-color: color.$background;
 
         &-title {
-            display: flex;
-            align-items: center;
-            gap: .5rem;
-            color: color.$h4-title;
-            font-family: font.$InterBold;
-            font-size: 1rem;
+            @include flex($direction: row, $align: center, $gap: .5rem); 
+            @include text($font: font.$InterBold, $color: color.$h4-title, $size: 1rem);
         }
         
         &-text {
-            color: color.$grey;
-            font-family: font.$InterLight;
-            font-size: 1rem;
-            line-height: 25px;
+            @include text($font: font.$InterLight, $color: color.$grey, $size: 1rem, $line: 25px);
         }
+
         &-icon {
             display: inline-block;
-           width: 24px;
+            width: 24px;
         }
 
     }
 
     &__alert {
-        border: 1px solid transparent;
-        border-radius: 8px;
+        @include standard-border($size: 1px, $shape: solid, $color: transparent, $radius: 8px);
         padding: .5rem;
     }
 
     &__lists {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
+        @include flex($direction: column, $gap: 1rem);
     }
 
     &__list {
 
         &-text {
-            font-family: font.$InterLight;
-            color: color.$grey;
-            font-size: 1rem;
-            line-height: 20px;
+            @include text($font: font.$InterLight, $color: color.$grey, $size: 1rem, $line: 20px);
             padding-left: 2rem;
-
+            
             &::before {
                 content: "->   ";
             }
         }
 
     }
-
-
+    
+    
     &__table-mask {
         overflow-x: scroll;
     }
+    
     &__table {
-        font-size: 1rem;
-        font-family: font.$InterRegular;
+        @include text($font: font.$InterRegular, $size: 1rem);
     }
 
-    &__header{
+    &__header {
         background-color: color.$background-blue-linear2;
         color: color.$white;
 
-       &-text {
-        padding: 1.5rem;
-        position: sticky;
-        left: 0;
-        background-color: color.$background-blue-linear2;
-        border-left: dotted 1px white;
-       }
+        &-text {
+            @include position($position: sticky, $left:0);
+            padding: 1.5rem;
+            background-color: color.$background-blue-linear2;
+            border-left: dotted 1px white;
+        }
     }
-    
+
     &__body {
         background-color: color.$background;
         color: color.$grey;
 
         &-text {
-         background-color: color.$background;
-         padding: 1.5rem;
-         border-bottom: 1px solid color.$grey;
-         position: sticky;
-         left: 0;
-         border-left: dotted 1px white;
-         white-space: nowrap;
+            @include position($position: sticky, $left:0);
+            background-color: color.$background;
+            padding: 1.5rem;
+            border-bottom: 1px solid color.$grey;
+            border-left: dotted 1px white;
+            white-space: nowrap;
 
         }
     }
 
 
     &__terminal {
+        @include standard-border($size: 4px, $shape: solid, $color: transparent, $radius: 8px);
         color: color.$white;
         padding: 1rem;
-        border-radius: 8px;
-        border: 4px solid transparent;
 
-
-        &-message, &-text {
+        &-message,
+        &-text {
             font-family: font.$FiraRegular;
             padding: .5rem;
         }
@@ -207,15 +162,12 @@
         }
 
         &-code {
+            @include text($font: font.$FiraRegular, $size: .8rem, $line: 20px);
             background-color: black;
             border-radius: 8px;
-
             padding: 1rem;
             white-space: pre-wrap;
             word-wrap: break-word;
-            font-size: .8rem;
-            font-family: font.$FiraRegular;
-            line-height: 20px;
         }
 
     }
@@ -231,28 +183,25 @@
 
         &__h2Title {
             font-size: 3.375rem;
-        
         }
+
         &__h3Title {
             font-size: 2.6rem;
-           
         }
+
         &__h4Title {
             font-size: 2.25rem;
-
         }
+
         &__h5Title {
             font-size: 1.5rem;
-        
         }
-    
-    
+
+
         &__text {
-          
-            font-size: 1.5rem;
+           font-size: 1.5rem;
             line-height: 40px;
 
-    
             &-p {
                 font-size: 1.5rem;
                 line-height: 30px;
@@ -260,36 +209,30 @@
         }
 
         &__card {
-                    display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        width: 300px;
-
+            @include flex($direction: column, $gap: 2rem);
+            width: 300px;
             height: 208px;
+
             &-title {
                 font-size: 1.5rem;
             }
-            
+
             &-text {
                 font-size: 1.5rem;
                 line-height: 30px;
             }
-    
+
         }
 
         &__list {
-    
             &-text {
                 font-size: 1.5rem;
                 line-height: 30px;
             }
-    
         }
 
 
         &__terminal {
-
-
             &-code {
                 font-size: 1.25rem;
                 line-height: 40px;
@@ -302,10 +245,9 @@
         }
 
 
-    &__alert {
-        padding: 1rem;
-    }
-    
+        &__alert {
+            padding: 1rem;
+        }
     }
 
 }
