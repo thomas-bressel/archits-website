@@ -129,7 +129,7 @@
 
         &-text {
             @include position($position: sticky, $left:0);
-            padding: 1.5rem;
+            padding: font.$array-cell-padding-mobile;
             background-color: color.$background-blue-linear2;
             border-left: dotted 1px white;
         }
@@ -142,7 +142,7 @@
         &-text {
             @include position($position: sticky, $left:0);
             background-color: color.$background;
-            padding: 1.5rem;
+            padding: font.$array-cell-padding-mobile;
             border-bottom: 1px solid color.$grey;
             border-left: dotted 1px white;
             white-space: nowrap;
