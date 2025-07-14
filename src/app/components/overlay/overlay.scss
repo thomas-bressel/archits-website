@@ -68,9 +68,9 @@
 
         &.closed,
         &.opened {
-            @include position($position: sticky);
+            @include position($position: sticky, $zindex: 0);
             margin-left: -16px;
-            margin-top: -16px;
+            margin-top: -15px;
             transition: 200ms ease-in-out;
             margin-bottom: -160px;
         }
