@@ -9,21 +9,23 @@
     border-right: solid 20px color.$background-blue-linear1;
 
     &.opened {
-        @include position($position: fixed, $left: 0, $top: 140px, $zindex: 10);
+        @include position($position: fixed, $left: 0, $top: 140px, $zindex: 5);
         transition: 300ms ease-in-out;
-
+        height: 100vh;
+        
     }
-
+    
     &.closed {
         @include position($position: fixed, $left: -290px, $top: 140px, $zindex: 10);
         transition: 300ms ease-in-out;
+        height: 100vh;
     }
 }
 
 
 .overlay {
     &__btn {
-        @include position($position: relative, $left: 300px, $top: -1px);
+        @include position($position: relative, $left: 300px, $top: 5px);
         @include standard-border ($radius: 50%, $shape: solid, $color: color.$white, $size: 1px);
         @include text($color: color.$grey, $size: 1.5rem, $align: center);
         width: 36px;
@@ -72,6 +74,7 @@
             margin-top: -15px;
             transition: 200ms ease-in-out;
             margin-bottom: -160px;
+            height: auto;
         }
     }
 
