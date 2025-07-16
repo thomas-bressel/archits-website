@@ -30,6 +30,8 @@
         @include text($color: color.$grey, $size: 1.5rem, $align: center);
         width: 36px;
         height: 48px;
+        min-height: 36px;
+
         background-color: color.$background-blue-linear1;
     }
 
