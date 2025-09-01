@@ -780,22 +780,50 @@ curl http://localhost:3000
                           borderColor: "terminal-black",
                           bgColor: "terminal-black", 
                           type: "TEXT",
-                          code: `src/ ├── controllers/ # Gestion des requêtes HTTP
-     │ └── base/ ├── services/ # Logique métier 
-     │ └── base/ ├── repositories/ # Accès aux données 
-     │ └── base/ ├── models/ # Entités et DTOs    
-     │ ├── entities/ 
-     │ ├── dtos/ 
-     │ ├── requests/ 
-     │ ├── responses/ 
-     │ └── database/ 
-     ├── middleware/ # Middlewares Express 
-     │ ├── auth/ 
-     │ ├── validation/ 
-     │ └── security/ 
-     ├── routes/ # Définition des routes 
-     │ ├── api/ 
-     │ └── web/ └── utils/ # Utilitaires
+                          code: `src/ ├── config/ # Configuration de l'application (DB, env, logger)
+      ├── errors/ # Gestion des erreurs personnalisées
+      ├── constants/ # Constantes partagées
+      ├── utils/ # Fonctions utilitaires et helpers
+      ├── mappers/ # Mappers Entity <-> DTO
+      ├── database/ # Accès et manipulation de la base de données
+      │ ├── connections/
+      │ ├── migrations/
+      │ ├── seeds/
+      │ └── queries/
+      ├── entities/ # Modèles métier (domain entities)
+      ├── dtos/ # Data Transfer Objects
+      │ ├── requests/
+      │ └── responses/
+      ├── repositories/ # Accès aux données
+      │ └── base/
+      ├── services/ # Logique métier
+      │ └── base/
+      ├── controllers/ # Gestion des requêtes HTTP
+      │ └── base/
+      ├── middleware/ # Middlewares Express
+      │ ├── auth/
+      │ ├── validation/
+      │ └── security/
+      ├── routes/ # Définition des routes
+      │ ├── api/
+      │ └── web/
+      ├── infrastructure/ # Intégrations externes
+      │ ├── cache/
+      │ ├── email/
+      │ └── modules/
+      ├── storage/ # Fichiers et logs
+      │ ├── uploads/
+      │ │ ├── avatars/
+      │ │ └── documents/
+      │ └── logs/
+      ├── database_backups/ # Sauvegardes de la base
+      ├── tests/ # Tests unitaires, d'intégration, fonctionnels et e2e
+      │ ├── unit/
+      │ ├── integration/
+      │ ├── functional/
+      │ └── e2e/
+      └── .github/ # Workflows CI/CD
+          └── workflows/
 `
                         },
                       ],

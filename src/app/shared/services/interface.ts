@@ -886,22 +886,52 @@ No, I don't need Express
                           borderColor: "terminal-black",
                           bgColor: "terminal-black", 
                           type: "TEXT",
-                          code: `src/ ├── controllers/ # Gestion des requêtes HTTP
-     │ └── base/ ├── services/ # Logique métier 
-     │ └── base/ ├── repositories/ # Accès aux données 
-     │ └── base/ ├── models/ # Entités et DTOs    
-     │ ├── entities/ 
-     │ ├── dtos/ 
-     │ ├── requests/ 
-     │ ├── responses/ 
-     │ └── database/ 
-     ├── middleware/ # Middlewares Express 
-     │ ├── auth/ 
-     │ ├── validation/ 
-     │ └── security/ 
-     ├── routes/ # Définition des routes 
-     │ ├── api/ 
-     │ └── web/ └── utils/ # Utilitaires
+                          code: `src/ ├── config/          # Configuration (DB, environnement, logger)
+    ├── errors/          # Gestion des erreurs personnalisées
+    ├── utils/           # Utilitaires & helpers
+    ├── constants/       # Constantes globales
+    ├── mappers/         # Mappers entité <-> DTO
+    ├── database/        # Couche Base de données
+    │   ├── connections/ # Connexions DB
+    │   ├── migrations/  # Migrations DB
+    │   ├── seeds/       # Données de test
+    │   └── queries/     # Requêtes SQL spécifiques
+    ├── entities/        # Entités du domaine
+    ├── dtos/            # DTOs (Data Transfer Objects)
+    │   ├── requests/    # Objets de requête
+    │   └── responses/   # Objets de réponse
+    ├── repositories/    # Couche Repositories
+    │   └── base/        # Fonctions communes aux repositories
+    ├── services/        # Couche Services
+    │   └── base/        # Fonctions communes aux services
+    ├── controllers/     # Couche Controllers
+    │   └── base/        # Fonctions communes aux controllers
+    ├── middleware/      # Couche Middleware
+    │   ├── auth/        # Authentification
+    │   ├── validation/  # Validation des données
+    │   └── security/    # Sécurité et filtres
+    ├── routes/          # Couche Routes
+    │   ├── api/         # Routes API
+    │   └── web/         # Routes web
+    ├── infrastructure/  # Infrastructure / intégrations externes
+    │   ├── cache/       # Cache (Redis, etc.)
+    │   ├── email/       # Gestion emails
+    │   └── modules/     # Modules externes ou services tiers
+    ├── database/        # Répertoires externes
+    │   ├── backups/     # Sauvegardes
+    │   └── schema/      # Schéma DB
+    ├── storage/
+    │   ├── uploads/
+    │   │   ├── avatars/
+    │   │   └── documents/
+    │   └── logs/
+    ├── tests/
+    │   ├── unit/
+    │   ├── integration/
+    │   ├── functional/
+    │   └── e2e/
+    └── .github/
+        └── workflows/   # CI/CD
 `
                         },
                       ],
@@ -2303,22 +2333,52 @@ No, I don't need Express
                           borderColor: "terminal-black",
                           bgColor: "terminal-black",
                           type: "TEXT",
-                          code: `src/ ├── controllers/ # HTTP request handling
-     │ └── base/ ├── services/ # Business logic
-     │ └── base/ ├── repositories/ # Data access
-     │ └── base/ ├── models/ # Entities and DTOs
-     │ ├── entities/
-     │ ├── dtos/
+                          code: `src/ ├── config/         # Configuration (DB, environment, logger)
+     ├── errors/          # Custom errors & handlers
+     ├── utils/           # Utilities & helpers
+     ├── constants/       # Constants
+     ├── mappers/         # Entity <-> DTO mappers
+     ├── database/        # Database layer
+     │ ├── connections/
+     │ ├── migrations/
+     │ ├── seeds/
+     │ └── queries/
+     ├── entities/        # Domain entities
+     ├── dtos/            # Data Transfer Objects
      │ ├── requests/
-     │ ├── responses/
-     │ └── database/
-     ├── middleware/ # Express Middlewares
+     │ └── responses/
+     ├── repositories/    # Repositories layer
+     │ └── base/          # Base repository with shared methods
+     ├── services/        # Services layer (business logic)
+     │ └── base/          # Base service with shared methods
+     ├── controllers/     # Controllers layer (HTTP request handling)
+     │ └── base/          # Base controller with shared methods
+     ├── middleware/      # Express middlewares
      │ ├── auth/
      │ ├── validation/
      │ └── security/
-     ├── routes/ # Route definition
+     ├── routes/          # Route definitions
      │ ├── api/
-     │ └── web/ └── utils/ # Utilities
+     │ └── web/
+     ├── infrastructure/  # External integrations
+     │ ├── cache/
+     │ ├── email/
+     │ └── modules/
+     ├── database/        # External database directories
+     │ ├── backups/
+     │ └── schema/
+     ├── storage/         # File storage
+     │ ├── uploads/
+     │ │ ├── avatars/
+     │ │ └── documents/
+     │ └── logs/
+     ├── tests/           # Test directories
+     │ ├── unit/
+     │ ├── integration/
+     │ ├── functional/
+     │ └── e2e/
+     ├── .github/         # CI/CD configuration
+     │ └── workflows/
   `
                         },
                       ],
