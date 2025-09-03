@@ -12,7 +12,7 @@ export class ConsoleService {
   private readonly steps: ConsoleStep[] = [
     // First command
     { id: 1, type: 'command', text: 'archi -v', delay: 100, typingSpeed: 100 },
-    { id: 2, type: 'response', text: 'archi version 1.7.0', delay: 800, className: 'version' },
+    { id: 2, type: 'response', text: 'archi version 1.9.0b', delay: 800, className: 'version' },
 
     // Second command
     { id: 3, type: 'command', text: 'archi create', delay: 1200, typingSpeed: 100 },
@@ -32,7 +32,7 @@ export class ConsoleService {
     },
 
     // Info lines
-    { id: 5, type: 'info', text: 'ArchiTS CLI: 1.7.0', delay: 20, className: 'version' },
+    { id: 5, type: 'info', text: 'ArchiTS CLI: 1.9.0b', delay: 20, className: 'version' },
     { id: 6, type: 'info', text: 'Node: v20.19.2', delay: 20, className: 'node' },
     { id: 7, type: 'info', text: 'Go: go1.22.2', delay: 20, className: 'go' },
     { id: 8, type: 'info', text: 'OS: linux', delay: 20, className: 'os' },

@@ -2,7 +2,7 @@
 
     // FRANCAIS
     {
-      version: "1.7.0",
+      version: "1.9.0b",
       language: "français",
       headerTop: [
         {
@@ -622,7 +622,7 @@ source ~/.bashrc`
 archi --version
 
 # Sortie attendue: 
-archi version 1.7.0
+archi version 1.9.0b
 
 # Afficher l'aide 
 archi --help 
@@ -677,7 +677,7 @@ archi create`
 archi --version
 
 # Sortie attendue: 
-archi version 1.7.0
+archi version 1.9.0b
 
 # Afficher l'aide 
 archi --help 

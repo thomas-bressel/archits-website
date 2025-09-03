@@ -103,7 +103,7 @@ export class Interface {
   public readonly interface = signal<LanguageConfig[]>([
     // FRANCAIS
     {
-      version: "1.7.0",
+      version: "1.9.0b",
       language: "français",
       headerTop: [
         {
@@ -169,7 +169,7 @@ export class Interface {
           pageTitle: 'accueil',
           h1Title: 'ArchiTS CLI',
           subtitle: "Générateur d'Architecture Backend",
-          hook: "Créez des structures backend robustes avec TypeScript ou JavaScript. Trois architectures éprouvées, configuration automatisée, prêt en 30 secondes.",
+          hook: "Créez des structures backend robustes avec TypeScript. Trois architectures éprouvées, configuration automatisée, prêt en 30 secondes.",
           blocsContent: [
             {
               id: 'bloc1',
@@ -205,7 +205,7 @@ export class Interface {
                   checklists: [
                     {
                       id: 'check4',
-                      text: 'TypeScript/JavaScript - Support complet'
+                      text: 'TypeScript - Support plus robuste'
                     },
                     {
                       id: 'check5',
@@ -214,6 +214,10 @@ export class Interface {
                     {
                       id: 'check6',
                       text: 'ESLint, Jest, Nodemon - Tooling inclus'
+                    },
+                    {
+                      id: 'check10',
+                      text: 'ORM préconfiguré prêt à l\'emplois avec SQlite'
                     },
                   ]
                 },
@@ -229,7 +233,7 @@ export class Interface {
                     },
                     {
                       id: 'check8',
-                      text: 'Templates prêts - Fichiers de base générés'
+                      text: 'Templates prêts - Fichiers de base et de test générés'
                     },
                     {
                       id: 'check9',
@@ -362,7 +366,7 @@ export class Interface {
               items: [
                 {
                   id: 'item13',
-                  name: 'Typescript / Javascript',
+                  name: 'Typescript',
                   anchor: 'section6-1'
                 },
                 {
@@ -389,13 +393,18 @@ export class Interface {
                 },
                 {
                   id: 'item17',
-                  name: 'archi version',
+                  name: 'archi generate entity',
                   anchor: 'section7-2'
                 },
                 {
                   id: 'item18',
-                  name: 'Dépannage',
+                  name: 'archi version',
                   anchor: 'section7-3'
+                },
+                {
+                  id: 'item19',
+                  name: 'Dépannage',
+                  anchor: 'section7-4'
                 }
               ]
             },
@@ -405,7 +414,7 @@ export class Interface {
               id: 'section1',
               h2Title: 'Documentation ArchiTS CLI',
               h2Anchor: 'introduction',
-              text: "Bienvenue dans la documentation complète d'ArchiTS CLI, votre générateur d'architecture backend moderne pour TypeScript et JavaScript.",
+              text: "Bienvenue dans la documentation complète d'ArchiTS CLI, votre générateur d'architecture backend moderne pour TypeScript.",
               cards: [
                 {
                   title: 'Installation Rapide',
@@ -428,7 +437,7 @@ export class Interface {
               id: 'section2',
               h2Title: "Qu'est-ce qu'ArchiTS ?",
               h2Anchor: 'section2-1',
-              text: "ArchiTS CLI est un outil en ligne de commande développé en Go qui permet de générer automatiquement des structures de projets backend robustes et bien organisées. Il supporte trois patterns architecturaux éprouvés et peut générer du code TypeScript ou JavaScript moderne.",
+              text: "ArchiTS CLI est un outil en ligne de commande développé en Go qui permet de générer automatiquement des structures de projets backend robustes et bien organisées. Il supporte trois patterns architecturaux éprouvés et peut générer du code TypeScript moderne.",
               alerts: [
                 {
                   bgColor: 'alert-blue',
@@ -449,7 +458,7 @@ export class Interface {
                         "Gain de temps: Création de projet en 30 secondes",
                         "Bonnes pratiques : Architectures éprouvées et patterns recommandés",
                         "Configuration automatique : ESLint, Jest, TypeScript pré-configurés",
-                        "Flexibilité : Support TypeScript/JavaScript et ExpressJS optionnel",
+                        "Flexibilité : Support TypeScript et ExpressJS optionnel",
                         "Maintenabilité : Structure claire et séparation des responsabilités",
                       ]
                     },
@@ -502,13 +511,13 @@ export class Interface {
                           ],
                           col2: [
                             {
-                              text: "Support complet TypeScript et JavaScript",
+                              text: "Support complet TypeScript",
                               label: false,
                             }
                           ],
                           col3: [
                             {
-                              text: "✅ TS/JS avec configuration optimisée",
+                              text: "✅ TS avec configuration optimisée",
                               label: false,
                             }
                           ]
@@ -723,7 +732,7 @@ export class Interface {
   archi --version
 
 # Sortie attendue: 
-  archi version 1.7.0
+  archi version 1.9.0b
 
 # Afficher l'aide 
   archi --help 
@@ -782,9 +791,6 @@ Layered Architecture
 ▸ Clean Architecture 
 Hexagonal Architecture 
 
-Select a language: 
-▸ TypeScript 
-JavaScript (please don't, if you're a true developer) 
 
 Do you want to use ExpressJS library? 
 ▸ Yes, install Express 
@@ -1229,8 +1235,8 @@ No, I don't need Express
                     {
                       h4Title: 'TypeScript vs JavaScript',
                       h4Anchor: 'section6-1',
-                      text: "ArchiTS supporte complètement TypeScript et JavaScript avec des configurations optimisées pour chaque langage.",
-                      h5Title: "TypeScript (Fortement recommandé)",
+                      text: "ArchiTS ne prend désormais plus en charge JavaScript (depuis la version 1.9.0b) et se concentre uniquement sur TypeScript, en raison des limitations de JavaScript concernant l’encapsulation des données dans une approche orientée objet.",
+                      h5Title: "TypeScript (le meilleurs !)",
                       alerts: [
                         {
                           bgColor: 'alert-green',
@@ -1274,23 +1280,6 @@ No, I don't need Express
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix"
   }
-}`
-                        },
-                      ],
-                    },
-                    {
-                      h5Title: "Javascript : Scripts npm générés :",
-                      terminal: [
-                        {
-                          borderColor: "terminal-black",
-                          bgColor: "terminal-black", 
-                          type: "JSON",
-                          code: `{ "scripts": 
-   { "start": "node src/index.js",
-     "dev": "nodemon src/index.js",
-     "lint": "eslint src/**/*.js",
-     "lint:fix": "eslint src/**/*.js --fix" 
-   } 
 }`
                         },
                       ],
@@ -1412,7 +1401,7 @@ MAIL_AUTH_PASSWORD="my-super-password"`
                       h5Title: "Processus interactif :",
                       list: ["Nom du projet : Définit le nom du dossier et du package",
                         "Architecture : Choix entre Layered, Clean ou Hexagonal",
-                        "Langage : TypeScript ou JavaScript",
+                        "Langage : TypeScript",
                         "ExpressJS : Inclure ou non le framework Express"]
 
                     },
@@ -1426,8 +1415,45 @@ MAIL_AUTH_PASSWORD="my-super-password"`
 
                     },
                     {
-                      h4Title: 'archi version',
+                      h4Title: 'archi generate entity',
                       h4Anchor: 'section7-2',
+                      text: "Commande permettant de générer automatiquement une entité et toutes ses couches associées (repository, service, controller, route), selon l’architecture choisie (Layered, Clean ou Hexagonal).",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
+                          type: "BASH",
+                          code: `# Génération complète
+archi generate entity user  
+
+# Alias court
+archi g e user`
+                        },
+                      ],
+                    },
+                    {
+                      h5Title: "Création automatiques des fichiers :",
+                      list: [
+                        "<nom>.routes.ts",
+                        "<nom>.entity.ts",
+                        "<nom>.controller.ts",
+                        "<nom>.service.ts",
+                        "<nom>.repository.ts",
+                      ]
+
+                    },
+                    {
+                      h5Title: "Génération des tests unitaires Jest :",
+                      list: [
+                        "tests/unit/repositories/<name>.repository.test.ts",
+                        "tests/unit/services/<name>.service.test.ts",
+                        "tests/unit/controllers/<name>.controller.test.ts",
+                      ]
+
+                    },
+                    {
+                      h4Title: 'archi version',
+                      h4Anchor: 'section7-3',
                       text: "Affiche les informations détaillées sur la version et l'environnement.",
                       terminal: [
                         {
@@ -1447,7 +1473,7 @@ MAIL_AUTH_PASSWORD="my-super-password"`
                     },
                     {
                       h4Title: 'Dépanage',
-                      h4Anchor: 'section7-3',
+                      h4Anchor: 'section7-4',
                       h5Title: 'Problèmes courants',
                       text: "Affiche les informations détaillées sur la version et l'environnement.",
                       terminal: [
@@ -1554,7 +1580,7 @@ MAIL_AUTH_PASSWORD="my-super-password"`
 
 
     {
-      version: "1.7.0",
+      version: "1.9.0b",
       language: "english",
       headerTop: [
         {
@@ -1619,7 +1645,7 @@ MAIL_AUTH_PASSWORD="my-super-password"`
           pageTitle: 'home',
           h1Title: 'ArchiTS CLI',
           subtitle: "Backend Architecture Generator",
-          hook: "Create robust backend structures with TypeScript or JavaScript. Three proven architectures, automated configuration, ready in 30 seconds.",
+          hook: "Create robust backend structures with TypeScript. Three proven architectures, automated configuration, ready in 30 seconds.",
           blocsContent: [
             {
               id: 'bloc1',
@@ -1655,7 +1681,7 @@ MAIL_AUTH_PASSWORD="my-super-password"`
                   checklists: [
                     {
                       id: 'check4',
-                      text: 'TypeScript/JavaScript - Full support'
+                      text: 'TypeScript - Strong support'
                     },
                     {
                       id: 'check5',
@@ -1664,6 +1690,10 @@ MAIL_AUTH_PASSWORD="my-super-password"`
                     {
                       id: 'check6',
                       text: 'ESLint, Jest, Nodemon - Included tooling'
+                    },
+                    {
+                      id: 'check10',
+                      text: 'Preconfigured ORM ready to use with SQLite'
                     },
                   ]
                 },
@@ -1679,7 +1709,7 @@ MAIL_AUTH_PASSWORD="my-super-password"`
                     },
                     {
                       id: 'check8',
-                      text: 'Ready templates - Base files generated'
+                      text: 'Ready templates - Base and test files generated'
                     },
                     {
                       id: 'check9',
@@ -1812,7 +1842,7 @@ MAIL_AUTH_PASSWORD="my-super-password"`
               items: [
                 {
                   id: 'item13',
-                  name: 'Typescript / Javascript',
+                  name: 'Typescript',
                   anchor: 'section6-1'
                 },
                 {
@@ -1839,13 +1869,18 @@ MAIL_AUTH_PASSWORD="my-super-password"`
                 },
                 {
                   id: 'item17',
-                  name: 'archi version',
+                  name: 'archi generate entity',
                   anchor: 'section7-2'
                 },
                 {
                   id: 'item18',
-                  name: 'Troubleshooting',
+                  name: 'archi version',
                   anchor: 'section7-3'
+                },
+                {
+                  id: 'item19',
+                  name: 'Troubleshooting',
+                  anchor: 'section7-4'
                 }
               ]
             },
@@ -1855,7 +1890,7 @@ MAIL_AUTH_PASSWORD="my-super-password"`
               id: 'section1',
               h2Title: 'ArchiTS CLI Documentation',
               h2Anchor: 'introduction',
-              text: "Welcome to the complete documentation of ArchiTS CLI, your modern backend architecture generator for TypeScript and JavaScript.",
+              text: "Welcome to the complete documentation of ArchiTS CLI, your modern backend architecture generator for TypeScript.",
               cards: [
                 {
                   title: 'Quick Installation',
@@ -1878,7 +1913,7 @@ MAIL_AUTH_PASSWORD="my-super-password"`
               id: 'section2',
               h2Title: "What is ArchiTS?",
               h2Anchor: 'section2-1',
-              text: "ArchiTS CLI is a command-line tool developed in Go that automatically generates robust and well-organized backend project structures. It supports three proven architectural patterns and can generate modern TypeScript or JavaScript code.",
+              text: "ArchiTS CLI is a command-line tool developed in Go that automatically generates robust and well-organized backend project structures. It supports three proven architectural patterns and can generate modern TypeScript code.",
               alerts: [
                 {
                   bgColor: 'alert-blue',
@@ -1899,7 +1934,7 @@ MAIL_AUTH_PASSWORD="my-super-password"`
                         "Time-saving: Project creation in 30 seconds",
                         "Best practices: Proven architectures and recommended patterns",
                         "Automatic configuration: Pre-configured ESLint, Jest, TypeScript",
-                        "Flexibility: TypeScript/JavaScript support and optional ExpressJS",
+                        "Flexibility: TypeScript support and optional ExpressJS",
                         "Maintainability: Clear structure and separation of responsibilities",
                       ]
                     },
@@ -1952,13 +1987,13 @@ MAIL_AUTH_PASSWORD="my-super-password"`
                           ],
                           col2: [
                             {
-                              text: "Full TypeScript and JavaScript support",
+                              text: "Full TypeScript support",
                               label: false,
                             }
                           ],
                           col3: [
                             {
-                              text: "✅ TS/JS with optimized configuration",
+                              text: "✅ TS with optimized configuration",
                               label: false,
                             }
                           ]
@@ -2172,7 +2207,7 @@ MAIL_AUTH_PASSWORD="my-super-password"`
   archi --version
 
 # Expected output:
-  archi version 1.7.0
+  archi version 1.9.0b
 
 # Display help
   archi --help
@@ -2231,9 +2266,6 @@ Layered Architecture
 ▸ Clean Architecture 
 Hexagonal Architecture 
 
-Select a language: 
-▸ TypeScript 
-JavaScript (please don't, if you're a true developer) 
 
 Do you want to use ExpressJS library? 
 ▸ Yes, install Express 
@@ -2674,8 +2706,8 @@ No, I don't need Express
                     {
                       h4Title: 'TypeScript vs JavaScript',
                       h4Anchor: 'section6-1',
-                      text: "ArchiTS fully supports TypeScript and JavaScript with optimized configurations for each language.",
-                      h5Title: "TypeScript (Highly Recommended)",
+                      text: "ArchiTS no longer supports JavaScript (since version 1.9.0b) and now focuses exclusively on TypeScript, due to JavaScript’s limitations in handling data encapsulation within an object-oriented structure.",
+                      h5Title: "TypeScript (the best !)",
                       alerts: [
                         {
                           bgColor: 'alert-green',
@@ -2717,23 +2749,6 @@ No, I don't need Express
       "lint": "eslint src/**/*.ts",
       "lint:fix": "eslint src/**/*.ts --fix"
     }
-  }`
-                        },
-                      ],
-                    },
-                    {
-                      h5Title: "JavaScript: Generated npm Scripts:",
-                      terminal: [
-                        {
-                          borderColor: "terminal-black",
-                          bgColor: "terminal-black",
-                          type: "JSON",
-                          code: `{ "scripts":
-     { "start": "node src/index.js",
-       "dev": "nodemon src/index.js",
-       "lint": "eslint src/**/*.js",
-       "lint:fix": "eslint src/**/*.js --fix"
-     }
   }`
                         },
                       ],
@@ -2852,7 +2867,7 @@ No, I don't need Express
                       h5Title: "Interactive Process:",
                       list: ["Project Name: Defines the folder and package name",
                         "Architecture: Choice between Layered, Clean, or Hexagonal",
-                        "Language: TypeScript or JavaScript",
+                        "Language: TypeScript",
                         "ExpressJS: Include or not the Express framework"]
                     },
                     {
@@ -2864,8 +2879,44 @@ No, I don't need Express
                         "Git initialization (if applicable)"]
                     },
                     {
-                      h4Title: 'archi version',
+                      h4Title: 'archi generate entity',
                       h4Anchor: 'section7-2',
+                      text: "Command for automatically generating an entity and all its associated layers (repository, service, controller, route), according to the selected architecture (Layered, Clean, or Hexagonal).",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black",
+                          type: "BASH",
+                          code: `# Full generation
+archi generate entity user
+
+# Short alias
+archi g e user
+`
+                        },
+                      ],
+                    },
+                    {
+                      h5Title: "Automatic file cration :",
+                      list: [
+                        "<name>.routes.ts",
+                        "<name>.entity.ts",
+                        "<name>.controller.ts",
+                        "<name>.service.ts",
+                        "<name>.repository.ts",
+                      ]
+                    },
+                    {
+                      h5Title: "Jest unit test generation :",
+                      list: [
+                        "tests/unit/repositories/<name>.repository.test.ts",
+                        "tests/unit/services/<name>.service.test.ts",
+                        "tests/unit/controllers/<name>.controller.test.ts"
+                      ]
+                    },
+                    {
+                      h4Title: 'archi version',
+                      h4Anchor: 'section7-3',
                       text: "Displays detailed information about the version and environment.",
                       terminal: [
                         {
@@ -2885,7 +2936,7 @@ No, I don't need Express
                     },
                     {
                       h4Title: 'Troubleshooting',
-                      h4Anchor: 'section7-3',
+                      h4Anchor: 'section7-4',
                       h5Title: 'Common Issues',
                       text: "Displays detailed information about the version and environment.",
                       terminal: [
