@@ -6,7 +6,7 @@
             @for (bloc of interfaceService() ; track $index) {
             <h5 class="overlay__title">
                 @if (bloc.h5Icon) {
-                <img class="overlay__icon" [src]="`icons/blue/${bloc.h5Icon}`" alt="">
+                <img class="overlay__icon" [src]="`icons/white/${bloc.h5Icon}`" alt="">
                 }
                 <a [routerLink]="[]" [fragment]="`${bloc.h5Anchor}`" (click)="closeOverlay($event)">{{bloc.h5Title}}</a>
             </h5>
