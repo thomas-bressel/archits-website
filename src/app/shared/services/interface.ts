@@ -103,7 +103,7 @@ export class Interface {
   public readonly interface = signal<LanguageConfig[]>([
     // FRANCAIS
     {
-      version: "1.9.0b",
+      version: "1.10.0",
       language: "français",
       headerTop: [
         {
@@ -217,7 +217,7 @@ export class Interface {
                     },
                     {
                       id: 'check10',
-                      text: 'ORM préconfiguré prêt à l\'emplois avec SQlite'
+                      text: 'ORM préconfiguré prêt à l\'emplois avec SQLite'
                     },
                   ]
                 },
@@ -255,15 +255,13 @@ export class Interface {
                   bgColor: "terminal-black",
                   borderColor: "terminal-black",
                   type: 'bash',
-                  content: `# Cloner le repository
-  git clone https://github.com/thomas-bressel/archi-ts-cli.git
-  cd archi-ts-cli
+                  content: `# Installation
+  npm install -g archits-cli 
 
-# Installation
-  make install
-  source ~/.bashrc
+# Configuration
+  https://www.npmjs.com/package/archits-cli
 
-# Créer votre premier projet
+# Utilisation
   archi create`
                 }
               ],
@@ -294,7 +292,7 @@ export class Interface {
               ]
             },
             {
-              h5Title: 'Installation',
+              h5Title: 'Installation avec npm',
               h5Icon: 'download.svg',
               h5Anchor: 'install',
               items: [
@@ -304,14 +302,19 @@ export class Interface {
                   anchor: 'section3-1'
                 },
                 {
-                  id: 'item5',
-                  name: 'Installation Linux',
+                  id: 'item20',
+                  name: 'Commencer à contribuer',
                   anchor: 'section3-2'
+                },
+                {
+                  id: 'item5',
+                  name: 'Installation avec npm',
+                  anchor: 'section3-3'
                 },
                 {
                   id: 'item6',
                   name: 'Vérification',
-                  anchor: 'section3-3'
+                  anchor: 'section3-4'
                 },
               ]
             },
@@ -437,13 +440,13 @@ export class Interface {
               id: 'section2',
               h2Title: "Qu'est-ce qu'ArchiTS ?",
               h2Anchor: 'section2-1',
-              text: "ArchiTS CLI est un outil en ligne de commande développé en Go qui permet de générer automatiquement des structures de projets backend robustes et bien organisées. Il supporte trois patterns architecturaux éprouvés et peut générer du code TypeScript moderne.",
+              text: "ArchiTS CLI est un outil en ligne de commande développé en Go qui permet de générer automatiquement des structures de projets backend robustes et bien organisées. Il supporte trois patterns architecturaux éprouvés et génère du code TypeScript moderne.",
               alerts: [
                 {
                   bgColor: 'alert-blue',
                   borderColor: 'alert-blue',
                   icon: '💡',
-                  text: "Philosophie : ArchiTS vous aide à démarrer vos projets backend avec une architecture solide, des bonnes pratiques et une configuration automatisée, vous permettant de vous concentrer sur votre logique métier."
+                  text: "Philosophie : ArchiTS vous aide à démarrer vos projets backend avec une architecture solide, des bonnes pratiques et une configuration automatisée, vous permettant de vous concentrer plus rapidement sur votre logique métier."
                 },
               ],
               subBlocs: [
@@ -458,7 +461,7 @@ export class Interface {
                         "Gain de temps: Création de projet en 30 secondes",
                         "Bonnes pratiques : Architectures éprouvées et patterns recommandés",
                         "Configuration automatique : ESLint, Jest, TypeScript pré-configurés",
-                        "Flexibilité : Support TypeScript et ExpressJS optionnel",
+                        "Flexibilité : Support TypeScript, ExpressJS, TypeORM optionnel",
                         "Maintenabilité : Structure claire et séparation des responsabilités",
                       ]
                     },
@@ -525,13 +528,33 @@ export class Interface {
                         {
                           col1: [
                             {
-                              text: "Framework",
+                              text: "Librairies",
                               label: false,
                             }
                           ],
                           col2: [
                             {
                               text: "ExpressJS optionnel ou Node.js natif",
+                              label: false,
+                            }
+                          ],
+                          col3: [
+                            {
+                              text: "✅ Choix lors de la création",
+                              label: false,
+                            }
+                          ]
+                        },
+                        {
+                          col1: [
+                            {
+                              text: "ORM",
+                              label: false,
+                            }
+                          ],
+                          col2: [
+                            {
+                              text: "TypeORM optionnel",
                               label: false,
                             }
                           ],
@@ -598,9 +621,9 @@ export class Interface {
                   id: 'sub-1',
                   subchildBlocs: [
                     {
-                      h4Title: 'Prérequis',
+                      h4Title: 'Prérequis pour contribuer',
                       h4Anchor: 'section3-1',
-                      text: "Avant d'installer ArchiTS, assurez-vous d'avoir les outils suivants installés sur votre système :",
+                      text: "Avant de contribuer au projet ArchiTS, assurez-vous d'avoir les outils suivants installés sur votre système :",
                       arrays: [
                         {
                           headCol: ["Outil", "Version minimale", "Vérification"],
@@ -690,9 +713,63 @@ export class Interface {
                       ]
                     },
                     {
-                      h4Title: "Installation sur Linux/WSL",
+                      h4Title: 'Prérequis pour l\'utilisation',
+                      h4Anchor: 'section3-1',
+                      text: "Avant de d'installer ArchiTS, assurez-vous d'avoir les outils suivants installés sur votre système :",
+                      arrays: [
+                        {
+                          headCol: ["Outil", "Version minimale", "Vérification"],
+                          rows: [
+                           
+                            {
+                              col1: [
+                                {
+                                  text: "NodeJS",
+                                  label: false,
+                                }
+                              ],
+                              col2: [
+                                {
+                                  text: "(LTS recommandé)",
+                                  label: false,
+                                }
+                              ],
+                              col3: [
+                                {
+                                  text: "node --version",
+                                  label: true,
+                                }
+                              ]
+                            },
+                            {
+                              col1: [
+                                {
+                                  text: "npm",
+                                  label: false,
+                                }
+                              ],
+                              col2: [
+                                {
+                                  text: "8+",
+                                  label: false,
+                                }
+                              ],
+                              col3: [
+                                {
+                                  text: "npm --version",
+                                  label: true,
+                                }
+                              ]
+                            },
+                           
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      h4Title: "Commencer à contribuer",
                       h4Anchor: 'section3-2',
-                      text: "Suivez ces étapes pour installer ArchiTS sur votre système :",
+                      text: "Suivez ces étapes pour installer le code source d'ArchiTS sur votre système :",
                       terminal: [
                         {
                           borderColor: "terminal-black",
@@ -720,6 +797,27 @@ export class Interface {
                       ],
                     },
                     {
+                      h4Title: "Installation avec npm",
+                      h4Anchor: 'section3-3',
+                      text: "Suivez ces étapes pour installer et utiliser  ArchiTS sur votre système :",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black", 
+                          type: "BASH",
+                          code: `# 1. Rendez-vous sur le site officiel de NPM et suivez les insctructions
+  https://www.npmjs.com/package/archits-cli
+
+# 2. Installation automatique 
+  npm install -g archits-cli 
+
+# 3. Créer un lien symbolique pour accéder aux commandes de ArchiTS
+ln -sf /home/[your-username]/.nvm/versions/node/v[your-node-version]/lib/node_modules/archits-cli/bin/archits /home/[your-username]/.nvm/versions/node/v[your-node-version]/bin/archi
+`
+                        },
+                      ],
+                    },
+                    {
                       h4Title: "Vérification de l'installation",
                       h4Anchor: 'section3-3',
                       text: "Une fois l'installation terminée, vérifiez que tout fonctionne correctement :",
@@ -732,7 +830,7 @@ export class Interface {
   archi --version
 
 # Sortie attendue: 
-  archi version 1.9.0b
+  archi version 1.10.0
 
 # Afficher l'aide 
   archi --help 
@@ -792,9 +890,15 @@ Layered Architecture
 Hexagonal Architecture 
 
 
-Do you want to use ExpressJS library? 
-▸ Yes, install Express 
-No, I don't need Express 
+Choose a library in the list ?:
+▸ No library needed 
+  Express.js 
+
+Select an ORM:
+  ▸ I don't need ORM
+    TypeORM
+
+Port Number: 6666█
 
 ✅ Project structure created successfully!`
                         },
@@ -822,13 +926,19 @@ No, I don't need Express
   npm run build 
 
 # Démarrer en production 
-  npm start 
+  npm run start 
 
 # Exécuter les tests 
-  npm test 
+  npm run test 
 
 # Linter le code 
-  npm run lint`
+  npm run lint
+  
+# Générer un script de migration 
+  npm run migration:generate <MyMigrationName>
+
+# Executer une migration 
+  npm run migration:run`
                         },
                       ],
 
@@ -892,52 +1002,36 @@ No, I don't need Express
                           borderColor: "terminal-black",
                           bgColor: "terminal-black", 
                           type: "TEXT",
-                          code: `src/ ├── config/          # Configuration (DB, environnement, logger)
-    ├── errors/          # Gestion des erreurs personnalisées
-    ├── utils/           # Utilitaires & helpers
-    ├── constants/       # Constantes globales
-    ├── mappers/         # Mappers entité <-> DTO
-    ├── database/        # Couche Base de données
-    │   ├── connections/ # Connexions DB
-    │   ├── migrations/  # Migrations DB
-    │   ├── seeds/       # Données de test
-    │   └── queries/     # Requêtes SQL spécifiques
-    ├── entities/        # Entités du domaine
-    ├── dtos/            # DTOs (Data Transfer Objects)
-    │   ├── requests/    # Objets de requête
-    │   └── responses/   # Objets de réponse
-    ├── repositories/    # Couche Repositories
-    │   └── base/        # Fonctions communes aux repositories
-    ├── services/        # Couche Services
-    │   └── base/        # Fonctions communes aux services
-    ├── controllers/     # Couche Controllers
-    │   └── base/        # Fonctions communes aux controllers
-    ├── middleware/      # Couche Middleware
-    │   ├── auth/        # Authentification
-    │   ├── validation/  # Validation des données
-    │   └── security/    # Sécurité et filtres
-    ├── routes/          # Couche Routes
-    │   ├── api/         # Routes API
-    │   └── web/         # Routes web
-    ├── infrastructure/  # Infrastructure / intégrations externes
-    │   ├── cache/       # Cache (Redis, etc.)
-    │   ├── email/       # Gestion emails
-    │   └── modules/     # Modules externes ou services tiers
-    ├── database/        # Répertoires externes
-    │   ├── backups/     # Sauvegardes
-    │   └── schema/      # Schéma DB
-    ├── storage/
-    │   ├── uploads/
-    │   │   ├── avatars/
-    │   │   └── documents/
-    │   └── logs/
-    ├── tests/
-    │   ├── unit/
-    │   ├── integration/
-    │   ├── functional/
-    │   └── e2e/
-    └── .github/
-        └── workflows/   # CI/CD
+                          code: `src/
+├── business/             # Couche métier (logique applicative)
+│   ├── interfaces/       # Interfaces et contrats pour typage
+│   ├── models/           # Modèles métier (objets du domaine)
+│   └── services/         # Services métier (logique et règles)
+│
+├── common/               # Composants communs / utilitaires partagés
+│   ├── config/           # Configuration générale (app, DB, logger, etc.)
+│   ├── constants/        # Constantes globales
+│   ├── errors/           # Gestion des erreurs personnalisées
+│   ├── logging/          # Gestion des logs
+│   └── utils/            # Fonctions utilitaires & helpers
+│
+├── data/                 # Couche d’accès et gestion des données
+│   ├── database/         # Base de données (schemas, init)
+│   ├── connection/       # Connexions à la base de données
+│   ├── migrations/       # Scripts de migration
+│   ├── seeds/            # Jeux de données de test / initialisation
+│   ├── models/           # Modèles de données (ORM, Sequelize, etc.)
+│   └── repositories/     # Repositories (accès CRUD aux données)
+│
+├── presentation/         # Couche présentation (API, contrôleurs, middlewares)
+│   ├── controllers/      # Contrôleurs (gèrent les requêtes/réponses)
+│   ├── middlewares/      # Middlewares globaux
+│   │   ├── auth/         # Gestion de l’authentification
+│   │   ├── security/     # Sécurité (CORS, rate limiting, etc.)
+│   │   └── validation/   # Validation des données entrantes
+│   └── routes/           # Définition des routes de l’application
+│       └── index.ts      # Point d’entrée principal des routes
+
 `
                         },
                       ],
@@ -970,29 +1064,36 @@ No, I don't need Express
                           borderColor: "terminal-black",
                           bgColor: "terminal-black", 
                           type: "TEXT",
-                          code: `src/ ├── domain/ # Cœur métier pur
-     │ └── entities/ 
-     ├── data/ # Couche de données 
-     │ ├── repositories/ 
-     │ ├── data-sources/ 
-     │ │ └── local/ 
-     │ ├── services/ 
-     │ ├── dtos/ 
-     │ ├── models/ 
-     │ └── mappers/ 
-     ├── presentation/ # Interface utilisateur 
-     │ ├── controllers/ 
-     │ ├── routes/ 
-     │ ├── middlewares/ 
-     │ └── models/ 
-     ├── infrastructure/ # Services externes 
-     │ ├── database/ 
-     │ ├── cache/ 
-     │ ├── email/ 
-     │ └── server/ 
-     └── shared/ # Code partagé 
-     ├── utils/ 
-     └── constants/
+                          code: `src/
+├── application/          # Couche application (orchestration des cas d’usage)
+│   ├── dtos/             # Data Transfer Objects (requêtes/réponses)
+│   ├── interfaces/       # Interfaces (contrats d’abstraction entre couches)
+│   └── use-cases/        # Cas d’usage (logique métier orchestrée)
+│
+├── domain/               # Couche domaine (règles métier pures)
+│   ├── entities/         # Entités du domaine (noyau métier)
+│   ├── errors/           # Erreurs spécifiques au domaine
+│   └── value-objects/    # Value Objects (objets métier immuables)
+│
+├── infrastructure/       # Couche infrastructure (implémentations techniques)
+│   ├── cache/            # Gestion du cache (ex: Redis, mémoire locale)
+│   ├── database/         # Configuration et initialisation base de données
+│   │   ├── config/       # Fichiers de configuration DB
+│   │   │   ├── create-database.ts  # Script de création de la base
+│   │   │   └── data-source.ts      # Source et connexion DB (ORM)
+│   │   └── migrations/   # Scripts de migration DB
+│   ├── email/            # Gestion des emails (SMTP, providers externes)
+│   ├── mappers/          # Mappers (conversion entre entités, DTOs, modèles)
+│   └── repositories/     # Repositories (implémentations concrètes DB)
+│
+├── presentation/         # Couche présentation (exposition via API)
+│   ├── controllers/      # Contrôleurs (point d’entrée des requêtes HTTP)
+│   ├── middlewares/      # Middlewares (auth, validation, sécurité, etc.)
+│   ├── routes/           # Définition des routes API
+│   └── validators/       # Validation des données entrantes
+│
+└── shared/               # Modules/utilitaires partagés entre couches
+    └── index.ts          # Point d’entrée des exports partagés
 `
                         },
                       ],
@@ -1024,43 +1125,62 @@ No, I don't need Express
                           borderColor: "terminal-black",
                           bgColor: "terminal-black", 
                           type: "TEXT",
-                          code: `src/ ├── core/ # Hexagone central
-     │ ├── domain/ 
-     │ │ ├── entities/ 
-     │ │ ├── value-objects/ 
-     │ │ ├── services/ 
-     │ │ └── exceptions/ 
-     │ └── application/ 
-     │ ├── use-cases/
-     │ ├── commands/ 
-     │ ├── queries/ 
-     │ ├── handlers/ 
-     │ └── dtos/ 
-     ├── ports/ # Interfaces 
-     │ ├── inbound/ 
-     │ │ ├── http/ 
-     │ │ └── cli/ 
-     │ └── outbound/ 
-     │ ├── repositories/ 
-     │ ├── external-services/ 
-     │ └── infrastructure/ *
-     ├── adapters/ # Implémentations 
-     │ ├── inbound/ 
-     │ │ └── http/ 
-     │ │ ├── controllers/ 
-     │ │ ├── middleware/ 
-     │ │ └── routes/ 
-     │ └── outbound/ 
-     │ ├── repositories/ 
-     │ │ ├── mysql/ 
-     │ │ ├── redis/ 
-     │ │ └── mappers/ 
-     │ └── external-services/ 
-     ├── config/ # Configuration et DI 
-     │ ├── dependencies/ 
-     │ ├── database/ 
-     │ └── environment/ 
-     └── main/ # Point d'entrée
+                          code: `scripts/       # Scripts utilitaires (ex: génération de migrations)
+│   └── generate-migration.ts   # Générer automatiquement une migration
+│
+src/
+├── adapters/         # Côté Adapters (implémentations concrètes des ports)
+│   ├── primary/      # Adapters primaires (exposition, entrée du système)
+│   │   ├── cli/      # Interface CLI
+│   │   ├── grpc/     # Interface gRPC
+│   │   └── http/     # Interface HTTP
+│   │       ├── controllers/  # Contrôleurs HTTP
+│   │       ├── middlewares/  # Middlewares HTTP
+│   │       └── routes/       # Définition des routes
+│   │
+│   ├── secondary/         # Adapters secondaires (infrastructure externe)
+│   │   ├── cache/         # Gestion du cache (Redis, mémoire)
+│   │   ├── email/         # Envoi et gestion des emails
+│   │   ├── persistence/   # Persistance des données
+│   │   │   ├── models/    # Modèles (mapping ORM)
+│   │   │   └── orm/       # Fichiers ORM (config, datasource, migrations)
+│   │   │       ├── create-database.ts  # Script de création de la DB
+│   │   │       └── data-source.ts      # Source et connexion DB
+│   │   └── repositories/    # Implémentations concrètes des repositories
+│   │
+│   └── storage/             # Stockage externe (fichiers, cloud, etc.)
+│
+├── application/        # Couche application (orchestration des cas d’usage)
+│   ├── dtos/           # Data Transfer Objects (requêtes/réponses)
+│   ├── ports/          # Ports (interfaces d’abstraction)
+│   │   ├── in/         # Ports entrants (interfaces exposées par le domaine)
+│   │   └── out/        # Ports sortants (interfaces vers l’extérieur)
+│   └── use-cases/      # Cas d’usage (logique applicative)
+│
+├── config/             # Configuration générale du projet
+│   └── dependencies/   # Déclaration/Injection des dépendances
+│
+├── domain/             # Couche domaine (noyau métier pur, indépendant)
+│   ├── entities/       # Entités métier
+│   ├── events/         # Événements de domaine
+│   ├── exceptions/     # Exceptions métier
+│   ├── services/       # Services métier (logique réutilisable)
+│   └── value-objects/  # Value Objects (objets métier immuables)
+│
+├── index.ts            # Point d’entrée principal de l’application
+│
+storage/             # Stockage des données & ressources persistantes
+├── database/        # Répertoires liés à la DB
+│   ├── backups/     # Sauvegardes DB
+│   ├── migrations/  # Scripts de migrations DB
+│   ├── schema/      # Schéma DB
+│   └── seeds/       # Données de test / initialisation
+├── logs/            # Logs applicatifs
+├── uploads/         # Fichiers uploadés par l’utilisateur
+│   ├── avatars/     # Avatars utilisateurs
+│   └── documents/   # Documents uploadés
+│
+tests/               # Tests automatisés (unitaires, intégration, e2e)
 `
                         },
                       ],
@@ -1235,7 +1355,7 @@ No, I don't need Express
                     {
                       h4Title: 'TypeScript vs JavaScript',
                       h4Anchor: 'section6-1',
-                      text: "ArchiTS ne prend désormais plus en charge JavaScript (depuis la version 1.9.0b) et se concentre uniquement sur TypeScript, en raison des limitations de JavaScript concernant l’encapsulation des données dans une approche orientée objet.",
+                      text: "ArchiTS ne prend désormais plus en charge JavaScript (depuis la version 1.10.0) et se concentre uniquement sur TypeScript, en raison des limitations de JavaScript concernant l’encapsulation des données dans une approche orientée objet.",
                       h5Title: "TypeScript (le meilleurs !)",
                       alerts: [
                         {
@@ -1472,9 +1592,9 @@ archi g e user`
                       ],
                     },
                     {
-                      h4Title: 'Dépanage',
+                      h4Title: 'Dépannage',
                       h4Anchor: 'section7-4',
-                      h5Title: 'Problèmes courants',
+                      /* h5Title: 'Problèmes courants',
                       text: "Affiche les informations détaillées sur la version et l'environnement.",
                       terminal: [
                         {
@@ -1535,7 +1655,7 @@ archi g e user`
                         },
                       ],
                     },
-                    {
+                    {*/
                       h5Title: "Support",
                       text: "Si vous rencontrez des problèmes non couverts ici :",
                       linksList: [
@@ -1578,9 +1698,9 @@ archi g e user`
     },
 
 
-
+ // ENGLISH
     {
-      version: "1.9.0b",
+      version: "1.10.0",
       language: "english",
       headerTop: [
         {
@@ -1731,15 +1851,13 @@ archi g e user`
                   bgColor: "terminal-black",
                   borderColor: "terminal-black",
                   type: 'bash',
-                  content: `# Clone the repository
-  git clone https://github.com/thomas-bressel/archi-ts-cli.git
-  cd archi-ts-cli
+                  content: `# Installation
+  npm install -g archits-cli 
 
-# Installation
-  make install
-  source ~/.bashrc
+# Setting
+  https://www.npmjs.com/package/archits-cli
 
-# Create your first project
+# Create !
   archi create`
                 }
               ],
@@ -1770,7 +1888,7 @@ archi g e user`
               ]
             },
             {
-              h5Title: 'Installation',
+              h5Title: 'Installation with npm',
               h5Icon: 'download.svg',
               h5Anchor: 'install',
               items: [
@@ -1780,14 +1898,19 @@ archi g e user`
                   anchor: 'section3-1'
                 },
                 {
-                  id: 'item5',
-                  name: 'Linux Installation',
+                  id: 'item20',
+                  name: 'Start Contributing',
                   anchor: 'section3-2'
+                },
+                {
+                  id: 'item5',
+                  name: 'Installation with npm',
+                  anchor: 'section3-3'
                 },
                 {
                   id: 'item6',
                   name: 'Verification',
-                  anchor: 'section3-3'
+                  anchor: 'section3-4'
                 },
               ]
             },
@@ -1913,13 +2036,13 @@ archi g e user`
               id: 'section2',
               h2Title: "What is ArchiTS?",
               h2Anchor: 'section2-1',
-              text: "ArchiTS CLI is a command-line tool developed in Go that automatically generates robust and well-organized backend project structures. It supports three proven architectural patterns and can generate modern TypeScript code.",
+              text: "ArchiTS CLI is a command-line tool developed in Go that automatically generates robust and well-organized backend project structures. It supports three proven architectural patterns and generate modern TypeScript code.",
               alerts: [
                 {
                   bgColor: 'alert-blue',
                   borderColor: 'alert-blue',
                   icon: '💡',
-                  text: "Philosophy: ArchiTS helps you start your backend projects with a solid architecture, best practices, and automated configuration, allowing you to focus on your business logic."
+                  text: "Philosophy: ArchiTS helps you start your backend projects with a solid architecture, best practices, and automated configuration, allowing you to focus quickely on your business logic."
                 },
               ],
               subBlocs: [
@@ -1934,7 +2057,7 @@ archi g e user`
                         "Time-saving: Project creation in 30 seconds",
                         "Best practices: Proven architectures and recommended patterns",
                         "Automatic configuration: Pre-configured ESLint, Jest, TypeScript",
-                        "Flexibility: TypeScript support and optional ExpressJS",
+                        "Flexibility: TypeScript support and optional ExpressJS, typeORM",
                         "Maintainability: Clear structure and separation of responsibilities",
                       ]
                     },
@@ -2001,13 +2124,33 @@ archi g e user`
                         {
                           col1: [
                             {
-                              text: "Framework",
+                              text: "Libraries",
                               label: false,
                             }
                           ],
                           col2: [
                             {
                               text: "Optional ExpressJS or native Node.js",
+                              label: false,
+                            }
+                          ],
+                          col3: [
+                            {
+                              text: "✅ Choice during creation",
+                              label: false,
+                            }
+                          ]
+                        },
+                        {
+                          col1: [
+                            {
+                              text: "ORM",
+                              label: false,
+                            }
+                          ],
+                          col2: [
+                            {
+                              text: "Optional TypeORM",
                               label: false,
                             }
                           ],
@@ -2073,9 +2216,9 @@ archi g e user`
                   id: 'sub-1',
                   subchildBlocs: [
                     {
-                      h4Title: 'Prerequisites',
+                      h4Title: 'Prerequisites for contributors',
                       h4Anchor: 'section3-1',
-                      text: "Before installing ArchiTS, make sure you have the following tools installed on your system:",
+                      text: "Before contributing to ArchiTS, make sure you have the following tools installed on your system:",
                       arrays: [
                         {
                           headCol: ["Tool", "Minimum Version", "Verification"],
@@ -2165,9 +2308,63 @@ archi g e user`
                       ]
                     },
                     {
-                      h4Title: "Installation on Linux/WSL",
+                      h4Title: 'Prerequisites for usage',
+                      h4Anchor: 'section3-1',
+                      text: "Before installing ArchiTS, make sure you have the following tools installed on your system:",
+                      arrays: [
+                        {
+                          headCol: ["Tool", "Minimum Version", "Verification"],
+                          rows: [
+                           
+                            {
+                              col1: [
+                                {
+                                  text: "NodeJS",
+                                  label: false,
+                                }
+                              ],
+                              col2: [
+                                {
+                                  text: "(LTS recommended)",
+                                  label: false,
+                                }
+                              ],
+                              col3: [
+                                {
+                                  text: "node --version",
+                                  label: true,
+                                }
+                              ]
+                            },
+                            {
+                              col1: [
+                                {
+                                  text: "npm",
+                                  label: false,
+                                }
+                              ],
+                              col2: [
+                                {
+                                  text: "8+",
+                                  label: false,
+                                }
+                              ],
+                              col3: [
+                                {
+                                  text: "npm --version",
+                                  label: true,
+                                }
+                              ]
+                            },
+                           
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      h4Title: "Start Contributing",
                       h4Anchor: 'section3-2',
-                      text: "Follow these steps to install ArchiTS on your system:",
+                      text: "Follow these steps to install ArchiTS source code on your system:",
                       terminal: [
                         {
                           borderColor: "terminal-black",
@@ -2195,8 +2392,28 @@ archi g e user`
                       ],
                     },
                     {
-                      h4Title: "Verification of Installation",
+                      h4Title: "Installation with npm",
                       h4Anchor: 'section3-3',
+                      text: "Follow these steps to install ArchiTS on your system:",
+                      terminal: [
+                        {
+                          borderColor: "terminal-black",
+                          bgColor: "terminal-black",
+                          type: "BASH",
+                          code: `# 1. Go on the official npm web site and follow the instructions
+  https://www.npmjs.com/package/archits-cli
+
+# 2. Automatic installation
+  npm install -g archits-cli
+
+# 3. Create a symlink for easier access (if using nvm)
+ln -sf /home/[your-username]/.nvm/versions/node/v[your-node-version]/lib/node_modules/archits-cli/bin/archits /home/[your-username]/.nvm/versions/node/v[your-node-version]/bin/archi`
+                        },
+                      ],
+                    },
+                    {
+                      h4Title: "Verification of Installation",
+                      h4Anchor: 'section3-4',
                       text: "Once the installation is complete, verify that everything is working correctly:",
                       terminal: [
                         {
@@ -2207,7 +2424,7 @@ archi g e user`
   archi --version
 
 # Expected output:
-  archi version 1.9.0b
+  archi version 1.10.0
 
 # Display help
   archi --help
@@ -2267,9 +2484,15 @@ Layered Architecture
 Hexagonal Architecture 
 
 
-Do you want to use ExpressJS library? 
-▸ Yes, install Express 
-No, I don't need Express 
+Choose a library in the list ?:
+▸ No library needed 
+  Express.js 
+
+Select an ORM:
+  ▸ I don't need ORM
+    TypeORM
+
+Port Number: 6666█
 
 ✅ Project structure created successfully!`
                         },
@@ -2297,13 +2520,19 @@ No, I don't need Express
   npm run build
 
 # Start in production
-  npm start
+  npm run start
 
 # Run tests
-  npm test
+  npm run test
 
 # Lint the code
-  npm run lint`
+  npm run lint
+
+# Generate a migration script 
+  npm run migration:generate <MyMigrationName>
+
+# Run a migration 
+  npm run migration:run`
                         },
                       ],
                     },
@@ -2365,53 +2594,35 @@ No, I don't need Express
                           borderColor: "terminal-black",
                           bgColor: "terminal-black",
                           type: "TEXT",
-                          code: `src/ ├── config/         # Configuration (DB, environment, logger)
-     ├── errors/          # Custom errors & handlers
-     ├── utils/           # Utilities & helpers
-     ├── constants/       # Constants
-     ├── mappers/         # Entity <-> DTO mappers
-     ├── database/        # Database layer
-     │ ├── connections/
-     │ ├── migrations/
-     │ ├── seeds/
-     │ └── queries/
-     ├── entities/        # Domain entities
-     ├── dtos/            # Data Transfer Objects
-     │ ├── requests/
-     │ └── responses/
-     ├── repositories/    # Repositories layer
-     │ └── base/          # Base repository with shared methods
-     ├── services/        # Services layer (business logic)
-     │ └── base/          # Base service with shared methods
-     ├── controllers/     # Controllers layer (HTTP request handling)
-     │ └── base/          # Base controller with shared methods
-     ├── middleware/      # Express middlewares
-     │ ├── auth/
-     │ ├── validation/
-     │ └── security/
-     ├── routes/          # Route definitions
-     │ ├── api/
-     │ └── web/
-     ├── infrastructure/  # External integrations
-     │ ├── cache/
-     │ ├── email/
-     │ └── modules/
-     ├── database/        # External database directories
-     │ ├── backups/
-     │ └── schema/
-     ├── storage/         # File storage
-     │ ├── uploads/
-     │ │ ├── avatars/
-     │ │ └── documents/
-     │ └── logs/
-     ├── tests/           # Test directories
-     │ ├── unit/
-     │ ├── integration/
-     │ ├── functional/
-     │ └── e2e/
-     ├── .github/         # CI/CD configuration
-     │ └── workflows/
-  `
+                          code: `src/
+├── business/             # Business layer (application logic)
+│   ├── interfaces/       # Interfaces and contracts for typing
+│   ├── models/           # Business models (domain objects)
+│   └── services/         # Business services (rules and logic)
+│
+├── common/               # Common components / shared utilities
+│   ├── config/           # General configuration (app, DB, logger, etc.)
+│   ├── constants/        # Global constants
+│   ├── errors/           # Custom error handling
+│   ├── logging/          # Logging system
+│   └── utils/            # Utility functions & helpers
+│
+├── data/                 # Data access and management layer
+│   ├── database/         # Database setup (schemas, initialization)
+│   ├── connection/       # Database connections
+│   ├── migrations/       # Database migration scripts
+│   ├── seeds/            # Test / seed data for initialization
+│   ├── models/           # Data models (ORM, Sequelize, etc.)
+│   └── repositories/     # Repositories (CRUD data access)
+│
+├── presentation/         # Presentation layer (API, controllers, middlewares)
+│   ├── controllers/      # Controllers (handle requests/responses)
+│   ├── middlewares/      # Global middlewares
+│   │   ├── auth/         # Authentication handling
+│   │   ├── security/     # Security (CORS, rate limiting, etc.)
+│   │   └── validation/   # Input data validation
+│   └── routes/           # Application routes definition
+│       └── index.ts      # Main entry point for routes`
                         },
                       ],
                     },
@@ -2442,29 +2653,36 @@ No, I don't need Express
                           borderColor: "terminal-black",
                           bgColor: "terminal-black",
                           type: "TEXT",
-                          code: `src/ ├── domain/ # Pure business core
-     │ └── entities/
-     ├── data/ # Data layer
-     │ ├── repositories/
-     │ ├── data-sources/
-     │ │ └── local/
-     │ ├── services/
-     │ ├── dtos/
-     │ ├── models/
-     │ └── mappers/
-     ├── presentation/ # User interface
-     │ ├── controllers/
-     │ ├── routes/
-     │ ├── middlewares/
-     │ └── models/
-     ├── infrastructure/ # External services
-     │ ├── database/
-     │ ├── cache/
-     │ ├── email/
-     │ └── server/
-     └── shared/ # Shared code
-     ├── utils/
-     └── constants/
+                          code: `src/
+├── application/          # Application layer (orchestration of use cases)
+│   ├── dtos/             # Data Transfer Objects (requests/responses)
+│   ├── interfaces/       # Interfaces (contracts for layer abstractions)
+│   └── use-cases/        # Use cases (business logic orchestration)
+│
+├── domain/               # Domain layer (pure business rules)
+│   ├── entities/         # Domain entities (core business objects)
+│   ├── errors/           # Domain-specific errors
+│   └── value-objects/    # Value Objects (immutable business objects)
+│
+├── infrastructure/       # Infrastructure layer (technical implementations)
+│   ├── cache/            # Cache management (e.g., Redis, in-memory)
+│   ├── database/         # Database setup and initialization
+│   │   ├── config/       # Database configuration files
+│   │   │   ├── create-database.ts  # Script to create the database
+│   │   │   └── data-source.ts      # Database source and ORM connection
+│   │   └── migrations/   # Database migration scripts
+│   ├── email/            # Email handling (SMTP, external providers)
+│   ├── mappers/          # Mappers (conversion between entities, DTOs, models)
+│   └── repositories/     # Repositories (concrete DB implementations)
+│
+├── presentation/         # Presentation layer (API exposure)
+│   ├── controllers/      # Controllers (HTTP request entry points)
+│   ├── middlewares/      # Middlewares (auth, validation, security, etc.)
+│   ├── routes/           # API route definitions
+│   └── validators/       # Input data validation
+│
+└── shared/               # Shared modules/utilities across layers
+    └── index.ts          # Entry point for shared exports
   `
                         },
                       ],
@@ -2496,43 +2714,63 @@ No, I don't need Express
                           borderColor: "terminal-black",
                           bgColor: "terminal-black",
                           type: "TEXT",
-                          code: `src/ ├── core/ # Central hexagon
-     │ ├── domain/
-     │ │ ├── entities/
-     │ │ ├── value-objects/
-     │ │ ├── services/
-     │ │ └── exceptions/
-     │ └── application/
-     │ ├── use-cases/
-     │ ├── commands/
-     │ ├── queries/
-     │ ├── handlers/
-     │ └── dtos/
-     ├── ports/ # Interfaces
-     │ ├── inbound/
-     │ │ ├── http/
-     │ │ └── cli/
-     │ └── outbound/
-     │ ├── repositories/
-     │ ├── external-services/
-     │ └── infrastructure/ *
-     ├── adapters/ # Implementations
-     │ ├── inbound/
-     │ │ └── http/
-     │ │ ├── controllers/
-     │ │ ├── middleware/
-     │ │ └── routes/
-     │ └── outbound/
-     │ ├── repositories/
-     │ │ ├── mysql/
-     │ │ ├── redis/
-     │ │ └── mappers/
-     │ └── external-services/
-     ├── config/ # Configuration and DI
-     │ ├── dependencies/
-     │ ├── database/
-     │ └── environment/
-     └── main/ # Entry point
+                          code: `scripts/    # Utility scripts (e.g., migration generation)
+│   └── generate-migration.ts   # Script to automatically generate a migration
+│
+src/
+├── adapters/        # Adapters side (concrete implementations of ports)
+│   ├── primary/     # Primary adapters (exposure, system entry points)
+│   │   ├── cli/              # Command Line Interface
+│   │   ├── grpc/             # gRPC interface
+│   │   └── http/             # HTTP interface
+│   │       ├── controllers/  # HTTP controllers
+│   │       ├── middlewares/  # HTTP middlewares
+│   │       └── routes/       # Routes definitions
+│   │
+│   ├── secondary/           # Secondary adapters (external infrastructure)
+│   │   ├── cache/           # Cache management (Redis, memory)
+│   │   ├── email/           # Email handling (sending, providers)
+│   │   ├── persistence/     # Data persistence
+│   │   │   ├── models/      # Models (ORM mapping)
+│   │   │   └── orm/         # ORM files (config, datasource, migrations)
+│   │   │       ├── create-database.ts  # Script to create the database
+│   │   │       └── data-source.ts      # Database source & connection
+│   │   └── repositories/    # Concrete repository implementations
+│   │
+│   └── storage/        # External storage (files, cloud, etc.)
+│
+├── application/        # Application layer (use case orchestration)
+│   ├── dtos/           # Data Transfer Objects (requests/responses)
+│   ├── ports/          # Ports (abstraction interfaces)
+│   │   ├── in/         # Incoming ports (interfaces exposed by domain)
+│   │   └── out/        # Outgoing ports (interfaces to external systems)
+│   └── use-cases/      # Use cases (application logic)
+│
+├── config/             # Project configuration
+│   └── dependencies/   # Dependency declaration/injection
+│
+├── domain/             # Domain layer (pure business core, independent)
+│   ├── entities/       # Business entities
+│   ├── events/         # Domain events
+│   ├── exceptions/     # Business exceptions
+│   ├── services/       # Domain services (reusable logic)
+│   └── value-objects/  # Value Objects (immutable business objects)
+│
+├── index.ts            # Main entry point of the application
+│
+storage/             # Data & persistent resources storage
+├── database/        # Database-related directories
+│   ├── backups/     # Database backups
+│   ├── migrations/  # Database migration scripts
+│   ├── schema/      # Database schema
+│   └── seeds/       # Test/seed data for initialization
+├── logs/            # Application logs
+├── uploads/         # User-uploaded files
+│   ├── avatars/     # User avatars
+│   └── documents/   # Uploaded documents
+│
+tests/               # Automated tests (unit, integration, e2e)
+
   `
                         },
                       ],
@@ -2706,7 +2944,7 @@ No, I don't need Express
                     {
                       h4Title: 'TypeScript vs JavaScript',
                       h4Anchor: 'section6-1',
-                      text: "ArchiTS no longer supports JavaScript (since version 1.9.0b) and now focuses exclusively on TypeScript, due to JavaScript’s limitations in handling data encapsulation within an object-oriented structure.",
+                      text: "ArchiTS no longer supports JavaScript (since version 1.10.0) and now focuses exclusively on TypeScript, due to JavaScript’s limitations in handling data encapsulation within an object-oriented structure.",
                       h5Title: "TypeScript (the best !)",
                       alerts: [
                         {
@@ -2937,9 +3175,9 @@ archi g e user
                     {
                       h4Title: 'Troubleshooting',
                       h4Anchor: 'section7-4',
-                      h5Title: 'Common Issues',
+                      /*5Title: 'Common Issues',
                       text: "Displays detailed information about the version and environment.",
-                      terminal: [
+                      /*terminal: [
                         {
                           message: "❌ Error: archi: command not found",
                           text: "Solutions:",
@@ -2998,7 +3236,7 @@ archi g e user
                         },
                       ],
                     },
-                    {
+                    { */
                       h5Title: "Support",
                       text: "If you encounter problems not covered here:",
                       linksList: [
